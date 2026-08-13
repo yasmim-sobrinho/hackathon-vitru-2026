@@ -1,0 +1,44 @@
+# Dados. NUNCA commitar base entregue pela Vitru no evento.
+/data/*
+!/data/.gitkeep
+!/data/README.md
+*.csv
+*.parquet
+*.xlsx
+*.db
+*.sqlite3
+
+# Segredos
+.env
+.env.*
+!.env.example
+*.pem
+credentials.json
+secrets.*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+dist/
+build/
+.next/
+*.log
+
+# Editor e SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Word e Office
+~$*
