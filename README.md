@@ -5,6 +5,13 @@
 
 > **Este arquivo é o cérebro compartilhado do time.** Leia ao chegar. É o painel principal de direcionamento estratégico de todo o nosso repositório.
 
+## 📑 Índice
+- [1. O que queremos (A Visão)](#-1-o-que-queremos-a-visão)
+- [2. O que descobrimos até agora (Insights da Base)](#-2-o-que-descobrimos-até-agora-insights-da-base)
+- [3. O que já construímos (O Protótipo Atual)](#️-3-o-que-já-construímos-o-protótipo-atual)
+- [4. Estrutura do Repositório](#-4-estrutura-do-repositório-onde-cada-coisa-vive)
+- [Pesquisa Anterior](#-pesquisa-anterior)
+
 ---
 
 ## 🎯 1. O que queremos (A Visão)
