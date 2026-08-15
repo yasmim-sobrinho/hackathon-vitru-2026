@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor de Intervenção Inteligente - Hackathon Vitru</title>
+    <!-- Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons via CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar glass">
+            <div class="logo">
+                <i data-lucide="zap" class="logo-icon"></i>
+                <h2>Motor Vitru</h2>
+            </div>
+            <nav>
+                <a href="#" class="active"><i data-lucide="layout-dashboard"></i> Triagem</a>
+                <a href="#"><i data-lucide="users"></i> Calouros</a>
+                <a href="#"><i data-lucide="graduation-cap"></i> Veteranos</a>
+                <a href="#"><i data-lucide="bar-chart-2"></i> Impacto</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="header-titles">
+                    <h1>Triagem de Evasão Silenciosa</h1>
+                    <p>Transformando evasão silenciosa em ações de sucesso do aluno</p>
+                </div>
+                <div class="header-stats glass">
+                    <div class="stat">
+                        <span class="stat-value text-danger">52.345</span>
+                        <span class="stat-label">Vidas em Risco</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value text-warning">R$ 179M</span>
+                        <span class="stat-label">Receita Ameaçada</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-grid">
+                <!-- Cases List -->
+                <div class="cases-panel glass">
+                    <h3>Fila Priorizada (Recuperabilidade)</h3>
+                    <div id="cases-list" class="cases-list">
+                        <!-- Loading State -->
+                        <div class="loading">Carregando casos do modelo...</div>
+                    </div>
+                </div>
+
+                <!-- Case Detail -->
+                <div class="case-detail-panel glass" id="case-detail">
+                    <div class="empty-state">
+                        <i data-lucide="mouse-pointer-click"></i>
+                        <p>Selecione um caso na fila para visualizar o diagnóstico e a intervenção recomendada da IA.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+</html>
