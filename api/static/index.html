@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motor de Intervenção Inteligente - Hackathon Vitru</title>
+    <title>Motor de Intervenção Inteligente - Hackathon Vitru 2026</title>
     <!-- Modern Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,6 +26,10 @@
                 <a href="#"><i data-lucide="graduation-cap"></i> Veteranos</a>
                 <a href="#"><i data-lucide="bar-chart-2"></i> Impacto</a>
             </nav>
+            <div style="margin-top: auto; padding: 12px; border-radius: 8px; background: rgba(255,255,255,0.03); font-size: 0.75rem; color: var(--text-muted);">
+                <div style="font-weight: 600; color: var(--text-main); margin-bottom: 4px;">Hackathon Vitru 2026</div>
+                Versão 1.2 • Foco em Intervenção
+            </div>
         </aside>
 
         <!-- Main Content -->
@@ -33,16 +37,29 @@
             <header class="top-bar">
                 <div class="header-titles">
                     <h1>Triagem de Evasão Silenciosa</h1>
-                    <p>Transformando evasão silenciosa em ações de sucesso do aluno</p>
+                    <p style="margin-bottom: 12px;">Transformando evasão silenciosa em ações de sucesso do aluno<br>
+                    <span style="font-size: 0.9em; color: var(--text-main); font-weight: 500; display: inline-block; margin-top: 4px;">52.345 alunos identificados em evasão silenciosa potencial (11,44% da base analisada).</span></p>
+                    <div class="thesis-badge">
+                        <i data-lucide="info" style="width:14px; height:14px;"></i>
+                        <span><strong>Evasão Silenciosa Potencial:</strong> alunos que ainda não solicitaram cancelamento formal, mas já apresentam sinais comportamentais de abandono.</span>
+                    </div>
                 </div>
-                <div class="header-stats glass">
+                <div class="header-stats glass" style="align-items: center;">
+                    <div class="insight-mini-card" style="margin-right: 16px;">
+                        <span style="display: block; font-size: 0.7rem; color: #34d399; text-transform: uppercase; font-weight: 700; margin-bottom: 2px;">Maior grupo acionável identificado</span>
+                        <span style="font-size: 0.8rem; color: var(--text-main); line-height: 1.2; display: block;">Evasão Silenciosa Potencial supera a intenção formal de cancelamento.</span>
+                    </div>
+                    <button class="action-btn demo-btn" onclick="nextCase()">
+                        <i data-lucide="presentation" style="width:18px;height:18px;"></i>
+                        Exibir Próximo Caso
+                    </button>
                     <div class="stat">
                         <span class="stat-value text-danger">52.345</span>
                         <span class="stat-label">Vidas em Risco</span>
                     </div>
-                    <div class="stat">
+                    <div class="stat" title="Cálculo: 52.345 alunos silenciosos × R$ 285,20 (ticket médio Vitru) × 12 meses">
                         <span class="stat-value text-warning">R$ 179M</span>
-                        <span class="stat-label">Receita Ameaçada</span>
+                        <span class="stat-label">Receita em Risco</span>
                     </div>
                 </div>
             </header>
@@ -50,7 +67,10 @@
             <div class="content-grid">
                 <!-- Cases List -->
                 <div class="cases-panel glass">
-                    <h3>Fila Priorizada (Recuperabilidade)</h3>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                        <h3>Fila Priorizada (Recuperabilidade)</h3>
+                        <span style="font-size: 0.8rem; color: var(--text-muted);">Modo Demonstração Ativo</span>
+                    </div>
                     <div id="cases-list" class="cases-list">
                         <!-- Loading State -->
                         <div class="loading">Carregando casos do modelo...</div>
@@ -61,7 +81,7 @@
                 <div class="case-detail-panel glass" id="case-detail">
                     <div class="empty-state">
                         <i data-lucide="mouse-pointer-click"></i>
-                        <p>Selecione um caso na fila para visualizar o diagnóstico e a intervenção recomendada da IA.</p>
+                        <p>Selecione um caso na fila ou clique em <strong>"Exibir Próximo Caso"</strong> para visualizar a necessidade identificada e a intervenção recomendada.</p>
                     </div>
                 </div>
             </div>

@@ -9,6 +9,7 @@
     --danger: #ef4444;
     --warning: #f59e0b;
     --success: #10b981;
+    --purple: #8b5cf6;
 }
 
 * {
@@ -104,7 +105,8 @@ nav a:hover, nav a.active {
 .top-bar {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
+    gap: 24px;
 }
 
 .header-titles h1 {
@@ -118,10 +120,48 @@ nav a:hover, nav a.active {
     font-size: 0.95rem;
 }
 
+.thesis-badge {
+    margin-top: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    color: #93c5fd;
+    line-height: 1.4;
+}
+
 .header-stats {
     display: flex;
-    padding: 16px 24px;
-    gap: 32px;
+    align-items: center;
+    padding: 14px 24px;
+    gap: 28px;
+}
+
+.insight-mini-card {
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    padding: 10px 14px;
+    border-radius: 8px;
+    max-width: 280px;
+}
+
+.demo-btn {
+    background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+    color: white;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    margin-top: 0;
+    white-space: nowrap;
+    padding: 10px 18px;
+    font-size: 0.9rem;
+}
+
+.demo-btn:hover {
+    background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+    transform: translateY(-1px);
 }
 
 .stat {
@@ -130,12 +170,12 @@ nav a:hover, nav a.active {
 }
 
 .stat-value {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 700;
 }
 
 .stat-label {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -147,7 +187,7 @@ nav a:hover, nav a.active {
 /* Grid */
 .content-grid {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: 1fr 1.25fr;
     gap: 24px;
     flex: 1;
     overflow: hidden;
@@ -161,7 +201,6 @@ nav a:hover, nav a.active {
 }
 
 .cases-panel h3 {
-    margin-bottom: 20px;
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--text-muted);
@@ -183,13 +222,17 @@ nav a:hover, nav a.active {
     transition: all 0.2s ease;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
 }
 
 .case-card:hover, .case-card.active {
     background: rgba(59, 130, 246, 0.08);
-    border-color: rgba(59, 130, 246, 0.3);
+    border-color: rgba(59, 130, 246, 0.4);
     transform: translateY(-2px);
+}
+
+.case-card.active {
+    box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.4);
 }
 
 .case-header {
@@ -200,7 +243,7 @@ nav a:hover, nav a.active {
 
 .student-name {
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
 }
 
 .badge {
@@ -213,6 +256,8 @@ nav a:hover, nav a.active {
 
 .badge.calouro { background: rgba(16, 185, 129, 0.15); color: #34d399; }
 .badge.veterano { background: rgba(59, 130, 246, 0.15); color: #60a5fa; }
+.badge-risk { background: rgba(239, 68, 68, 0.15); color: #f87171; }
+.badge-recovery { background: rgba(52, 211, 153, 0.15); color: #34d399; }
 
 .case-risk {
     display: flex;
@@ -226,8 +271,8 @@ nav a:hover, nav a.active {
 .case-signature {
     font-size: 0.85rem;
     color: var(--text-muted);
-    background: rgba(0, 0, 0, 0.2);
-    padding: 8px;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 8px 10px;
     border-radius: 6px;
 }
 
@@ -252,58 +297,93 @@ nav a:hover, nav a.active {
 .detail-content {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 20px;
     animation: fadeIn 0.3s ease-out;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
+    from { opacity: 0; transform: translateY(8px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
 .detail-header h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-bottom: 8px;
 }
 
 .detail-tags {
     display: flex;
     gap: 8px;
+    flex-wrap: wrap;
 }
 
 .diag-box {
-    background: rgba(239, 68, 68, 0.05);
+    background: rgba(239, 68, 68, 0.06);
     border: 1px solid rgba(239, 68, 68, 0.2);
     border-left: 4px solid var(--danger);
     padding: 16px;
     border-radius: 8px;
 }
 
-.diag-box h4 { margin-bottom: 8px; color: var(--danger); display: flex; align-items: center; gap: 8px;}
+.diag-box h4 { margin-bottom: 6px; color: var(--danger); display: flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+.diag-box p { font-size: 0.95rem; line-height: 1.5; }
 
 .action-box {
-    background: rgba(16, 185, 129, 0.05);
+    background: rgba(16, 185, 129, 0.06);
     border: 1px solid rgba(16, 185, 129, 0.2);
     border-left: 4px solid var(--success);
     padding: 16px;
     border-radius: 8px;
 }
 
-.action-box h4 { margin-bottom: 8px; color: var(--success); display: flex; align-items: center; gap: 8px;}
+.action-box h4 { margin-bottom: 8px; color: var(--success); display: flex; align-items: center; gap: 8px; font-size: 0.95rem;}
+
+.impact-section {
+    margin-top: 16px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 14px 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.impact-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #34d399;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.impact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.impact-list li {
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    color: var(--text-main);
+}
 
 .action-btn {
-    margin-top: 16px;
     background: var(--success);
     color: white;
     border: none;
-    padding: 12px 24px;
+    padding: 10px 20px;
     border-radius: 8px;
     font-weight: 600;
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 8px;
-    transition: background 0.2s;
+    transition: all 0.2s;
 }
 
 .action-btn:hover { background: #059669; }
@@ -316,8 +396,15 @@ nav a:hover, nav a.active {
 
 .metric-item {
     background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
     padding: 12px;
     border-radius: 8px;
+}
+
+.metric-gap {
+    grid-column: span 2;
+    background: rgba(245, 158, 11, 0.05);
+    border-color: rgba(245, 158, 11, 0.2);
 }
 
 .metric-label {
@@ -328,5 +415,6 @@ nav a:hover, nav a.active {
 
 .metric-val {
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
 }

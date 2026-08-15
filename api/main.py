@@ -34,58 +34,96 @@ class Case(BaseModel):
     assinatura_primaria: str
     diagnostico_ia: str
     intervencao_recomendada: str
+    impacto_esperado: List[str]
     detalhes: dict
 
 MOCK_CASES = [
     {
         "id": "1",
-        "nome": "João Silva",
+        "nome": "João Silva (Calouro)",
         "tp_aluno": "CALOURO",
         "curso": "EGRAD_PED",
-        "polo": "Polo São Paulo",
+        "polo": "Polo São Paulo - Centro",
         "cluster_proba": "( 80-90 )",
         "risco_percentual": 87.5,
         "assinatura_primaria": "Queda abrupta na % Entrega de Atividades",
-        "diagnostico_ia": "Falsa largada / Falta de organização e método EAD. Aluno não entregou as primeiras atividades e reduziu acesso ao AVA. Dor primária: Acadêmica.",
-        "intervencao_recomendada": "Disparar 'Trilha de Retomada Guiada' via WhatsApp (Guia de sobrevivência EAD de 5 min).",
+        "diagnostico_ia": "Falta de organização e adaptação ao método EAD. O aluno não entregou atividades iniciais e reduziu o acesso ao ambiente de aprendizagem.",
+        "intervencao_recomendada": "Apoiar a retomada da jornada acadêmica através de uma trilha de orientação rápida e acompanhamento inicial.",
+        "impacto_esperado": [
+            "Retorno ao AVA",
+            "Entrega da primeira atividade",
+            "Recuperação do vínculo acadêmico"
+        ],
         "detalhes": {
             "% Entrega de atividades": "0%",
             "Qtde de acesso AVA semana entrega": "1",
-            "NPS / Tickets": "Lacuna - Sem histórico"
+            "NPS / Experiência": "Lacuna identificada: o modelo atual não possui dados de atendimento, satisfação ou experiência do aluno."
         }
     },
     {
         "id": "2",
-        "nome": "Maria Souza",
+        "nome": "Maria Souza (Veterano)",
         "tp_aluno": "VETERANO",
         "curso": "EGRAD_ADM",
-        "polo": "Polo Rio de Janeiro",
+        "polo": "Polo Rio de Janeiro - Botafogo",
         "cluster_proba": "( 70-80 )",
         "risco_percentual": 74.2,
         "assinatura_primaria": "Reprovações severas no Mód. Anterior",
-        "diagnostico_ia": "Fadiga Acadêmica. Aluno veterano não conseguiu acompanhar a carga devido a reprovações passadas. Risco de abandono por dívida acadêmica.",
-        "intervencao_recomendada": "Sugerir 'Plano de Redução de Carga' (Remontagem de grade para salvar o semestre e manter vínculo).",
+        "diagnostico_ia": "Sobrecarga e fadiga acadêmica. A aluna acumulou disciplinas pendentes e apresenta risco de desistência por desmotivação.",
+        "intervencao_recomendada": "Propor readequação da grade curricular para aliviar a carga do semestre, focando na aprovação de disciplinas estruturantes.",
+        "impacto_esperado": [
+            "Aceitação do plano de readequação de grade",
+            "Aprovação nas disciplinas matriculadas",
+            "Prevenção do trancamento do curso"
+        ],
         "detalhes": {
             "% Aprovação em disciplinas": "25%",
             "% Andamento do curso": "Lento",
-            "NPS / Tickets": "Lacuna - Sem histórico"
+            "NPS / Experiência": "Lacuna identificada: o modelo atual não possui dados de atendimento, satisfação ou experiência do aluno."
         }
     },
     {
         "id": "3",
-        "nome": "Carlos Mendes",
-        "tp_aluno": "CALOURO",
-        "curso": "EGRAD_EDU",
-        "polo": "Polo Curitiba",
-        "cluster_proba": "( 50-60 )",
-        "risco_percentual": 58.0,
-        "assinatura_primaria": "Despenca Dias de Acesso ao AVA",
-        "diagnostico_ia": "Desengajamento Digital. Aluno mal consegue acessar o portal. Possível fricção técnica ou desconhecimento da interface.",
-        "intervencao_recomendada": "Transbordo para Monitoria de Polo. Ligar oferecendo onboarding guiado de 10 minutos.",
+        "nome": "Lucas Fernandes (Financeiro)",
+        "tp_aluno": "VETERANO",
+        "curso": "EGRAD_ENG",
+        "polo": "Polo Belo Horizonte",
+        "cluster_proba": "( 80-90 )",
+        "risco_percentual": 82.0,
+        "assinatura_primaria": "Atraso em 2 mensalidades consecutivas",
+        "diagnostico_ia": "Vulnerabilidade financeira pontual. O aluno mantém acessos e bom rendimento acadêmico, mas corre risco de cancelamento por bloqueio financeiro.",
+        "intervencao_recomendada": "Apresentar plano de parcelamento flexível e renegociação consultiva de débitos antes do fechamento do ciclo de rematrícula.",
+        "impacto_esperado": [
+            "Adesão ao acordo financeiro",
+            "Continuidade de acesso sem restrições",
+            "Confirmação de rematrícula no próximo ciclo"
+        ],
         "detalhes": {
-            "Qtde dias até primeiro acesso": "40",
-            "Qtde total de dias acesso AVA": "2",
-            "NPS / Tickets": "Lacuna - Sem histórico"
+            "Dias de atraso financeiro": "34 dias",
+            "Média notas AVA": "8.4 (Alto desempenho)",
+            "NPS / Experiência": "Lacuna identificada: o modelo atual não possui dados de atendimento, satisfação ou experiência do aluno."
+        }
+    },
+    {
+        "id": "4",
+        "nome": "Camila Santos (Acadêmico)",
+        "tp_aluno": "CALOURO",
+        "curso": "EGRAD_TI",
+        "polo": "Polo Curitiba",
+        "cluster_proba": "( 60-70 )",
+        "risco_percentual": 68.5,
+        "assinatura_primaria": "Desengajamento e Dificuldade Técnica",
+        "diagnostico_ia": "Fricção no ambiente digital e barreira de conteúdo. A aluna acessou o portal poucas vezes e não concluiu as videoaulas das disciplinas base.",
+        "intervencao_recomendada": "Conectar com monitor acadêmico para tutoria de nivelamento e verificação de suporte técnico na plataforma.",
+        "impacto_esperado": [
+            "Conclusão do módulo de introdução",
+            "Aumento na frequência semanal de login",
+            "Participação na primeira monitoria online"
+        ],
+        "detalhes": {
+            "Qtde dias até primeiro acesso": "28 dias",
+            "Visualização de videoaulas": "15%",
+            "NPS / Experiência": "Lacuna identificada: o modelo atual não possui dados de atendimento, satisfação ou experiência do aluno."
         }
     }
 ]
