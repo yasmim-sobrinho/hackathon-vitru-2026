@@ -71,22 +71,33 @@ Se insistirem:
 > Então a pergunta que a gente se fez foi: por que uma pessoa paga uma matrícula
 > e não aparece?
 >
-> E vocês mesmos nos deram as duas pistas.
+> E a resposta apareceu quando a gente parou de olhar o aluno médio e olhou por
+> curso.
 >
-> A **segunda página mais acessada** do site de vocês são as ementas dos cursos.
-> Então a vontade de entender o curso existe, e é gigante.
+> A taxa de quem nunca acessa **varia de onze por cento a trinta e oito por cento
+> dependendo do curso**. Isso é vinte vezes mais dispersão do que o acaso
+> explicaria. Metade dos cursos está fora de três desvios.
 >
-> E o **segundo processo mais comum** na central de serviços é troca de curso. Com
-> gente trocando até três vezes, para áreas que não têm nada a ver uma com a
-> outra.
+> E o padrão é o seguinte. Os cursos onde menos gente some são Geografia, História,
+> Serviço Social, Pedagogia — cursos em que a pessoa sabe exatamente qual
+> profissão está comprando.
 >
-> Junta as duas: a pessoa quer entender, não consegue entender, compra assim
-> mesmo — e depois tenta consertar.
+> Os piores são cursos cujo nome sugere uma profissão que o diploma não entrega
+> sozinho.
 >
-> Isso tem nome na literatura. Um estudo publicado em Labour Economics mediu:
-> quando o curso não bate com a preferência real da pessoa, a evasão sobe **nove
-> pontos percentuais**. E o motivo não é dificuldade acadêmica. É indecisão na
-> escolha.
+> **Não é o aluno que varia. É a clareza da venda que varia.**
+>
+> E vocês mesmos nos deram as outras duas pistas: a segunda página mais acessada
+> do site são as ementas — a vontade de entender existe. E o segundo processo mais
+> comum da central de serviços é troca de curso, com gente trocando até três
+> vezes, para áreas que não têm nada a ver.
+>
+> A pessoa quer entender, não consegue, compra assim mesmo — e tenta consertar
+> depois.
+>
+> Um estudo publicado em Labour Economics mediu exatamente esse mecanismo: quando
+> o curso não bate com a preferência real, a evasão sobe **nove pontos
+> percentuais**. E o motivo não é dificuldade acadêmica. É indecisão na escolha.
 >
 > **A decisão de evadir já estava tomada. Ela só foi executada depois.**
 
@@ -216,16 +227,24 @@ Se insistirem:
 
 ## 11 · Piloto
 
-> Sobre implementar: a rede tem mil cento e trinta e sete polos, com estruturas
-> muito diferentes. A gente sabe que não dá para padronizar isso.
+> Sobre implementar: a rede tem mais de mil polos, com estruturas muito
+> diferentes. A gente sabe que não dá para padronizar isso.
 >
 > Por isso o sistema **não depende do polo**. Ele roda no digital de ponta a
 > ponta. O polo entra como exceção, recebendo caso triado e com contexto.
 >
 > Onde o polo adere, o resultado é melhor. Onde não adere, continua funcionando.
 >
-> Para o piloto, a gente propõe os polos de maior volume que já tenham Salesforce
-> e SLA — porque isso dá poder de medição, não porque o resto fica de fora.
+> E o piloto já está dimensionado. A gente encontrou efeito de pares na base: a
+> chance de intenção de cancelamento sobe vinte e nove por cento a cada dez pontos
+> de colegas de turma com intenção, controlando pelo risco individual.
+>
+> Isso tem uma consequência prática: **randomizar por turma, não por aluno.** Se
+> randomizar por aluno dentro da mesma turma, tratamento contamina controle.
+>
+> Com isso, para detectar três pontos percentuais com poder de oitenta por cento,
+> a gente precisa de cerca de **vinte e dois mil alunos**. Menos que três pontos
+> não é detectável neste ciclo, e a gente prefere dizer isso agora.
 
 ---
 

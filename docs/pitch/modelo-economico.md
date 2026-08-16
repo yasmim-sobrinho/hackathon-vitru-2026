@@ -26,6 +26,19 @@ número oficial ou preço de tabela público. Cada premissa está rotulada.
 
 ---
 
+## 1.1 Guardrail: não multiplicamos score por dinheiro
+
+O `ACHADOS.md` mostrou, via calibração de Platt, que `Y_PROBA_EVADIU` é
+**ordenação, não probabilidade** (inclinação 0,438; erro de calibração cai de
+8,53 p.p. para 1,34 depois de recalibrar). Conta de valor esperado usando o score
+bruto sai **inflada em ~70%**.
+
+Todo o modelo abaixo é construído sobre **contagem de alunos do release**
+(captação, engajados, não engajados) e ticket médio. Nenhuma linha multiplica
+score de risco por receita. Se a banca perguntar, essa é a resposta.
+
+---
+
 ## 2. Correção importante sobre o custo de WhatsApp
 
 O especialista da Salesforce falou em **R$ 0,80 por disparo**. Isso não bate com

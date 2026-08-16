@@ -152,8 +152,47 @@ Calouro evade por **não começar**. Só um dos dois tem a ver com a venda.
 
 ### Sobre a planilha do hackathon
 
-**Descartada** conforme orientação. Sem congelamento temporal, campos que
-continuam contando, sem data de evento. Fonte primária = PPTX + release.
+Eu tinha descartado. **O `ACHADOS.md` mostrou que dá para usar — desde que seja
+comparação relativa, não taxa absoluta.** O viés do retrato afeta todos os cursos
+igualmente, então a razão entre cursos sobrevive. Foi assim que apareceu o achado
+mais forte do projeto (ver abaixo).
+
+Continua valendo: **não citar taxa absoluta de evasão** a partir dela, e **não
+multiplicar `Y_PROBA_EVADIU` por dinheiro** (score é ordenação, não
+probabilidade — infla valor esperado em ~70%).
+
+---
+
+## 3.1 O achado que fecha a ponte com a pré-venda 🟢
+
+Do `ACHADOS.md` e do `api/prompt_agente_prevenda.md`:
+
+> A taxa de matriculados que **nunca acessam o AVA varia de 11,3% a 37,9%
+> conforme o curso** — dispersão de 20,7 contra 1 esperado ao acaso, com 54% dos
+> cursos além de três desvios.
+>
+> Menores taxas: Geografia 11,3% · História 12,9% · Serviço Social 13,7% ·
+> Pedagogia 14,5%. São cursos em que a pessoa **sabe qual profissão está
+> comprando**. As maiores são cursos cujo nome sugere uma profissão que o diploma
+> não entrega sozinho.
+
+**Por que isso é decisivo:** é dose-resposta. Não é "existe correlação", é "o
+efeito cresce conforme a ambiguidade do curso". E o aluno não varia — o que varia
+é a clareza do que foi vendido. É a evidência interna mais forte de venda
+desalinhada que o projeto tem, e ela sobrevive ao viés do retrato porque é
+comparação entre cursos no mesmo instante.
+
+Isso **substitui** a inferência anamnésica como argumento principal do slide 04.
+A anamnese vira reforço, não a espinha.
+
+### Correções que o ACHADOS.md impõe ao que eu tinha escrito
+
+| O que eu disse | O que é correto |
+| :-- | :-- |
+| Ambientação: 3,4× menos saídas | Risco 38,5 vs 43,7 para quem faz — efeito real mas **modesto** |
+| 11.677 calouros nunca acessaram (20,9%) | Usar a taxonomia do ACHADOS: "nunca começou" 45.786 e "paga e sumiu" 24.441 |
+| Base tem 55.884 calouros | 54.829 depois de excluir os já evadidos — **bate com o slide 12 do PPTX** |
+| "O modelo não vê" | O modelo tem AUC 0,583 em calouros. Não usar isso no palco; serve só como resposta se perguntarem |
 
 ---
 
