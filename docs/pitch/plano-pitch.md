@@ -176,14 +176,26 @@ Do `ACHADOS.md` e do `api/prompt_agente_prevenda.md`:
 > comprando**. As maiores são cursos cujo nome sugere uma profissão que o diploma
 > não entrega sozinho.
 
-**Por que isso é decisivo:** é dose-resposta. Não é "existe correlação", é "o
-efeito cresce conforme a ambiguidade do curso". E o aluno não varia — o que varia
-é a clareza do que foi vendido. É a evidência interna mais forte de venda
-desalinhada que o projeto tem, e ela sobrevive ao viés do retrato porque é
-comparação entre cursos no mesmo instante.
+### ⚠️ Rebaixado — não usar como espinha do slide 04
 
-Isso **substitui** a inferência anamnésica como argumento principal do slide 04.
-A anamnese vira reforço, não a espinha.
+Eu tinha promovido esse achado a argumento principal. **Recuado**, por um
+confundidor que não consigo descartar com a planilha que temos.
+
+"Nunca acessou" é medido num retrato único, sem congelamento temporal. Se os
+cursos tiverem **calendários diferentes** — datas de início distintas, ou pontos
+diferentes do ciclo no dia do corte — então um curso que começou depois mostra
+mais "nunca acessou" só porque passou menos tempo. A dispersão de 20,7 seria, em
+parte, dispersão de calendário.
+
+O módulo de ingresso único (2026-53) atenua, mas não elimina: EGRAD e ESPRE têm
+calendários diferentes, e cursos dentro da mesma modalidade podem ter também.
+
+**O que tornaria o achado utilizável:** refazer controlando por dias decorridos
+desde o início de cada curso. Se a dispersão sobreviver, é ouro. Vale pedir isso
+à Yasmim se sobrar tempo — mas **não colocar no pitch antes disso**.
+
+Enquanto isso, a espinha do slide 04 volta a ser a anamnese (ementa + troca de
+curso + os 9 p.p. de Fouarge & Heß), que não depende da planilha.
 
 ### Correções que o ACHADOS.md impõe ao que eu tinha escrito
 
@@ -242,13 +254,33 @@ Consequência: **a fala não muda quando o número muda.** Ver seção 7.
 
 ## 6. Buracos
 
-| ID | Buraco | Slide | Como fecho |
+| ID | Buraco | Slide | Situação |
 | :-- | :-- | :-- | :-- |
-| **G1** | Oportunidade em p.p. e custo de operação | 08 | Modelo sobre o release + preço Agentforce — **é comigo** |
-| **G2** | Perfil do aluno de sucesso | 06, 10 | PPTX dá Promotor > 50% e os fatores de veterano — **é comigo**, com lacuna a confirmar |
-| **G3** | Critério de seleção dos polos | 11 | Proposta nossa; ideal validar |
-| **G4** | Personas e storytelling do pré | 09 | **É comigo**, ancorado em A + B |
-| **G5** | Calouros que cancelam no 1º trimestre | 02 | **Só a Vitru tem** |
+| **G1** | Oportunidade em p.p. e custo de operação | 08 | ✅ **Fechado** — `modelo-economico.md`. Ponto de equilíbrio entre 0,31% e 0,45%, invariante ao recorte |
+| **G2** | Perfil do aluno de sucesso | 06, 10 | ✅ **Fechado** — `perfil-sucesso-e-personas.md`, parte 1. Régua de 6 marcos ancorada no PPTX |
+| **G3** | Piloto e recorte de polos | 11 | ✅ **Fechado** — randomizar por turma, ~22 mil alunos, 3 p.p. detectáveis |
+| **G4** | Personas e storytelling do pré | 09 | ✅ **Fechado** — `perfil-sucesso-e-personas.md`, parte 2. Quatro personas |
+| **G5** | Calouros que cancelam no 1º trimestre | 02 | ⏳ **Só a Vitru tem** — plano B ativo (45,3% × 8,9%) |
+| **G6** | Split captação digital × via polo | 08 | ⏳ **Só a Vitru tem** — dimensiona o prêmio, não a viabilidade |
+
+## 6.1 Restrição de mensageria — incorporada ao desenho
+
+A diretoria disse: **Salesforce é replicável ao polo e não aumenta custo;
+mensageria não é.** Não vamos disputar o ponto — o desenho já cabe dentro dele.
+
+| Camada | Quem opera | Replicável ao polo? |
+| :-- | :-- | :-- |
+| Mensagem ao aluno | **Sede, canal centralizado** | não precisa ser |
+| Tarefa com contexto e SLA | Salesforce que o polo já acessa | **sim, já existe** |
+| Ação local | Polo | sim |
+
+⚠️ **Nunca dizer** "cada polo terá um agente" ou "o polo vai mandar mensagem".
+**Dizer:** *"a mensageria é centralizada; o polo recebe tarefa no Salesforce que
+ele já acessa."*
+
+Detalhe a favor: eles mesmos disseram que a página do polo integrada ao Data Lake
+e ao CRM **já existe e às vezes não é usada**. Nossa proposta dá motivo para ela
+ser usada — sem custo novo de licença.
 
 ---
 

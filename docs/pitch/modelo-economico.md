@@ -90,28 +90,94 @@ Comparações que fazem esse número falar:
 
 ---
 
+## 3.1 Restrição de arquitetura: mensageria não é replicável para o polo
+
+A diretoria foi clara na reunião:
+
+- **Salesforce para o polo é replicável e não aumenta custo.** Já existe hoje uma
+  página integrada ao Data Lake e ao CRM que o polo acessa — às vezes usa, às
+  vezes não.
+- **Mensageria não é replicável para o polo.**
+
+Ficou em aberto o que exatamente conta como mensageria. Não vamos disputar o
+ponto. Vamos desenhar dentro dele.
+
+**Como o desenho responde a isso:**
+
+| Camada | Quem opera | Replicável ao polo? |
+| :-- | :-- | :-- |
+| Mensagem ao aluno (WhatsApp, e-mail, push) | **Sede, canal único centralizado** | não precisa ser |
+| Tarefa com contexto e SLA | Salesforce, o polo acessa | **sim, e já existe** |
+| Ação local (matrícula, documento, atendimento) | Polo | sim |
+
+O polo **nunca envia mensagem** neste desenho. Ele recebe caso triado dentro do
+Salesforce que já tem. A mensageria fica na sede, num número só.
+
+Isso é exatamente o que a mentoria recomendou (canal centralizado, não depender
+de cada polo) e está registrado no alinhamento mestre. **A restrição não é
+obstáculo — é a arquitetura que a gente já tinha escolhido.**
+
+⚠️ **Cuidado de fala:** nunca dizer "cada polo vai ter um agente" nem "o polo vai
+mandar mensagem". Dizer: *"a mensageria é centralizada; o polo recebe tarefa no
+Salesforce que ele já acessa."*
+
+---
+
 ## 4. O ponto de equilíbrio
 
-Rodar em toda a safra de calouros UniCesumar:
+### A pergunta que a banca vai fazer
 
-```
-54.800 calouros × R$ 11 = R$ 603 mil por safra
+*"Essa conta é de qual jornada? Do aluno que entra pelo polo ou do 100% digital?"*
+
+É a pergunta certa, e a resposta é o que torna o número robusto.
+
+### Custo por jornada
+
+| Jornada | Agente 1 (Escolha) | Agente 2 (Ingresso) | Custo/aluno |
+| :-- | :-- | :-- | --: |
+| **100% digital** | sim, widget no site | sim, WhatsApp central | **R$ 11,00** |
+| **Via polo** | não — quem vende é o humano do polo | sim, WhatsApp central | **R$ 7,44** |
+
+### O ponto de equilíbrio não depende do tamanho da coorte
+
+Essa é a propriedade que fecha a discussão:
+
+```text
+ponto de equilíbrio (%) = custo por aluno ÷ contribuição por aluno retido
 ```
 
-Um aluno retido gera R$ 287,4 × 70,3% = **R$ 202 de contribuição bruta por mês**.
-Em 12 meses: **R$ 2.424**.
+Contribuição por aluno retido em 12 meses: R$ 287,4 × 70,3% × 12 = **R$ 2.424**.
 
-```
-R$ 603.000 ÷ R$ 2.424 = 249 alunos
-249 ÷ 54.800 = 0,45%
-```
+| Jornada | Conta | Ponto de equilíbrio |
+| :-- | :-- | --: |
+| 100% digital | R$ 11,00 ÷ R$ 2.424 | **0,45%** |
+| Via polo | R$ 7,44 ÷ R$ 2.424 | **0,31%** |
 
-> **O programa se paga retendo 0,45% da safra de calouros.**
+> **Custo e base escalam juntos.** Se a coorte for menor, o custo cai na mesma
+> proporção. O percentual de equilíbrio é uma propriedade *por aluno*, não da
+> coorte.
 >
-> Menos de 5 alunos em cada mil.
+> **Qualquer jornada que a banca escolher, o equilíbrio fica entre 0,31% e
+> 0,45%.**
 
-Este é o número mais forte do pitch inteiro. Não depende de nenhum dado que a
-Vitru precise liberar.
+O que muda com a coorte é só o **tamanho absoluto do prêmio**, não a viabilidade.
+
+### Escala absoluta, para dimensionar
+
+| Recorte | Alunos | Custo do programa |
+| :-- | --: | --: |
+| Safra inteira de calouros UniCesumar | 54.829 | R$ 603 mil |
+| Só o recorte 100% digital *(estimativa — ver seção 7)* | ~23 mil | R$ 253 mil |
+| Piloto dimensionado (ver `plano-pitch.md`) | ~22 mil | R$ 242 mil |
+
+**Formulação segura para o palco:**
+
+> "Cada aluno custa onze reais para acompanhar do começo ao fim. Um aluno que
+> fica devolve isso em **menos de dois dias** de mensalidade. O programa se paga
+> retendo menos de meio por cento da coorte — e isso vale para qualquer recorte,
+> porque custo e base andam juntos."
+
+*(R$ 202 de contribuição por mês = R$ 6,73 por dia. R$ 11 ÷ R$ 6,73 = 1,6 dias.)*
 
 ---
 

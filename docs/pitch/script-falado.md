@@ -71,33 +71,25 @@ Se insistirem:
 > Então a pergunta que a gente se fez foi: por que uma pessoa paga uma matrícula
 > e não aparece?
 >
-> E a resposta apareceu quando a gente parou de olhar o aluno médio e olhou por
-> curso.
+> E vocês mesmos nos deram as duas pistas.
 >
-> A taxa de quem nunca acessa **varia de onze por cento a trinta e oito por cento
-> dependendo do curso**. Isso é vinte vezes mais dispersão do que o acaso
-> explicaria. Metade dos cursos está fora de três desvios.
+> A **segunda página mais acessada** do site de vocês são as ementas dos cursos.
+> Então a vontade de entender o curso existe, e é gigante.
 >
-> E o padrão é o seguinte. Os cursos onde menos gente some são Geografia, História,
-> Serviço Social, Pedagogia — cursos em que a pessoa sabe exatamente qual
-> profissão está comprando.
+> E o **segundo processo mais comum** na central de serviços compartilhados é
+> troca de curso. Com gente trocando até três vezes, para áreas que não têm nada a
+> ver uma com a outra.
 >
-> Os piores são cursos cujo nome sugere uma profissão que o diploma não entrega
-> sozinho.
+> Junta as duas: a pessoa quer entender, não consegue entender, compra assim
+> mesmo — e depois tenta consertar por dentro.
 >
-> **Não é o aluno que varia. É a clareza da venda que varia.**
+> Trocar de curso três vezes não é indecisão do aluno. É a venda empurrando a
+> decisão para depois da matrícula.
 >
-> E vocês mesmos nos deram as outras duas pistas: a segunda página mais acessada
-> do site são as ementas — a vontade de entender existe. E o segundo processo mais
-> comum da central de serviços é troca de curso, com gente trocando até três
-> vezes, para áreas que não têm nada a ver.
->
-> A pessoa quer entender, não consegue, compra assim mesmo — e tenta consertar
-> depois.
->
-> Um estudo publicado em Labour Economics mediu exatamente esse mecanismo: quando
-> o curso não bate com a preferência real, a evasão sobe **nove pontos
-> percentuais**. E o motivo não é dificuldade acadêmica. É indecisão na escolha.
+> E isso tem tamanho medido na literatura. Um estudo publicado em Labour
+> Economics acompanhou alunos ao longo do tempo e mediu: quando o curso não bate
+> com a preferência real da pessoa, a evasão sobe **nove pontos percentuais**. O
+> motivo não é dificuldade acadêmica. É indecisão na escolha.
 >
 > **A decisão de evadir já estava tomada. Ela só foi executada depois.**
 
@@ -231,7 +223,12 @@ Se insistirem:
 > diferentes. A gente sabe que não dá para padronizar isso.
 >
 > Por isso o sistema **não depende do polo**. Ele roda no digital de ponta a
-> ponta. O polo entra como exceção, recebendo caso triado e com contexto.
+> ponta.
+>
+> E aqui tem um cuidado de desenho que vale explicitar: **nenhum polo manda
+> mensagem.** A mensageria é centralizada, num canal só. O que chega no polo é
+> tarefa dentro do Salesforce que ele já acessa hoje — que, pelo que vocês
+> contaram, às vezes é usada e às vezes não. A gente dá motivo para ela ser usada.
 >
 > Onde o polo adere, o resultado é melhor. Onde não adere, continua funcionando.
 >
@@ -296,3 +293,41 @@ Se insistirem:
 > No modelo de vocês, para o calouro, presença pesa quase cinquenta por cento e
 > dinheiro pesa dezessete. Para o veterano a ordem se inverte. Foi por isso que a
 > gente recortou o calouro.
+
+**"Mensageria não é replicável para os polos."** ⚠️ *(pergunta esperada — eles já
+disseram isso na mentoria)*
+> Concordamos, e o desenho já assume isso. **Nenhum polo manda mensagem.** A
+> mensageria é centralizada, num canal só, operado pela sede. O que chega no polo
+> é tarefa dentro do Salesforce que ele já acessa hoje — aquela página integrada
+> ao Data Lake e ao CRM. Isso é replicável e não adiciona custo de licença.
+>
+> Aliás, vocês mencionaram que essa página às vezes é usada e às vezes não. A
+> nossa proposta dá motivo para ela ser usada, porque o que chega lá passa a ser
+> caso triado com contexto, e não fila.
+
+**"Essa conta de zero vírgula quarenta e cinco por cento é de qual jornada? Do
+polo ou do cem por cento digital?"** ⚠️ *(a pergunta mais afiada que podem fazer)*
+> Das duas, e é por isso que a gente gosta desse número.
+>
+> O ponto de equilíbrio é custo por aluno dividido por contribuição por aluno. Os
+> dois lados escalam junto com a coorte. Se a base for menor, o custo cai na mesma
+> proporção.
+>
+> Na jornada cem por cento digital, onde rodam os dois agentes, dá onze reais por
+> aluno e zero vírgula quarenta e cinco por cento. Na jornada via polo, onde quem
+> vende é o humano e a gente só faz o ingresso, dá sete e quarenta e quatro e zero
+> vírgula trinta e um por cento.
+>
+> **Qualquer recorte que vocês escolherem, o equilíbrio fica abaixo de meio por
+> cento.** O que muda com o recorte é o tamanho do prêmio, não a viabilidade.
+
+**"Vocês vão obrigar o polo a mudar o processo?"**
+> Não. As diretrizes são recomendação. O digital roda de ponta a ponta sem o polo.
+> Onde o polo adere, o resultado é melhor; onde não adere, continua funcionando.
+> A gente sabe que não dá para padronizar mil polos, e o desenho não pede isso.
+
+**"Vocês usaram a base que a gente entregou?"**
+> Usamos para entender o terreno, mas a fundamentação do pitch está no material
+> de vocês: o deck do time de Ciência de Dados e o release do trimestre. A base
+> anonimizada é um retrato único, sem congelamento temporal — dá para ordenar,
+> não dá para afirmar taxa. Por isso nenhum número do palco vem dela.
