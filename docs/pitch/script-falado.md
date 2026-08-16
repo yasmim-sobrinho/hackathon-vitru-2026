@@ -6,26 +6,9 @@ Só as falas. Um bloco por slide. Sem notas de design.
 
 ---
 
-## A frase que responde "não entendi a solução"
-
-Decorar. É a resposta para qualquer pergunta que comece com "mas afinal o que
-vocês fizeram":
-
-> **"Marco Zero é um sistema de ingresso: ele leva a pessoa da dúvida sobre qual
-> curso fazer até a primeira atividade entregue."**
-
-Se insistirem:
-
-> "A IA aqui é infraestrutura, como energia elétrica. Não é o produto. O produto
-> é o processo — uma régua de ingresso que a sede opera em escala e que o polo
-> segue quando fizer sentido. Nada aqui obriga polo nenhum a mudar o que faz."
-
----
-
 ## 01 · Capa
 
-> A gente veio defender uma frase desconfortável: **a evasão começa antes mesmo
-> da matrícula.**
+> A gente veio defender uma frase desconfortável: **a evasão começa antes mesmo da matrícula.**
 >
 > E não é opinião nossa. Está nos dados de vocês.
 
@@ -33,16 +16,14 @@ Se insistirem:
 
 ## 02 · Problema
 
-> Quando a gente abriu o modelo de risco da própria Vitru e separou calouro de
-> veterano, apareceu isso:
+> Quando a gente abriu o modelo de risco da própria Vitru e separou calouro de veterano, apareceu isso:
 >
 > Quarenta e cinco por cento dos calouros estão em faixa de risco de cinquenta
 > por cento ou mais. Entre os veteranos, são nove por cento.
 >
 > **Cinco vezes mais risco na entrada.**
 >
-> Ou seja: o problema não está espalhado pela jornada do aluno. Ele está
-> concentrado no começo.
+> Ou seja: o problema não está espalhado pela jornada do aluno. Ele está > concentrado no começo.
 
 ---
 
