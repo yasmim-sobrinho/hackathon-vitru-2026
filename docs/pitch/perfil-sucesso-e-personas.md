@@ -17,8 +17,7 @@ O PPTX classifica o veterano por **% de conclusão do curso**:
 | 25% a 50% | Neutro |
 | > 50% | **Promotor** |
 
-Usar essa régua no pitch. É vocabulário da casa, e evita a gente inventar
-definição própria de "aluno bom".
+Usar essa régua no pitch. É vocabulário da casa, e evita a gente inventar definição própria de "aluno bom".
 
 ## O que o aluno de sucesso faz — traduzido em comportamento
 
@@ -33,15 +32,12 @@ Das variáveis do modelo de veteranos, na ordem de importância deles:
 
 E dos gráficos de distribuição:
 
-- **Aulas assistidas:** quem evadiu concentra-se em **0%**. Quem fica tem alguma
-  participação. Assistir não é o que segura — mas não assistir nada é sinal.
-- **Engajamento financeiro:** a distribuição é bimodal, 0% ou 100%. Quase não
-  existe meio-termo.
+- **Aulas assistidas:** quem evadiu concentra-se em **0%**. Quem fica tem alguma  participação. Assistir não é o que segura — mas não assistir nada é sinal.
+- **Engajamento financeiro:** a distribuição é bimodal, 0% ou 100%. Quase não  existe meio-termo.
 
 ## O caminho do calouro até virar Promotor
 
-Aqui é onde o perfil de sucesso vira **régua de agente**. Tudo abaixo tem âncora
-no material deles:
+Aqui é onde o perfil de sucesso vira **régua de agente**. Tudo abaixo tem âncora no material deles:
 
 | Marco | Âncora no dado da Vitru | O que o agente faz |
 | :-- | :-- | :-- |
