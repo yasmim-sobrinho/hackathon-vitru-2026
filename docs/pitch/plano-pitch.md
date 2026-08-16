@@ -22,21 +22,72 @@ medido e reconstrói-se a história.
 O que separa isso de correlação espúria é ter **mecanismo** e **evidência
 convergente de fontes independentes**. Temos as duas coisas.
 
+## 1.1 🔴 Dois números rebaixados em 16/08 — ler antes de subir no palco
+
+### O "+9 pontos percentuais" do Fouarge & Heß não está verificado
+
+Rastreamento da cadeia:
+
+| Onde | O que diz |
+| :-- | :-- |
+| `alinhamento-mestre` \[E3\] | Cita o estudo e diz: "encontrou **maior evasão**" — **sem magnitude** — e avisa que é "evidência de mecanismo, **não estimativa transportável**" |
+| `context-index.md` | "Esses estudos justificam **mecanismos**, não estimativas de impacto" |
+| `plano-pitch.md` (evidência C) | Passou a afirmar "**+9 pontos percentuais**", rotulado 🟢 Confirmado |
+| Deck slide 04, script, handoff | Herdaram o número |
+
+Ou seja: o número foi **promovido de "não temos magnitude" para "magnitude
+confirmada"** dentro do nosso próprio material, contra o aviso explícito da fonte
+de verdade.
+
+O que dá para confirmar hoje, da página de publicações do próprio Pascal Heß: o
+estudo usa o painel alemão NEPS e mostra que alunos que escolhem um curso que não
+corresponde à preferência ocupacional declarada **antes** de entrar na
+universidade têm **mais probabilidade de evadir** do que quem escolhe curso
+compatível. Direção confirmada, mecanismo confirmado, base de dados confirmada.
+**Magnitude não confirmada** — o artigo está atrás de paywall e o resumo público
+não traz percentual.
+
+**Decisão:** não falar os 9 p.p. até alguém abrir o artigo e conferir de qual
+especificação o número sairia. A fala segura está no `script-falado.md`, slide 04.
+O argumento **não depende** da magnitude: ementa mais troca de curso já
+estabelecem que a demanda existe e não é atendida.
+
+*Conteúdo da fonte externa foi parafraseado para conformidade de licenciamento.*
+
+### O 64,1% do Semesp conflitava com a nossa própria referência
+
+O handoff trazia "Semesp, 15º Mapa (2025): 64,1% de evasão no EAD privado". Mas a
+`pre-pesquisa-hackathon-vitru-2026.docx`, referência \[29\], usa o **16º Mapa
+(2026)** e registra **24,8% de evasão total, 26,6% na rede privada e 21,4% na
+pública em 2024**.
+
+São edições diferentes e provavelmente métricas diferentes — taxa anual versus
+acumulada no curso. Não deu tempo de reconciliar, e ter dois números do Semesp
+brigando no nosso material é exposição pura.
+
+**Decisão:** a linha saiu do slide 02. Ela não somava nada — o número que sustenta
+o slide são os 19,1 mil, que é da própria Vitru. Se alguém quiser referência de
+setor no Q&A, usar a da nossa pré-pesquisa: **26,6% na rede privada em 2024,
+Semesp, 16º Mapa**.
+
+---
+
 ### As quatro evidências
 
 | | Evidência | Fonte | O que prova |
 | :-- | :-- | :-- | :-- |
 | **A** | A 2ª página mais acessada do site são as **ementas dos cursos** | 🟢 diretoria Vitru | A demanda por entender o curso é enorme e explícita |
 | **B** | O 2º processo mais comum no CSC é **alteração de matrícula/curso** — até 3 trocas, para áreas não correlatas | 🟢 diretoria Vitru | Essa demanda **não é atendida na venda**. A pessoa compra e descobre depois |
-| **C** | Descompasso entre preferência ocupacional e curso escolhido → **+9 pontos percentuais** de evasão | 🟢 Fouarge & Heß, *Labour Economics* 2023 | O mecanismo tem magnitude medida, com painel longitudinal e controles |
+| **C** | Descompasso entre preferência ocupacional e curso escolhido → **mais evasão** (direção confirmada, magnitude **não** confirmada — ver 1.1) | 🟡 Fouarge & Heß, *Labour Economics* 2023, painel NEPS | O mecanismo tem identificação causal e painel longitudinal. **Não citar percentual.** |
 | **D** | Os 5 principais fatores de risco do calouro são todos de **presença**; o 4º é literalmente "dias até o primeiro acesso" | 🟢 PPTX do time de dados Vitru | O sintoma é ausência, não reprovação nem inadimplência |
 
 ### A inferência
 
 > A + B mostram, em dois pontos independentes do funil, que existe uma demanda
 > massiva por entender o curso **que não é atendida no momento da compra**.
-> C dá a magnitude do mecanismo: escolher errado custa 9 pontos percentuais de
-> evasão. D mostra que, na UniCesumar, o sintoma se manifesta como ausência.
+> C dá identificação causal ao mecanismo: escolher curso que não corresponde à
+> preferência aumenta a evasão. D mostra que, na UniCesumar, o sintoma se
+> manifesta como ausência.
 >
 > Logo: **parte da ausência medida em D é gente que comprou sem entender.**
 
@@ -203,7 +254,7 @@ desde o início de cada curso. Se a dispersão sobreviver, é ouro. Vale pedir i
 à Yasmim se sobrar tempo — mas **não colocar no pitch antes disso**.
 
 Enquanto isso, a espinha do slide 04 volta a ser a anamnese (ementa + troca de
-curso + os 9 p.p. de Fouarge & Heß), que não depende da planilha.
+curso + o mecanismo de Fouarge & Heß, sem percentual), que não depende da planilha.
 
 ### Correções que o ACHADOS.md impõe ao que eu tinha escrito
 

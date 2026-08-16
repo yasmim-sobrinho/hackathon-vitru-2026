@@ -121,10 +121,25 @@ Literatura:
 - Bailey et al. (2021), Research in Higher Education: replicação, efeito NÃO é
   uniforme — depende de recorte. Citamos por honestidade, e justifica o recorte
 - Castleman & Page (2015), J. Economic Behavior & Organization 115: nudges
-- Fouarge & Heß (2023), Labour Economics 83: descompasso preferência-curso causa
-  +9 PONTOS PERCENTUAIS de evasão. Mecanismo é indecisão, não obstáculo
-- Simpson (Open University): contato proativo; reter custa menos que recrutar
-- Semesp, 15º Mapa (2025): 64,1% de evasão no EAD privado
+- Fouarge & Heß (2023), Labour Economics 83, painel alemão NEPS: quem escolhe curso
+  que não corresponde à preferência ocupacional declarada ANTES de entrar evade
+  mais. DIREÇÃO CONFIRMADA. A magnitude de "+9 p.p." que circulava no material
+  NÃO ESTÁ VERIFICADA e foi rebaixada em 16/08 — não falar percentual. Ver seção
+  1.1 do plano-pitch.md
+- FÓRMULA DE SIMPSON (está na secão 8.5 da pre-pesquisa-hackathon-vitru-2026.docx,
+  e é o melhor ativo de validação que temos):
+    sucesso = escolha adequada de curso
+            + identificação precoce de quem tende a evadir
+            + (contato precoce e contínuo x apoio motivacional proativo)
+  A leitura que importa: identificar entra como PARCELA SOMADA, logo é limitada.
+  O que MULTIPLICA é contato contínuo x apoio proativo. Se um dos dois é zero, o
+  produto é zero. Identificar sozinho não salva ninguém. É a nossa tese inteira
+  como equação, escrita por quem dirigia a retenção da Open University.
+  Simpson também diz que desistir de casos caros de recuperar é aceitável — o que
+  legitima triagem por capacidade.
+- Semesp: usar 26,6% de evasão na rede privada em 2024 (16º Mapa, 2026), que é a
+  referência [29] da nossa pré-pesquisa. O "64,1% no EAD privado" que circulava
+  vinha de outra edição e não foi reconciliado — saiu do deck.
 
 ## Regras que NÃO podem ser quebradas
 

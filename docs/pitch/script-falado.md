@@ -48,9 +48,6 @@ Se insistirem:
 > não desistiram no meio do curso. Elas não registraram nem uma coisa nem outra.
 > **Elas não começaram.**
 >
-> ✂ *(cortar se estiver longo:)* Pra dimensionar o setor: no EAD privado
-> brasileiro, a evasão medida é de sessenta e quatro por cento.
->
 > E quando a gente separa calouro de veterano, **o calouro carrega cinco vezes
 > mais risco.** O problema não está espalhado pela jornada. Está na entrada.
 
@@ -103,6 +100,15 @@ abre é contagem do release. O modelo entra no slide 03, para explicar *por que*
 > preferência real da pessoa, a evasão sobe **nove pontos percentuais**.
 >
 > **A decisão de evadir já estava tomada. Ela só foi executada depois.**
+
+> 🔴 **NÃO FALAR OS NOVE PONTOS PERCENTUAIS ATÉ VALIDAR.** Ver seção 1.1 do
+> `plano-pitch.md`. O estudo existe e a direção está confirmada, mas a magnitude
+> de 9 p.p. não foi verificada em nenhuma fonte acessível, e o alinhamento mestre
+> — nossa fonte de verdade — diz explicitamente que esse estudo serve como
+> mecanismo e **não** como estimativa. Fala segura enquanto não validar:
+>
+> > "E isso está medido na literatura: quando o curso não bate com a preferência
+> > real da pessoa, a evasão é maior. É painel longitudinal alemão, com controles."
 
 ---
 
@@ -204,8 +210,8 @@ abre é contagem do release. O modelo entra no slide 03, para explicar *por que*
 > de utilidade no WhatsApp no Brasil: seis centavos de real — não oitenta, porque
 > oitenta é preço de mensagem de marketing, e a nossa é serviço.
 >
-> A jornada inteira, do primeiro "oi" até a primeira atividade: **onze reais por
-> aluno.**
+> A jornada inteira, do primeiro "oi" até a primeira atividade: **onze reais de
+> investimento por aluno.**
 >
 > Do outro lado da conta: mensalidade de duzentos e oitenta e sete e quarenta,
 > vezes a margem bruta ajustada de **setenta vírgula três por cento**. Os dois
@@ -285,12 +291,12 @@ mais**. E nunca chamar os R$ 202 de lucro.
 
 ## Cortes para fechar em 5 minutos
 
-1. Slide 02 — cortar a linha do Semesp (os 64,1%)
-2. Slide 07 — cortar o parágrafo do escalonamento para o polo
-3. Slide 08 — cortar Castleman & Page, ficar com Georgia State e Fouarge & Heß
+1. Slide 07 — cortar o parágrafo do escalonamento para o polo
+2. Slide 08 — cortar Castleman & Page, ficar com Georgia State e Fouarge & Heß
+3. Slide 09 — cortar a explicação de por que se usa margem bruta e deixar para o Q&A
 
-Se precisar de um quarto corte: no slide 09, tirar a explicação de por que se usa
-margem bruta e deixar essa resposta para o Q&A.
+Se precisar de um quarto corte: no slide 04, ficar só com ementa e troca de curso,
+sem a referência à literatura.
 
 ---
 
