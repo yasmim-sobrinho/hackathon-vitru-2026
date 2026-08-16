@@ -93,7 +93,7 @@ subagent course_guidance:
               Seu papel é orientar o candidato sobre o curso EAD da UniCesumar com clareza e acolhimento.
               Siga estas etapas:
               1. Explique brevemente como funciona o EAD da UniCesumar: aulas gravadas, polo de apoio presencial, provas, suporte ao aluno.
-              2. Responda as dúvidas do candidato relacionadas ao curso de interesse (@variables.course_interest).
+              2. Se o candidato fizer perguntas técnicas sobre o curso, reconhecimento, ou regras, OBRIGATORIAMENTE use a ação {!@actions.AnswerQuestionsWithKnowledge} para buscar a resposta oficial na base de conhecimento. Nunca invente informações acadêmicas.
               3. Registre as preocupações mencionadas em @variables.main_concerns.
               4. Ao perceber que o candidato está mais confiante, atualize @variables.course_confidence para "medium" ou "high".
               5. Se o candidato demonstrar intenção de se matricular ou disser que está decidido, chame imediatamente {!@actions.go_to_enrollment}.
@@ -103,6 +103,61 @@ subagent course_guidance:
               - NUNCA conduza testes vocacionais longos ou faça mais de 2 perguntas adicionais.
         actions:
             go_to_enrollment: @utils.transition to @subagent.enrollment_intent
+            AnswerQuestionsWithKnowledge: @actions.AnswerQuestionsWithKnowledge
+                with query = ...
+                with citationsUrl = ...
+                with ragFeatureConfigId = ...
+                with citationsEnabled = ...
+    actions:
+        AnswerQuestionsWithKnowledge:
+            description: |
+                Answers questions about company policies and procedures, troubleshooting steps, or product information. For example: “What is your return policy?” “How do I fix an issue?” or “What features does a product have?”
+            label: "Answer Questions with Knowledge"
+            require_user_confirmation: False
+            include_in_progress_indicator: True
+            progress_indicator_message: "Buscando informações oficiais..."
+            source: "EmployeeCopilot__AnswerQuestionsWithKnowledge"
+            target: "standardInvocableAction://streamKnowledgeSearch"
+            inputs:
+                "query": string
+                    description: |
+                      Required. A string created by generative AI to be used in the knowledge article search.
+                    label: "Query"
+                    is_required: True
+                    is_user_input: True
+                "citationsUrl": string=@knowledge.citations_url
+                    description: |
+                      The URL to use for citations for custom Agents.
+                    label: "Citations Url"
+                    is_required: False
+                    is_user_input: True
+                "ragFeatureConfigId": string=@knowledge.rag_feature_config_id
+                    description: |
+                      The RAG Feature ID to use for grounding this copilot action invocation.
+                    label: "RAG Feature Configuration Id"
+                    is_required: False
+                    is_user_input: True
+                "citationsEnabled": boolean=@knowledge.citations_enabled
+                    description: |
+                      Whether or not citations are enabled.
+                    label: "Citations Enabled"
+                    is_required: False
+                    is_user_input: True
+            outputs:
+                "knowledgeSummary": object
+                    description: |
+                      A string formatted as rich text that includes a summary of the information retrieved from the knowledge articles and citations to those articles.
+                    label: "Knowledge Summary"
+                    is_displayable: True
+                    filter_from_agent: False
+                    complex_data_type_name: "lightning__richTextType"
+                "citationSources": object
+                    description: |
+                      Source links for the chunks in the hydrated prompt that's used by the planner service.
+                    label: "Citation Sources"
+                    is_displayable: False
+                    filter_from_agent: False
+                    complex_data_type_name: "@apexClassType/AiCopilot__GenAiCitationInput"
 
 subagent enrollment_intent:
     label: "Intenção de Matrícula"
