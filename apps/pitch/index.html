@@ -201,6 +201,15 @@ h3{margin:0 0 10px;font-size:18px;font-weight:600;letter-spacing:-.01em}
 .lay small{display:block;margin-top:10px;font-size:12px;color:var(--dim);font-weight:300}
 @media(min-width:901px){.layers{grid-template-columns:1fr 1fr}
   .lay.whole{grid-column:1/-1}}
+
+.hyp{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.hy{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:24px 22px;border-top:3px solid var(--bright);position:relative}
+.hy b{display:block;font-size:12px;font-weight:700;letter-spacing:.18em;
+  color:var(--bright);margin-bottom:12px}
+.hy h4{margin:0 0 10px;font-size:19px;font-weight:600;line-height:1.25}
+.hy p{margin:0;font-size:14px;font-weight:300;line-height:1.55;color:#dceaf5}
+@media(max-width:900px){.hyp{grid-template-columns:1fr}}
 @media(max-width:1040px){
   .sim{grid-template-columns:1fr}
   .panels{grid-template-columns:1fr}
@@ -232,24 +241,23 @@ h3{margin:0 0 10px;font-size:18px;font-weight:600;letter-spacing:-.01em}
   <p class="sub"><b style="font-weight:600;color:#fff">Marco Zero</b> — sistema de ingresso do aluno.</p>
   <div class="row">
     <button class="btn" onclick="go(1)">Ver a tese</button>
-    <button class="btn ghost" onclick="go(5)">Ir para a demo</button>
+    <button class="btn ghost" onclick="go(6)">Ir para a demo</button>
   </div>
 </div></section>
 
 <!-- 02 PROBLEMA -->
 <section class="slide" data-n="02"><div class="wrap">
   <span class="label">Problema</span>
-  <h2><span class="ac">18%</span> evadem no mesmo trimestre em que entram.</h2>
+  <h2>A evasão não está espalhada pelo curso. Ela mora na entrada.</h2>
   <div class="grid g3">
-    <div class="card metric"><strong style="color:var(--alert)">18%</strong><span>dos alunos evadem <b>dentro do próprio módulo</b> de ingresso</span></div>
-    <div class="card metric"><strong>+80 mil</strong><span>pessoas por ano, somando os quatro trimestres</span></div>
-    <div class="card metric"><strong class="ac">19,1 mil</strong><span>captados do trimestre que não engajaram — <b>17,9%</b></span></div>
+    <div class="card metric"><strong style="color:var(--alert)">18%<span style="font-size:.4em;color:var(--muted);font-weight:300"> × 7%</span></strong><span>dos <b>calouros</b> evadem no próprio módulo de ingresso, contra <b>7% dos veteranos</b></span></div>
+    <div class="card metric"><strong>+80 mil</strong><span>alunos perdidos logo no <b>primeiro ano</b></span></div>
+    <div class="card metric"><strong class="ac">R$ 783</strong><span>de aquisição investidos em <b>cada captação</b> — perdidos junto quando o aluno não começa</span></div>
   </div>
-  <p class="note">Dois recortes independentes, o mesmo tamanho: um interno de vocês, outro do release.
-  <b>Não é evasão ao longo do curso. É gente que não chega a começar.</b><br>
-  E o calouro carrega <b>cinco vezes mais risco</b> que o veterano — o problema está concentrado na entrada.</p>
-</div>
-<div class="src">18% e +80 mil/ano: dado interno Vitru sobre alunos que evadem, um ano de safras (4 módulos). 19,1 mil de 106,9 mil captações e taxa de engajamento de 82,1%: release do 2º trimestre de 2026 — engajamento definido como contato acadêmico e/ou financeiro, consolidado, não segmentado por marca. Recorte calouro × veterano: deck "Motivos de Evasão" do time de Ciência de Dados da Vitru.</div></section>
+  <p class="note">O calouro evade <b>duas vezes e meia mais</b> que o veterano. Não é desistência ao longo da graduação —
+  <b>é gente que não chega a começar.</b><br>
+  E quando não começa, perde-se a mensalidade futura <b>e</b> o investimento de aquisição já gasto.</p>
+</div></section>
 
 <!-- 03 O SINTOMA -->
 <section class="slide" data-n="03"><div class="wrap">
@@ -273,58 +281,74 @@ h3{margin:0 0 10px;font-size:18px;font-weight:600;letter-spacing:-.01em}
         <li>Aprovação em disciplinas</li>
       </ol></div>
   </div>
-  <p class="note">No modelo do calouro, sinais de acesso somam <b>49,5%</b>; financeiros, <b>17,6%</b>.<br>
-  Isso não explica por que ele sai. Localiza a ruptura: no veterano, no progresso; no calouro, <b>antes da ativação</b>.</p>
-</div>
-<div class="src">Vitru — importância de variáveis preditivas UniCesumar, calouros e veteranos. Pesos somados sobre total de 14.753; importância preditiva não implica causalidade.</div></section>
+  <p class="note">Quando esses sinais aparecem, <b>o que os produziu já aconteceu semanas antes.</b></p>
+</div></section>
 
 <!-- 04 A HIPÓTESE -->
 <section class="slide" data-n="04"><div class="wrap">
   <span class="label">A hipótese</span>
-  <h2>O que pode estar antes dessa ausência?</h2>
+  <h2>Três hipóteses. Nenhuma delas é acadêmica.</h2>
+  <div class="hyp">
+    <div class="hy"><b>01</b><h4>Desalinhamento de expectativa</h4>
+      <p>Compra o curso e descobre tarde demais a rotina e a autonomia que o EAD exige.</p></div>
+    <div class="hy"><b>02</b><h4>Compra impulsiva no funil mecânico</h4>
+      <p>A decisão acontece em pico de motivação. O funil só coleta contato e encaminha ao pagamento — nada leva a pessoa a examinar a própria escolha.</p></div>
+    <div class="hy"><b>03</b><h4>A síndrome de começar sozinho</h4>
+      <p>Decide sozinho, se matricula sozinho, começa sozinho. Quando trava, silencia — e o silêncio é lido como desistência.</p></div>
+  </div>
+  <p class="note">Duas nascem <b>antes</b> da primeira aula, uma logo depois. Todos os sintomas só aparecem com o trimestre em curso.<br>
+  A dor está partida entre <b>Captação e Retenção</b> — e é nessa costura que o aluno fica sem dono.</p>
+</div></section>
+
+<!-- 05 FUNDAMENTAÇÃO -->
+<section class="slide" data-n="05"><div class="wrap">
+  <span class="label">Fundamentação</span>
+  <h2>O que sustenta essas hipóteses.</h2>
   <div class="grid g3">
     <div class="card metric"><strong class="ac">2ª</strong><span><b>Busca por clareza:</b> as ementas ocupam o 2º lugar entre as páginas mais acessadas do site</span></div>
     <div class="card metric"><strong class="ac">2º</strong><span><b>Correção depois da compra:</b> troca de curso no CSC — até 3 por aluno</span></div>
     <div class="card metric"><strong style="color:var(--alert)">+9,3 p.p.</strong><span><b>associados</b> à interrupção do curso inicial quando escolha e preferência não coincidem</span></div>
   </div>
-  <p class="note">Os sinais do slide anterior são <b>sintomas</b>. Estes três apontam para o que pode estar a montante:
-  <b>uma escolha pouco esclarecida e uma expectativa corrigida só depois da matrícula.</b><br>
-  Se a ruptura atravessa o RA, <b>a resposta também precisa atravessar.</b></p>
-</div>
-<div class="src">Ementas e CSC: diretoria Vitru. Fouarge &amp; Heß (2023), Labour Economics 83: painel alemão, n=2.476; associação robusta, sem identificação causal.</div></section>
+  <p class="note">A vontade de entender existe e é grande — mas não se completa antes da compra,
+  e a correção acaba acontecendo depois dela.<br>
+  Se a ruptura atravessa a matrícula, <b>a resposta também precisa atravessar.</b></p>
+</div></section>
 
 <!-- 05 AS TRÊS CAMADAS -->
-<section class="slide" data-n="05"><div class="wrap">
+<section class="slide" data-n="06"><div class="wrap">
   <span class="label">Solução</span>
-  <h2>Marco Zero: um sistema de ingresso.</h2>
-  <p class="sub" style="max-width:72ch;margin-bottom:34px">Leva a pessoa da dúvida sobre qual curso fazer até a primeira atividade entregue.
-  A IA é a infraestrutura que faz isso em escala — <b style="color:#fff;font-weight:600">não é o produto. O produto é o processo.</b></p>
+  <h2>Marco Zero: a rampa de lançamento do aluno.</h2>
+  <p class="sub" style="max-width:74ch;margin-bottom:34px">Quem entra numa faculdade presencial encontra um orientador.
+  Quem entra num EAD encontra um formulário. <b style="color:#fff;font-weight:600">Marco Zero devolve esse orientador</b> —
+  da primeira dúvida sobre qual curso escolher até a primeira entrega feita.</p>
   <div class="layers">
     <div class="lay whole">
-      <b>A camada 1 é o sistema inteiro</b>
+      <b>Camada 1 · o sistema inteiro</b>
       <div class="layflow">
         <span class="node">Dúvida</span><span class="chev">→</span>
         <span class="node">Escolha</span><span class="chev">→</span>
-        <span class="node key">RA</span><span class="chev">→</span>
+        <span class="node key">Matrícula</span><span class="chev">→</span>
         <span class="node">Ativação</span><span class="chev">→</span>
         <span class="node">1ª entrega</span>
       </div>
     </div>
     <div class="lay"><span class="tag2 ac">Camada 2 · Agente Pré</span>
-      <h4>Antes do RA</h4>
-      <p>Alinha escolha e expectativa. Uma pergunta curta sobre objetivo, explica curso e rotina do EAD, converte — e registra intenção, disponibilidade e dúvida.</p>
-      <small>Ataca a hipótese do slide anterior.</small></div>
+      <h4>Orientadora vocacional</h4>
+      <p>Pergunta o que a captação nunca pergunta: como é seu espaço de estudo, quantas horas livres você tem.
+      Transforma um processo transacional em <b>autodescoberta</b> — e cria o vínculo que sustenta o aluno quando ele travar.</p>
+      <small>Ataca as hipóteses 01 e 02.</small></div>
     <div class="lay"><span class="tag2 gr">Camada 3 · Agente Pós</span>
-      <h4>Depois do RA</h4>
-      <p>Recebe esse contexto, considera o momento de ingresso e conduz aos marcos do trimestre — sem perguntar tudo de novo.</p>
-      <small>Ataca os sintomas de ausência.</small></div>
+      <h4>Motor de engajamento</h4>
+      <p>O aluno não começa sozinho. O agente conduz aos comportamentos que a base associa à permanência,
+      chegando <b>antes</b> de o sintoma aparecer.</p>
+      <small>Ataca a hipótese 03.</small></div>
   </div>
-  <p class="note">Entre os dois, a peça que não existe hoje: <b>o Contexto de Entrada atravessa a matrícula.</b>
-  A matrícula deixa de apagar a conversa.</p>
+  <p class="note">Ligando os dois, a peça que não existe hoje: <b>o objetivo que a própria pessoa declarou atravessa a matrícula.</b>
+  A instituição deixa de esquecer quem ela acabou de receber.</p>
 </div></section>
 
 <!-- 06 PRODUTO — ESCOLHA -->
-<section class="slide" data-n="06"><div class="wrap">
+<section class="slide" data-n="07"><div class="wrap">
   <span class="label">Produto · Agente Pré</span>
   <h2 style="font-size:clamp(28px,3.4vw,46px);margin-bottom:24px">Vender explicando. Não perguntando.</h2>
   <div class="sim">
@@ -335,8 +359,6 @@ h3{margin:0 0 10px;font-size:18px;font-weight:600;letter-spacing:-.01em}
         <span class="hint">Márcia, 44 — procura curso para a filha, que gosta de animais</span>
       </div>
       <div class="panels" id="prePanels"></div>
-      <p class="note" style="margin-top:24px">Hoje o pop-up pede CEP <b>com número</b> antes de explicar qualquer curso —
-      e é o mesmo atendimento em qualquer página do site.</p>
     </div>
     <div class="phone">
       <div class="phonehead"><div class="avatar">U</div><div><b style="font-size:13.5px">UniCesumar</b>
@@ -347,7 +369,7 @@ h3{margin:0 0 10px;font-size:18px;font-weight:600;letter-spacing:-.01em}
 </div></section>
 
 <!-- 07 PRODUTO — INGRESSO -->
-<section class="slide" data-n="07"><div class="wrap">
+<section class="slide" data-n="08"><div class="wrap">
   <span class="label">Produto · Agente Pós</span>
   <h2 style="font-size:clamp(28px,3.4vw,46px);margin-bottom:20px">Cada marco tem gatilho, canal e registro.</h2>
   <div class="simbar">
@@ -369,26 +391,7 @@ h3{margin:0 0 10px;font-size:18px;font-weight:600;letter-spacing:-.01em}
       <div class="chat" id="simChat"></div>
     </div>
   </div>
-</div>
-<div class="src">Marcos ancorados no material da Vitru: ponto de virada de 40 dias de acesso ao AVA; M.A.P.A. vale 3,5 e avaliação presencial 4,0 dos 10 pontos do trimestre.</div></section>
-
-<!-- VALIDAÇÃO -->
-<section class="slide" data-n="08"><div class="wrap">
-  <span class="label">Validação</span>
-  <h2>Isso já foi medido. Com grupo de controle.</h2>
-  <div class="refs">
-    <div class="ref"><div class="who">Open University · Reino Unido<em>Ormond Simpson — ligação antes do início do módulo, projeto de 5 anos</em></div>
-      <div class="res">Custo de <strong>£10</strong> por aluno. <strong>+5,1%</strong> de retenção sobre o controle. Retorno de <strong>640%</strong>.</div></div>
-    <div class="ref"><div class="who">Georgia State University<em>Assistente conversacional na janela de ingresso · ensaio randomizado</em></div>
-      <div class="res"><strong>+3,3 p.p.</strong> de matrícula no prazo e cerca de <strong>21%</strong> menos desistência antes do início.</div></div>
-    <div class="ref"><div class="who">Contato proativo, seis estudos<em>Ligações, cartões e e-mails motivacionais — compilados por Simpson</em></div>
-      <div class="res">Ganhos de retenção de <strong>+5,1% a +27%</strong>. Nenhum deles usou IA.</div></div>
-  </div>
-  <p class="note">Simpson conseguiu <b>5,1%</b> com um telefonema. A gente precisa de <b>0,45%</b> para empatar —
-  e faz digital, por R$ 11, para a safra inteira.<br>
-  Ressalva honesta: uma replicação de 2021 mostrou que o efeito <b>não é uniforme</b>. Depende de recorte. Por isso o nosso é estreito.</p>
-</div>
-<div class="src">Simpson, O. (2023). Student Support in Online Learning — We Need to Talk About Money. IRRODL 24(4), Tabela 1 e Cenário 1. Page &amp; Gehlbach (2017), AERA Open 3(4). Bailey et al. (2021), Research in Higher Education. O paper de Simpson não trata de inteligência artificial nem de descompasso de escolha de curso.</div></section>
+</div></section>
 
 <!-- 08 OPORTUNIDADE -->
 <section class="slide" data-n="09"><div class="wrap">
@@ -403,8 +406,7 @@ h3{margin:0 0 10px;font-size:18px;font-weight:600;letter-spacing:-.01em}
   de contribuição. Em doze meses, R$ 2.424. Custo de R$ 11 ÷ R$ 2.424 = <b>0,45%</b>.<br>
   Um aluno que fica devolve o custo em <b>menos de dois dias</b>. E o ponto de equilíbrio não muda com o
   recorte, porque custo e base escalam juntos.</p>
-</div>
-<div class="src">Cálculo próprio sobre o release do 2º trimestre de 2026 e preço de tabela Salesforce/Meta. A margem bruta ajustada de 70,3% é a margem reportada pela Vitru no release — é margem no nível <b>bruto</b>, não desconta despesa comercial nem administrativa, então os R$ 202/mês são contribuição bruta e não lucro. Ação de agente US$ 0,10; mensagem utility no Brasil R$ 0,04–0,08; câmbio a R$ 5,50, premissa nossa. Retorno de 2,9× no cenário de +1 ponto percentual de engajamento, calculado sobre a mesma base de alunos do custo. Proxy de aquisição R$ 783 — não é o CAC oficial da companhia.</div></section>
+</div></section>
 
 <!-- 09 ARQUITETURA E ESCALA -->
 <section class="slide" data-n="10"><div class="wrap">
@@ -421,13 +423,7 @@ h3{margin:0 0 10px;font-size:18px;font-weight:600;letter-spacing:-.01em}
       <p class="sub" style="font-size:14px">O polo resolve o que só ele resolve: documento, presencial, exceção.</p>
       <small>Diretriz, não obrigação.</small></div>
   </div>
-  <div class="flow" style="margin-top:28px">
-    <span class="node">Site / in-app</span><span class="chev">→</span>
-    <span class="node">Push · e-mail</span><span class="chev">→</span>
-    <span class="node key">WhatsApp central</span><span class="chev">→</span>
-    <span class="node">Polo</span><span class="chev">→</span>
-    <span class="node">Especialista</span>
-  </div>
+  
   <p class="note">O sistema roda de ponta a ponta sem o polo. Onde o polo adere, o resultado é melhor;
   onde não adere, continua funcionando. Não dá para padronizar mil polos — e o desenho não pede isso.</p>
 </div></section>
