@@ -1,10 +1,27 @@
 # Dados. NUNCA commitar base entregue pela Vitru no evento.
+# ATENCAO: este repositorio e PUBLICO.
 /data/*
 !/data/.gitkeep
 !/data/README.md
 *.csv
 *.parquet
+
+# Base de alunos do hackathon (457k registros, nivel individual). LGPD.
 *.xlsx
+dataset_aluno_predicted_*
+
+# Material interno da Vitru — nao publicar em repositorio publico
+Motivos de Evasao Vitru.pptx
+Motivos de Evas*.pptx
+docs/source/vitru-oficial/*.pdf
+
+# Referencias de terceiros / capturas de trabalho
+AirBnB_Pitch_Deck.pdf
+view-source_*.html
+
+# Historico de sessao de ferramentas
+.codex-history/
+
 *.db
 *.sqlite3
 
@@ -32,6 +49,13 @@ dist/
 build/
 .next/
 *.log
+*.tsbuildinfo
+
+# Salesforce DX
+.sf/
+.sfdx/
+.localdevserver/
+deploy-options.json
 
 # Editor e SO
 .vscode/

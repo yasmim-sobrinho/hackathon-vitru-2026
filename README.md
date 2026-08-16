@@ -1,115 +1,280 @@
-# Hackathon Vitru 2026 - Motor de Intervenção Inteligente
+# Vitru — Jornada de Ingresso
 
-15 e 16 de agosto, presencial, sede da Vitru em São Paulo. 32 participantes, 8 times.  
-**Tema:** permanência do estudante na graduação.
+MVP do Hackathon Vitru 2026. Recorte: **UniCesumar**, graduação EAD.
 
-> **Este arquivo é o cérebro compartilhado do time.** Leia ao chegar. É o painel principal de direcionamento estratégico de todo o nosso repositório.
+## Contexto
 
-## 📑 Índice
-- [1. O que queremos (A Visão)](#-1-o-que-queremos-a-visão)
-- [2. O que descobrimos até agora (Insights da Base)](#-2-o-que-descobrimos-até-agora-insights-da-base)
-- [3. O que já construímos (O Protótipo Atual)](#️-3-o-que-já-construímos-o-protótipo-atual)
-- [4. Estrutura do Repositório](#-4-estrutura-do-repositório-onde-cada-coisa-vive)
-- [5. Registro de Versões e CHANGELOG](#-5-registro-de-versões-e-changelog)
-- [Pesquisa Anterior](#-pesquisa-anterior)
+Como aumentar a permanência e o sucesso de alunos da graduação EAD, reduzindo a
+evasão. A Vitru já possui modelos preditivos de evasão — o desafio não é
+construir outro modelo, é transformar sinais em ações que aumentem permanência.
 
----
+Não estamos apresentando "uma solução de IA". Estamos apresentando uma **nova
+Jornada de Ingresso do aluno UniCesumar**. A IA é a infraestrutura que viabiliza
+personalização, escala e continuidade.
 
-## 🎯 1. O que queremos (A Visão)
+A jornada conecta: Captação → Venda Educacional → Matrícula → Ingresso →
+Onboarding → Ativação Inicial.
 
-A Vitru já possui modelos preditivos capazes de identificar alunos com risco de evasão. O nosso desafio **não é criar um novo modelo**. 
+## Hipótese
 
-Nosso objetivo é construir o **Motor de Intervenção Inteligente** (Transformando evasão silenciosa em ações de sucesso do aluno).  
-A tese do projeto é:  
-> *"A evasão não começa quando o aluno cancela. Ela começa antes, quando o aluno deixa de acessar, de entregar atividades, perde o ritmo acadêmico ou a percepção de valor. A solução atua exatamente nessa janela de oportunidade."*
+Uma entrada mais consciente, contextualizada, orientada e acompanhada nos
+primeiros momentos aumenta a probabilidade de o aluno efetivamente começar sua
+jornada acadêmica e criar as condições iniciais para permanecer.
 
----
+Dois problemas distintos, que não têm a mesma causa:
 
-## 🔍 2. O que descobrimos até agora (Insights da Base)
+- **A — escolha/alinhamento.** A pessoa começa e percebe que o curso não
+  corresponde ao que imaginava.
+- **B — intenção sem ativação.** A pessoa escolhe bem, se matricula, e ainda
+  assim não acessa, procrastina ou perde o propósito.
 
-Rodamos uma Análise Exploratória (EDA) profunda na base `dataset_aluno_predicted.xlsx` focando no conceito de **Evasão Silenciosa** (alunos com alto risco preditivo, mas que ainda não pediram cancelamento formal). O que os dados comprovam:
+**Diferencial em uma frase:** o contexto não morre na matrícula.
 
-* **O Tamanho do Problema:** Dos 457.427 alunos da base, existem **52.345 alunos** na Evasão Silenciosa Potencial (11,4% da base total).
-* **O Impacto Financeiro (Receita em Risco):**  
-  $$\text{Receita em Risco} = 52.345 \text{ alunos silenciosos} \times \text{R\$ } 285,20 \text{ (ticket médio)} \times 12 \text{ meses} = \mathbf{\text{R\$ } 179,1 \text{ Milhões}}$$  
-  *(Cálculo 100% fundamentado nos dados da base e no ticket médio oficial do Dossiê de Pré-pesquisa da Vitru).*
-* **A Assinatura do Calouro (A Falsa Largada):** A maioria esmagadora (~80%) dos calouros silenciosos evade porque trava na entrega das primeiras atividades. A dor é **metodológica e de adaptação ao EAD**, não financeira.
-* **A Assinatura do Veterano (Fadiga Acadêmica):** ~85% evade por acúmulo de reprovações no módulo anterior e sobrecarga de dependências.
-* **A Lacuna de Experiência (Oceano Azul):** Constatamos que a base preditiva da Vitru **não possui dados integrados de NPS, CSAT, chamados de atendimento ou tickets**. A IA atual opera "cega" em relação à percepção de serviço do aluno, criando a oportunidade para o nosso motor conectar a intervenção humana com esses contextos.
+## Escopo
 
-### Análise Complementar: Fricções Digitais e Operacionais
-A análise detalhada em `docs/analise_friccoes_jornada.md` compara alunos em Evasão Silenciosa Potencial com Ativos Sem Risco e identifica os principais pontos de ruptura da jornada.
+Dois agentes, uma jornada:
 
-**Principais achados:**
-- A maior quebra aparece na **Ambientação**.
-- Alunos silenciosos têm menor realização do Questionário Espaço Calouro.
-- Alunos silenciosos acessam menos o Conheça EAD.
-- A queda financeira aparece com força, mas como sintoma avançado.
-- Há lacuna de telemetria granular do AVA e dados de experiência/atendimento.
+| Agente | Quando | Responsabilidade |
+| --- | --- | --- |
+| `VitruEducationalSales` | Antes da matrícula | Venda educacional consultiva, alinhamento de expectativa, captura de contexto, conversão |
+| `VitruStudentOnboarding` | Depois do RA | Identificar cenário de ingresso, orientar, ativar, acompanhar, escalar |
 
-👉 **[Ver Análise de Fricções e Mapa da Jornada (docs/analise_friccoes_jornada.md)](./docs/analise_friccoes_jornada.md)**  
-👉 **[Ver Memória de Cálculo Detalhada e Defesa para a Banca (docs/memoria_calculo_evasao.md)](./docs/memoria_calculo_evasao.md)**  
-👉 **[Ver Estrutura e Roteiro do Pitch de 5 Minutos (docs/pitch_5min_estrategia_final.md)](./docs/pitch_5min_estrategia_final.md)**
+O handoff é a geração do RA. O `StudentEntryContext` atravessa esse ponto.
 
----
+**O que não fazemos:** novo modelo preditivo, chatbot de FAQ, teste vocacional
+clínico, venda socrática, substituição de Studeo/CRM/financeiro, central humana
+acompanhando todos os alunos.
 
-## 🛠️ 3. O que já construímos (O Protótipo Atual)
+Detalhes em `.kiro/steering/01-product-scope.md`.
 
-Para tangibilizar a visão, desenvolvemos um **Protótipo Funcional** do Motor focado na Interface do Consultor de Retenção e no fluxo de decisão rápida:
+## Arquitetura
 
-1. **Backend (FastAPI):**
-   - Serve a fila de casos priorizada por **Recuperabilidade** e risco de evasão silenciosa.
-   - Contém 4 personas modeladas para o pitch:
-     - **Calouro (Adaptação/Falsa Largada):** João Silva
-     - **Veterano (Sobrecarga/Fadiga):** Maria Souza
-     - **Caso Financeiro (Risco Econômico):** Lucas Fernandes
-     - **Caso Acadêmico (Dificuldade Técnica/AVA):** Camila Santos
-   - Cada caso mapeia **Necessidade Identificada**, **Próxima Melhor Ação Orientada ao Sucesso** e **Impacto Esperado**.
-2. **Frontend Premium (Vanilla Web):**
-   - Construído com estética imersiva (Glassmorphism e tipografia Outfit), servido diretamente pelo FastAPI.
-   - **Modo Demonstração (Pitch Ready):** Botão *"Exibir Próximo Caso"* para transição imediata entre personas durante a apresentação para a banca.
-   - Destaque claro da tese da evasão silenciosa, lacuna de atendimento e indicadores de impacto.
+Três superfícies, um frontend:
 
-### Como rodar o protótipo:
-No terminal, dentro deste repositório:
-```bash
-cd api
-uvicorn main:app --reload --port 8000
+```text
+apps/web
+├── /site      → simulação do ambiente UniCesumar (pré-venda)
+├── /whatsapp  → simulação de WhatsApp (onboarding proativo)
+└── /demo      → seletor de cenários da apresentação
 ```
-Depois, abra o navegador em `http://localhost:8000`.
 
----
+A regra mais importante: **nenhum componente de UI fala com o Agentforce.**
 
-## 📁 4. Estrutura do Repositório (Onde cada coisa vive)
+```text
+Site widget  ─┐
+              ├─→ useConversation ─→ AgentAdapter ─→ MockAgentAdapter (default)
+WhatsApp sim ─┘                                   └─→ AgentforceAdapter (stub)
+```
 
-- `/api/`: Contém o código do Backend (FastAPI, rotas `/cases` e dados de demonstração).
-- `/api/static/`: Interface visual (HTML, CSS e JavaScript) do protótipo web.
-- `/scratch/`: Scripts em Python utilizados para extrair estatísticas da base Excel (EDA).
-- `/data/`: (Ignorada no git) Onde residem as bases da Vitru.
-- `/docs/`: Documentações complementares e materiais de apoio.
-- `CLAUDE.md`: O arquivo mestre de convenções e governança do time.
+Trocar o mock pela implementação real não deve exigir mudança em nenhum
+componente. Se exigir, o contrato está vazando.
 
----
+Detalhes em `docs/architecture.md`.
 
-## 🚀 5. Registro de Versões e CHANGELOG
+## Estrutura de pastas
 
-### Alterações v1.2
-- **Substituição do termo Risco:** O indicador de "Risco" foi substituído por "Prioridade de Intervenção", adotando uma postura mais ativa.
-- **Tamanho do Problema em Destaque:** O volume de evasão silenciosa potencial (52.345 alunos / 11,44%) foi adicionado com destaque logo no subtítulo da aplicação.
-- **Maior Grupo Acionável Identificado:** Inclusão de um card informativo apontando que a "Evasão Silenciosa Potencial supera a intenção formal de cancelamento", reforçando o insight número um.
-- **Lacuna Estratégica Reforçada:** O texto sobre a falta de dados (NPS/Experiência) foi reescrito para demonstrar que essa é uma oportunidade estratégica e não um simples erro no dataset.
-- **Impacto Esperado em Evidência:** A seção de impacto da intervenção virou um mini-card de alto contraste, garantindo leitura instantânea pela banca.
+```text
+/
+├── apps/web/                  Frontend: Vite + React 19 + TS strict + Tailwind
+│   └── src/
+│       ├── app/               Rotas
+│       ├── components/layout/ AppShell (casca de desenvolvimento)
+│       ├── features/          site, whatsapp, conversation, demo
+│       ├── data/              Catálogo de cursos (mock declarado)
+│       ├── lib/               env.ts, utm.ts
+│       ├── mocks/             Cenários de demo
+│       ├── services/agent/    AgentAdapter e implementações
+│       └── types/             Contratos de domínio
+├── force-app/main/default/
+│   └── aiAuthoringBundles/    Agentes Agentforce (a gerar)
+├── mock-data/                 Fixtures fora do bundle
+├── docs/
+│   ├── source/                Fontes originais — NÃO alterar
+│   ├── decisions/             ADRs e perguntas abertas
+│   ├── specs/                 Specs dos agentes
+│   └── research/              Pesquisa e análises
+├── legacy/                    Protótipo anterior, arquivado
+├── .kiro/
+│   ├── settings/mcp.json      Salesforce DX MCP
+│   └── steering/              Contexto permanente do projeto
+├── sfdx-project.json
+└── package.json               Workspace raiz
+```
 
-### Alterações v1.1
-- **Reforço da tese de evasão silenciosa:** Destacado no cabeçalho e nos KPIs o conceito de alunos que ainda não solicitaram cancelamento formal, mas já apresentam sinais comportamentais de abandono.
-- **Substituição do conceito de diagnóstico preditivo por necessidade identificada:** Transição do tom técnico de predição para identificação de causa-raiz e necessidade humana do aluno.
-- **Explicitação da lacuna de experiência e atendimento:** Evidenciada a ausência de dados de NPS/Tickets no modelo atual como oportunidade de integração do motor.
-- **Ajuste da narrativa da próxima melhor ação:** Prescrições orientadas ao sucesso do estudante e retenção humanizada.
-- **Inclusão do impacto esperado por intervenção:** Mapeamento explícito de marcos de recuperação (ex: retorno ao AVA, entrega de atividade, regularização acadêmica/financeira).
-- **Validação do indicador financeiro (R$ 179M):** Memória de cálculo consolidada e documentada (52.345 vidas × R$ 285,20 × 12m).
-- **Modo Demonstração:** Navegação com atalho rápido ("Exibir Próximo Caso") cobrindo Calouro, Veterano, Caso Financeiro e Caso Acadêmico.
+## Como rodar o frontend
 
----
+```bash
+npm install
+npm run dev      # http://localhost:5173
+npm run build    # inclui tsc -b: erro de tipo derruba o build
+```
 
-## 📚 Pesquisa Anterior
-*Aviso do time original:* O documento `Hackathon Vitru 2026 - Pre-pesquisa.docx` (cerca de 18 págs, 137 citações, 35 fontes de 7 sistemas de ensino mundiais) é leitura de aprofundamento. Se o tempo for curto, foque na Tabela de Convergência no fim da seção 8.
+Rotas:
+
+| Rota | Estado |
+| --- | --- |
+| `/demo` | Funcional — seletor de cenários, conversa mock, contexto e escalonamento |
+| `/site/curso/:slug` | Em construção — página de curso, ementa e captura de UTM funcionais |
+| `/whatsapp` | Placeholder |
+
+Para ver a mesma página produzir contextos de aquisição diferentes:
+
+```text
+http://localhost:5173/site/curso/administracao?utm_campaign=adm-empreendedores
+http://localhost:5173/site/curso/administracao?utm_campaign=adm-carreira
+```
+
+`/site` renderiza fora do `AppShell` de propósito: a simulação precisa parecer o
+site real.
+
+## Salesforce
+
+Salesforce CLI instalado: **2.147.7**. Verificar com `sf --version`.
+
+Se o `sf` não for reconhecido:
+
+```bash
+npm install -g @salesforce/cli
+```
+
+### Autenticar a org — pendente
+
+**Nenhuma org está autorizada.** `sf org list` retorna "No Orgs found". Este passo
+precisa ser executado interativamente:
+
+```bash
+sf org login web --alias vitru-hackathon --set-default
+sf org list
+```
+
+Sem isso, ficam bloqueados: MCP, geração de authoring bundle, inspeção de
+metadata e mapeamento dos agentes existentes da Vitru.
+
+## Salesforce MCP
+
+O arquivo `.kiro/settings/mcp.json` **precisa ser criado manualmente** (a escrita
+foi bloqueada por regra de permissão do workspace). Conteúdo:
+
+```json
+{
+  "mcpServers": {
+    "salesforce-dx": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@salesforce/mcp@latest",
+        "--orgs",
+        "DEFAULT_TARGET_ORG",
+        "--toolsets",
+        "orgs,metadata,data,testing"
+      ],
+      "disabled": false,
+      "autoApprove": []
+    }
+  }
+}
+```
+
+Princípios aplicados:
+
+- toolsets mínimos necessários — **não** usar `--toolsets all`;
+- prender à org específica, **não** usar `ALLOW_ALL_ORGS`;
+- **não** adicionar `--allow-non-ga-tools` sem necessidade concreta;
+- `autoApprove` vazio: nenhuma ferramenta destrutiva ou de deploy aprovada
+  automaticamente;
+- nenhum segredo no arquivo. O MCP usa a org já autorizada pelo CLI.
+
+Depois de autenticar a org, trocar `DEFAULT_TARGET_ORG` por `vitru-hackathon` se
+quiser fixar o alias.
+
+## Agentforce DX
+
+Três coisas diferentes que não devem ser confundidas:
+
+| Componente | O que é |
+| --- | --- |
+| **Salesforce DX MCP Server** | `@salesforce/mcp`, deixa o Kiro operar a org: metadata, dados, testes |
+| **Agentforce DX** | Workflow de authoring dos agentes: agent spec, Agent Script, preview, publish |
+| **`sf agent mcp`** | Registro de MCP no API Catalog. Developer Preview. Não é requisito do MVP |
+
+Os comandos `sf agent` estão disponíveis (`generate`, `validate`, `preview`,
+`publish`, `test`, `adl`, `trace`).
+
+Os bundles devem ser **gerados pelo CLI**, nunca escritos à mão:
+
+```bash
+sf agent generate agent-spec
+sf agent generate authoring-bundle
+sf agent validate
+sf agent preview
+sf agent publish authoring-bundle
+```
+
+**Regra crítica:** antes de qualquer deploy, listar os agentes existentes no org e
+confirmar que não há colisão. **Não sobrescrever agentes da Vitru.**
+
+Ver `force-app/main/default/aiAuthoringBundles/README.md`.
+
+## Mock Mode
+
+`MockAgentAdapter` é o default. A demo roda offline, sem rede e sem org
+Salesforce. Isso é decisão de arquitetura (ADR-005), não improviso.
+
+```text
+VITE_AGENT_MODE=mock         → MockAgentAdapter
+VITE_AGENT_MODE=agentforce   → AgentforceAdapter, se a config estiver completa
+                               senão cai no mock com aviso em console
+```
+
+O mock **não inventa informação institucional**. Onde falta fonte oficial, ele
+declara que não sabe e encaminha.
+
+O adapter ativo aparece no cabeçalho do app, para não haver dúvida na
+apresentação.
+
+## Documentação
+
+| Documento | Para quê |
+| --- | --- |
+| `docs/source/time/alinhamento-mestre-jornada-ingresso.md` | **Fonte de verdade de produto** |
+| `docs/repository-audit.md` | Estado encontrado no kickoff e decisão de rebuild |
+| `docs/architecture.md` | Arquitetura, contratos, stack |
+| `docs/decisions/decision-log.md` | ADR-001 a ADR-008 |
+| `docs/decisions/open-questions.md` | Conflitos e o que falta validar com a Vitru |
+| `docs/backlog.md` | P0/P1/P2 e bloqueios ativos |
+| `docs/demo-plan.md` | Roteiro da apresentação |
+| `docs/context-index.md` | Índice e classificação de todo documento |
+| `docs/specs/` | Specs dos dois agentes |
+| `.kiro/steering/` | Contexto que o Kiro carrega em toda sessão |
+
+### Regras que não se negociam
+
+- **Não hardcodear regra institucional.** Prazo, preço, bolsa, calendário e
+  política acadêmica não são inventados. Sem fonte oficial, o valor é `UNKNOWN` e
+  vira pergunta em `docs/decisions/open-questions.md`.
+- **Hipótese não vira fato.** Números falados em reunião ficam rotulados como
+  hipótese. O recorte de piloto ("30 polos", "top 30%") é hipótese do time.
+- **Nenhuma promessa** de emprego, salário ou percentual de redução de evasão.
+- **Fontes em `docs/source/` não são alteradas.**
+- **Segredos nunca no repositório.** Só `.env.local`, que é gitignored.
+
+## Próximas tarefas
+
+Bloqueios ativos, em ordem de impacto:
+
+1. **Autenticar a org Salesforce** — destrava MCP, authoring bundles e o
+   mapeamento dos agentes existentes.
+2. **Criar `.kiro/settings/mcp.json`** com o conteúdo acima.
+3. **Plugar o widget de agente na página de curso** — `ConversationPanel` +
+   `useConversation` já existem; falta montar na `CoursePage`.
+4. **Decidir se preço aparece na tela** — ver C-002 em
+   `docs/decisions/open-questions.md`.
+5. Construir a casca do simulador de WhatsApp.
+
+Backlog completo em `docs/backlog.md`.
+
+## Git
+
+- Branch de trabalho: `hackathon/jornada-ingresso`
+- Tag de backup do estado anterior: `backup/motor-intervencao-pre-kickoff`
+- `main` intocada

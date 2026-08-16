@@ -1,0 +1,21 @@
+{
+  "name": "vitru-jornada-ingresso",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MVP da Jornada de Ingresso UniCesumar - Hackathon Vitru 2026",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "pitch": "npx --yes serve apps/pitch -l 4321",
+    "dev": "npm run dev --workspace apps/web",
+    "build": "npm run build --workspace apps/web",
+    "preview": "npm run preview --workspace apps/web",
+    "typecheck": "npm run typecheck --workspace apps/web",
+    "sf:orgs": "sf org list",
+    "sf:login": "sf org login web --alias vitru-hackathon --set-default"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  }
+}

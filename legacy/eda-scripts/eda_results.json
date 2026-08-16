@@ -1,0 +1,25 @@
+{
+    "Total_Base": 457427,
+    "Evasao_Declarada": 45372,
+    "Evasao_Silenciosa": 52345,
+    "Silenciosa_Por_Perfil": {
+        "Calouro": 24676,
+        "Veterano": 27669
+    },
+    "Assinatura_Calouro": {
+        "% Entrega de atividades": 19794,
+        "Qtde de acesso ao AVA no perÃ­odo de atividades": 2196,
+        "Qtde total de dias de acessos ao AVA": 1256,
+        "% Engajamento financeiro": 1128,
+        "Idade do aluno no ingresso": 222
+    },
+    "Assinatura_Veterano": {
+        "% AprovaÃ§Ã£o em disciplinas (mÃ³d. anterior)": 23673,
+        "% Andamento do curso": 3957,
+        "% Entrega de atividades": 39
+    },
+    "Impacto_Financeiro": {
+        "Vidas_Em_Risco_Silencioso": 52345,
+        "Receita_Anual_Em_Risco": 179145528.0
+    }
+}

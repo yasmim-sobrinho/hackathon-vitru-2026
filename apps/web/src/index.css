@@ -1,0 +1,86 @@
+@import 'tailwindcss';
+
+/*
+ * Identidade visual UniCesumar.
+ *
+ * Cores e tipografia extraídas do CSS público do tema do site
+ * (unicesumar.edu.br/wp-content/themes/unicesumar/.../style.css).
+ * O navy #00467a é a cor dominante da marca; o amarelo #ffca0a é o
+ * destaque de CTA. Não inventar tons novos: a fidelidade visual é o que
+ * faz a demo parecer o site real e não uma maquete.
+ */
+@theme {
+  --color-uni-navy: #00467a;
+  --color-uni-navy-deep: #0f2b5b;
+  --color-uni-navy-ink: #001321;
+  --color-uni-cyan: #00a0e8;
+  --color-uni-blue: #246bf7;
+  --color-uni-blue-dark: #0073c8;
+  --color-uni-yellow: #ffca0a;
+  --color-uni-green: #1fb40b;
+  --color-uni-ink: #1d1d1b;
+  --color-uni-gray: #303032;
+  --color-uni-mist: #f4f4f4;
+  --color-uni-line: #d1d5db;
+
+  /* WhatsApp — o clone precisa das cores certas para ler como WhatsApp. */
+  --color-wa-teal: #128c7e;
+  --color-wa-green: #25d366;
+  --color-wa-header: #f0f2f5;
+  --color-wa-bg: #efeae2;
+  --color-wa-bubble-in: #ffffff;
+  --color-wa-bubble-out: #d9fdd3;
+  --color-wa-ink: #111b21;
+  --color-wa-muted: #667781;
+
+  --font-sans: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+
+  /*
+   * Tokens da casca de desenvolvimento (/demo, navegação entre superfícies).
+   * Deliberadamente neutros: não competem com a identidade UniCesumar acima,
+   * porque essa casca não aparece na simulação do site.
+   */
+  --color-brand-50: #eef6ff;
+  --color-brand-100: #d9eaff;
+  --color-brand-500: #1668c1;
+  --color-brand-600: #11559f;
+  --color-brand-700: #0d417a;
+  --color-ink-500: #47536b;
+  --color-ink-700: #1f2a3d;
+  --color-ink-900: #0f172a;
+}
+
+/* Foco sempre visível — acessibilidade básica é regra do projeto. */
+:focus-visible {
+  outline: 3px solid var(--color-uni-cyan);
+  outline-offset: 2px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-uni-ink);
+  background: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+}
+
+/* Fundo quadriculado do WhatsApp, aproximado sem baixar o asset original. */
+.wa-wallpaper {
+  background-color: var(--color-wa-bg);
+  background-image: radial-gradient(
+      circle at 1px 1px,
+      rgba(0, 0, 0, 0.035) 1px,
+      transparent 0
+    );
+  background-size: 22px 22px;
+}
