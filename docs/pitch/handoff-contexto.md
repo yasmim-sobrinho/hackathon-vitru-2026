@@ -119,27 +119,17 @@ Literatura:
 - Page & Gehlbach (2017), AERA Open 3(4): assistente conversacional na janela de
   ingresso, ensaio randomizado na Georgia State, +3,3 p.p. de matrícula efetivada
 - Bailey et al. (2021), Research in Higher Education: replicação, efeito NÃO é
-  uniforme — depende de recorte. Citamos por honestidade, e justifica o recorte
-- Castleman & Page (2015), J. Economic Behavior & Organization 115: nudges
-- Fouarge & Heß (2023), Labour Economics 83, painel alemão NEPS: quem escolhe curso
-  que não corresponde à preferência ocupacional declarada ANTES de entrar evade
-  mais. DIREÇÃO CONFIRMADA. A magnitude de "+9 p.p." que circulava no material
-  NÃO ESTÁ VERIFICADA e foi rebaixada em 16/08 — não falar percentual. Ver seção
-  1.1 do plano-pitch.md
-- FÓRMULA DE SIMPSON (está na secão 8.5 da pre-pesquisa-hackathon-vitru-2026.docx,
-  e é o melhor ativo de validação que temos):
-    sucesso = escolha adequada de curso
-            + identificação precoce de quem tende a evadir
-            + (contato precoce e contínuo x apoio motivacional proativo)
-  A leitura que importa: identificar entra como PARCELA SOMADA, logo é limitada.
-  O que MULTIPLICA é contato contínuo x apoio proativo. Se um dos dois é zero, o
-  produto é zero. Identificar sozinho não salva ninguém. É a nossa tese inteira
-  como equação, escrita por quem dirigia a retenção da Open University.
-  Simpson também diz que desistir de casos caros de recuperar é aceitável — o que
-  legitima triagem por capacidade.
-- Semesp: usar 26,6% de evasão na rede privada em 2024 (16º Mapa, 2026), que é a
-  referência [29] da nossa pré-pesquisa. O "64,1% no EAD privado" que circulava
-  vinha de outra edição e não foi reconciliado — saiu do deck.
+  uniforme — depende de recorte. Citamos por honestidade, e justifica o piloto
+- Fouarge & Heß (2023), Labour Economics 83: painel alemão com 2.476 jovens;
+  descompasso preferência ocupacional-curso associado a +9,1–9,3 p.p. de
+  interrupção do curso inicial. O paper declara que NÃO identifica causalidade;
+  mecanismos prováveis são indecisão e mudança de preferência
+- Simpson (2023), IRRODL 24(4): suporte proativo antes do início e fórmula de
+  break-even `n ≥ 100 × P ÷ F`. Não trata de course choice mismatch. IA aparece
+  apenas como potencial, sem efeito testado
+- Castleman & Page (2015), J. Economic Behavior & Organization 115: nudges;
+  referência de apoio, fora do slide 08 atual
+- Semesp, 15º Mapa (2025): 64,1% de evasão no EAD privado
 
 ## Regras que NÃO podem ser quebradas
 
@@ -161,6 +151,12 @@ Literatura:
 9. O ponto de equilíbrio é RETENÇÃO INCREMENTAL. Dizer "0,45% A MAIS", nunca
    "0,45% da coorte", que soa absurdamente baixo diante da realidade deles.
 10. Nunca chamar os R$ 202/mês de lucro. É contribuição bruta.
+11. Nunca chamar importância preditiva de motivo ou causa. O slide 03 mostra o
+    sintoma; o slide 04 apresenta uma hipótese testável.
+12. Nunca dizer que Fouarge & Heß provaram efeito de 9,3 p.p. É associação num
+    painel alemão e o desfecho inclui troca de curso/instituição.
+13. Nunca atribuir a Simpson mismatch, desestímulo de candidatos ou impacto
+    comprovado de IA. O paper sustenta suporte proativo e estrutura econômica.
 11. Não abrir a problemática pelo modelo preditivo deles. Abrir pelos 19,1 mil.
 
 ## O que ainda não temos (com plano B ativo — nada é bloqueante)

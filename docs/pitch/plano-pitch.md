@@ -12,128 +12,82 @@ Status de evidência em tudo:
 
 ---
 
-## 1. A anamnese — como ligar pós-venda a pré-venda sem ser espúrio
+## 1. A anamnese — do sintoma à hipótese, sem inventar causalidade
 
 O problema metodológico é real: **todo dado interno que temos é de pós-venda**.
-É de quem já é aluno, não de quem era candidato. Então a ligação com a pré-venda
-é necessariamente reconstruída — como anamnese médica: parte-se do sintoma
-medido e reconstrói-se a história.
+É de quem já é aluno, não de quem era candidato. Portanto, não dá para usar o
+modelo preditivo para afirmar por que alguém evadiu. Ele mostra **onde a ruptura
+aparece**; a história anterior à matrícula continua sendo uma hipótese a testar.
 
-O que separa isso de correlação espúria é ter **mecanismo** e **evidência
-convergente de fontes independentes**. Temos as duas coisas.
-
-## 1.1 🔴 Dois números rebaixados em 16/08 — ler antes de subir no palco
-
-### O "+9 pontos percentuais" do Fouarge & Heß não está verificado
-
-Rastreamento da cadeia:
-
-| Onde | O que diz |
-| :-- | :-- |
-| `alinhamento-mestre` \[E3\] | Cita o estudo e diz: "encontrou **maior evasão**" — **sem magnitude** — e avisa que é "evidência de mecanismo, **não estimativa transportável**" |
-| `context-index.md` | "Esses estudos justificam **mecanismos**, não estimativas de impacto" |
-| `plano-pitch.md` (evidência C) | Passou a afirmar "**+9 pontos percentuais**", rotulado 🟢 Confirmado |
-| Deck slide 04, script, handoff | Herdaram o número |
-
-Ou seja: o número foi **promovido de "não temos magnitude" para "magnitude
-confirmada"** dentro do nosso próprio material, contra o aviso explícito da fonte
-de verdade.
-
-O que dá para confirmar hoje, da página de publicações do próprio Pascal Heß: o
-estudo usa o painel alemão NEPS e mostra que alunos que escolhem um curso que não
-corresponde à preferência ocupacional declarada **antes** de entrar na
-universidade têm **mais probabilidade de evadir** do que quem escolhe curso
-compatível. Direção confirmada, mecanismo confirmado, base de dados confirmada.
-**Magnitude não confirmada** — o artigo está atrás de paywall e o resumo público
-não traz percentual.
-
-**Decisão:** não falar os 9 p.p. até alguém abrir o artigo e conferir de qual
-especificação o número sairia. A fala segura está no `script-falado.md`, slide 04.
-O argumento **não depende** da magnitude: ementa mais troca de curso já
-estabelecem que a demanda existe e não é atendida.
-
-*Conteúdo da fonte externa foi parafraseado para conformidade de licenciamento.*
-
-### O 64,1% do Semesp conflitava com a nossa própria referência
-
-O handoff trazia "Semesp, 15º Mapa (2025): 64,1% de evasão no EAD privado". Mas a
-`pre-pesquisa-hackathon-vitru-2026.docx`, referência \[29\], usa o **16º Mapa
-(2026)** e registra **24,8% de evasão total, 26,6% na rede privada e 21,4% na
-pública em 2024**.
-
-São edições diferentes e provavelmente métricas diferentes — taxa anual versus
-acumulada no curso. Não deu tempo de reconciliar, e ter dois números do Semesp
-brigando no nosso material é exposição pura.
-
-**Decisão:** a linha saiu do slide 02. Ela não somava nada — o número que sustenta
-o slide são os 19,1 mil, que é da própria Vitru. Se alguém quiser referência de
-setor no Q&A, usar a da nossa pré-pesquisa: **26,6% na rede privada em 2024,
-Semesp, 16º Mapa**.
-
----
+A narrativa correta tem três camadas: sintoma interno, sinais convergentes e
+mecanismo externo. Nenhuma delas, isoladamente, prova uma causa na UniCesumar.
 
 ### As quatro evidências
 
-| | Evidência | Fonte | O que prova |
+| | Evidência | Fonte | O que sustenta — e o que não sustenta |
 | :-- | :-- | :-- | :-- |
-| **A** | A 2ª página mais acessada do site são as **ementas dos cursos** | 🟢 diretoria Vitru | A demanda por entender o curso é enorme e explícita |
-| **B** | O 2º processo mais comum no CSC é **alteração de matrícula/curso** — até 3 trocas, para áreas não correlatas | 🟢 diretoria Vitru | Essa demanda **não é atendida na venda**. A pessoa compra e descobre depois |
-| **C** | Descompasso entre preferência ocupacional e curso escolhido → **mais evasão** (direção confirmada, magnitude **não** confirmada — ver 1.1) | 🟡 Fouarge & Heß, *Labour Economics* 2023, painel NEPS | O mecanismo tem identificação causal e painel longitudinal. **Não citar percentual.** |
-| **D** | Os 5 principais fatores de risco do calouro são todos de **presença**; o 4º é literalmente "dias até o primeiro acesso" | 🟢 PPTX do time de dados Vitru | O sintoma é ausência, não reprovação nem inadimplência |
+| **A** | A 2ª página mais acessada do site são as **ementas dos cursos** | 🟢 diretoria Vitru | Existe demanda por clareza sobre o curso. Não prova que a venda falhou em atendê-la |
+| **B** | O 2º processo mais comum no CSC é **alteração de matrícula/curso** — com relatos de até 3 trocas | 🟢 diretoria Vitru | Parte da decisão é corrigida depois da matrícula. Não mede quantos casos nasceram de venda desalinhada |
+| **C** | Descompasso entre preferência ocupacional e curso escolhido esteve associado a **+9,3 p.p.** de interrupção do curso inicial | 🟢 Fouarge & Heß, *Labour Economics* 2023 | O mecanismo é relevante num painel alemão de 2.476 jovens. O próprio paper diz que **não identifica causalidade** |
+| **D** | Quatro dos 5 sinais mais relevantes do calouro são de acesso; o quinto é entrega | 🟢 PPTX do time de dados Vitru | Na UniCesumar, o risco do calouro aparece como não ativação. Importância preditiva não é motivo de evasão |
 
-### A inferência
+### A hipótese que os sinais permitem testar
 
-> A + B mostram, em dois pontos independentes do funil, que existe uma demanda
-> massiva por entender o curso **que não é atendida no momento da compra**.
-> C dá identificação causal ao mecanismo: escolher curso que não corresponde à
-> preferência aumenta a evasão. D mostra que, na UniCesumar, o sintoma se
-> manifesta como ausência.
+> D localiza o sintoma: a ruptura do calouro aparece antes da ativação. A mostra
+> busca por clareza; B mostra correção da escolha depois da compra; C mostra que
+> o descompasso entre preferência e curso está associado à interrupção do curso
+> inicial em outro contexto.
 >
-> Logo: **parte da ausência medida em D é gente que comprou sem entender.**
+> Juntos, eles sustentam — mas não provam — a hipótese de que **parte do não
+> começo nasce de uma escolha pouco esclarecida e de uma expectativa corrigida
+> só depois da matrícula**.
 
-Isso não é "sorvete causa ataque de tubarão". A e B são medições independentes do
-**mesmo mecanismo** em momentos diferentes da jornada. C é um estudo com
-identificação causal. D é o desfecho.
+Essa formulação é deliberadamente mais estreita que “a venda causa evasão”. O
+piloto precisa medir se esclarecer escolha e expectativa antes do RA, e preservar
+esse contexto depois dele, aumenta primeiro acesso e primeira entrega.
 
-**O achado B é o mais forte que temos.** Troca de curso é preferência revelada:
-alguém que troca para uma área não correlata está provando que a venda original
-estava desalinhada. É a coisa mais próxima de uma medição direta de "venda mal
-feita" que existe na operação deles — e ainda gera custo de CSC.
+### O que os papers não autorizam dizer
 
-### Engenharia reversa — o que o Agente Pré ataca
+- Fouarge & Heß reportam **associação de 9,1–9,3 p.p.**, não efeito causal. O
+  desfecho inclui abandonar, trocar de curso ou trocar de instituição.
+- Os mecanismos mais compatíveis com os dados são **indecisão e mudança de
+  preferência**. Déficit de informação não apareceu como driver significativo.
+- O percentual alemão não é estimativa de impacto do Marco Zero nem pode ser
+  transportado para a UniCesumar.
+- Simpson (2023) não estuda *course choice mismatch*, pré-requisitos ou triagem
+  para desestimular candidatos. Ele sustenta **contato proativo**, retenção e a
+  lógica econômica do investimento em suporte.
 
-Você pediu para eu construir isso de trás para frente. Cada linha: uma lacuna na
-venda → o que a pessoa sente → como isso aparece no modelo de risco **deles**.
+### Da hipótese ao processo — o que cada etapa resolve
 
-| Lacuna na pré-venda | O que o aluno sente | Como aparece no dado da Vitru |
-| :-- | :-- | :-- |
-| Não entendeu o curso nem a carreira | "Não era isso que eu queria" | Troca de curso no CSC — ou some sem avisar |
-| Não entendeu a metodologia EAD | "Achei que era mais fácil; não sei como estudar" | % entrega de atividades *(fator 5)* |
-| Ninguém disse o que fazer depois de pagar | "Paguei. E agora?" | **Dias até o primeiro acesso** *(fator 4)* |
-| Ficou semanas sem contato até a aula começar | Esfriou, perdeu o propósito da compra | Qtde total de dias de acesso ao AVA *(fator 1)* |
-| Não conhece ninguém, não tem rede | Isolamento, não pertence | Acesso no período pedagógico *(fator 3)* |
+| Lacuna observável | Agente Pré — antes do RA | Agente Pós — depois do RA | Métrica do piloto |
+| :-- | :-- | :-- | :-- |
+| Dúvida sobre curso e carreira | Faz uma pergunta curta, explica caminhos e limites do diploma | Recupera o objetivo declarado quando orienta | troca de curso; clareza percebida |
+| Expectativa sobre a rotina EAD | Explica metodologia e registra disponibilidade e dúvida | Usa disponibilidade e cenário de ingresso, sem refazer a anamnese | primeiro acesso; primeira entrega |
+| Compra sem próximo passo claro | Registra a razão da escolha no Contexto de Entrada | Apresenta só a próxima ação conforme data e evento | tempo até primeiro acesso |
+| Intervalo entre matrícula e aula | Preserva propósito e restrições | Muda a ação para `early`, `regular` ou `late` | marcos de ativação por cenário |
 
-### O cenário perfeito, para contraste
+### A transição que fica no palco
 
-Venda alinhada → a pessoa entendeu o curso e a rotina → no intervalo até a aula
-já acessou a plataforma, já sabe onde ficam as coisas, já entrou numa comunidade
-→ chega no primeiro dia sabendo o que fazer.
-
-**O pitch mostra esse trajeto e depois pergunta: e quando não tem nada disso?**
+> **“O modelo mostra o sintoma, não a causa. Ementa, troca de curso e a literatura
+> sustentam uma hipótese: parte do não começo nasce de uma escolha pouco
+> esclarecida e de uma expectativa corrigida tarde. Se essa ruptura atravessa o
+> RA, a resposta também precisa atravessar.”**
 
 ### O que isso permite dizer no palco
 
-✅ *"Dos cinco fatores, os quatro primeiros são de presença. E presença no
-primeiro mês é consequência de uma coisa que já estava decidida antes: se essa
-pessoa entendeu o que estava comprando."*
+✅ *"No modelo do calouro, sinais de acesso somam 49,5%. Isso localiza a ruptura
+antes da ativação; não explica sozinho por que ela aconteceu."*
 
-✅ *"A gente sabe que existe demanda por entender: ementa é a segunda página mais
-acessada. E sabe que ela não está sendo atendida: troca de curso é o segundo
-processo mais comum do CSC, com gente trocando até três vezes para áreas que não
-têm nada a ver."*
+✅ *"Fouarge e Heß encontraram uma associação de 9,3 pontos percentuais num
+painel alemão. Não transportamos o número: usamos o estudo para sustentar o
+mecanismo e testamos a hipótese na UniCesumar."*
 
-❌ *"Três dos cinco fatores são causados por venda mal feita."* — afirma
-atribuição direta que nenhum dado sustenta. Use a formulação acima.
+❌ *"O calouro evade porque não começa."* — transforma um sinal preditivo em
+causa.
+
+❌ *"A venda desalinhada causa nove pontos de evasão."* — transforma associação
+externa em efeito causal local.
 
 ---
 
@@ -253,8 +207,10 @@ calendários diferentes, e cursos dentro da mesma modalidade podem ter também.
 desde o início de cada curso. Se a dispersão sobreviver, é ouro. Vale pedir isso
 à Yasmim se sobrar tempo — mas **não colocar no pitch antes disso**.
 
-Enquanto isso, a espinha do slide 04 volta a ser a anamnese (ementa + troca de
-curso + o mecanismo de Fouarge & Heß, sem percentual), que não depende da planilha.
+Enquanto isso, a espinha do slide 04 é a hipótese convergente: busca por
+clareza nas ementas + correção de curso no CSC + associação externa de 9,3 p.p.
+em Fouarge & Heß. Ela não depende da planilha e continua rotulada como hipótese,
+não como causa comprovada.
 
 ### Correções que o ACHADOS.md impõe ao que eu tinha escrito
 
@@ -267,7 +223,7 @@ curso + o mecanismo de Fouarge & Heß, sem percentual), que não depende da plan
 
 ---
 
-## 4. Estrutura do deck — 12 slides
+## 4. Estrutura do deck — 11 slides
 
 Esta tabela é o **espelho do `apps/pitch/index.html`**. Se divergir do arquivo, o
 arquivo manda. Conferida em 16/08.
@@ -276,20 +232,20 @@ arquivo manda. Conferida em 16/08.
 | --: | :-- | :-- | :-- |
 | 01 | **Capa** | "A evasão começa antes da matrícula" | 🟢 |
 | 02 | **Problema** | 19,1 mil captados não engajaram num trimestre | 🟢 |
-| 03 | **Diagnóstico** | Calouro × veterano: presença vs. progresso | 🟢 |
-| 04 | **A pergunta** | Ementa é a 2ª página mais vista; troca de curso é o 2º processo do CSC | 🟢🔵 |
-| 05 | **Solução** | Marco Zero, um sistema de ingresso com Agente Pré e Agente Pós | 🔵 |
+| 03 | **O sintoma** | O modelo localiza a ruptura antes da ativação; não explica a causa | 🟢 |
+| 04 | **A hipótese** | Ementa + troca de curso + associação externa de 9,3 p.p.; hipótese, não causalidade | 🟢🔵 |
+| 05 | **Solução** | Marco Zero preserva contexto entre Agente Pré e Agente Pós | 🔵 |
 | 06 | **Produto · Agente Pré** | Conversa rodando: vender explicando, não perguntando | 🟢 |
 | 07 | **Produto · Agente Pós** | Simulador dos 6 marcos: gatilho, ação, registro | 🟢 |
-| 08 | **Validação** | Georgia State, Castleman & Page, Fouarge & Heß, ressalva do Bailey | 🟢 |
-| 09 | **Oportunidade** | R$ 11, ponto de equilíbrio de 0,45%, retorno de 2,9× | 🟢 |
-| 10 | **Escala** | Mensageria centralizada; polo recebe tarefa, não fila | 🟢 |
-| 11 | **Implementação** | Piloto dimensionado, randomização por turma, roadmap em 4 fases | 🟢 |
-| 12 | **Time e fechamento** | — | 🟢 |
+| 08 | **Oportunidade** | Investimento operacional de R$ 11, equilíbrio de 0,45%, retorno de 2,9× | 🟢 |
+| 09 | **Escala** | Mensageria centralizada; polo recebe tarefa, não fila | 🟢 |
+| 10 | **Implementação** | Piloto dimensionado, randomização por turma, roadmap em 4 fases | 🟢 |
+| 11 | **Time e fechamento** | — | 🟢 |
 
-**Cortados por repetição:** Diferenciais (está em 05), Evidências separado (é o
-08), Piloto duplicado (é o 11), Modelo de Valor separado (funde com o 09), "O que
-existe hoje" separado (vira contraste dentro do 06).
+**Cortados por repetição:** Diferenciais (está em 05), Evidências como slide
+separado (a hipótese está no 04 e a validação será feita no piloto do 10), Piloto
+duplicado (é o 10), Modelo de Valor separado (funde com o 08), "O que existe hoje"
+separado (vira contraste dentro do 06).
 
 **Nota importante para o slide 07:** o agente **não consulta** o modelo preditivo
 em runtime. O modelo **fundamentou** o desenho dos marcos e da régua. A distinção
@@ -333,8 +289,8 @@ Dados.
 **Onde foi parar o 45,3%.** Virou a **frase mastigada de fechamento** do slide 02:
 *"e o calouro carrega cinco vezes mais risco que o veterano — o problema está
 concentrado na entrada."* Uma frase, sem percentual aninhado, depois do número
-absoluto. O detalhamento fica no slide 03, onde o modelo é usado para explicar
-**mecanismo**, que é o uso legítimo dele.
+absoluto. O detalhamento fica no slide 03, onde o modelo é usado para localizar
+**como o risco aparece**, sem atribuir causalidade.
 
 ---
 
@@ -346,10 +302,10 @@ crítico, existe um substituto já definido:
 | Slide | Número ideal | Plano B se não vier |
 | :-- | :-- | :-- |
 | 02 | % de calouros que cancelam no 1º trimestre | 19,1 mil não engajados do release *(já temos, e é absoluto)* |
-| 04 | Volume real de trocas de curso no CSC | "2º processo mais comum" qualitativo + os 9 p.p. de Fouarge & Heß |
-| 09 | CAC oficial | Proxy R$ 783, rotulado como proxy *(já temos)* |
-| 09 | Impacto em p.p. de receita | Cenário modelado sobre o release, rotulado como cenário |
-| 11 | Critério de polo da Vitru | Critério nosso, justificado por volume + capacidade |
+| 04 | Volume real de trocas de curso no CSC | "2º processo mais comum" qualitativo + associação de 9,3 p.p. em Fouarge & Heß, rotulada como externa e não causal |
+| 08 | CAC oficial | Proxy R$ 783, rotulado como proxy *(já temos)* |
+| 08 | Impacto em p.p. de receita | Cenário modelado sobre o release, rotulado como cenário |
+| 10 | Critério de polo da Vitru | Critério nosso, justificado por volume + capacidade |
 
 Consequência: **a fala não muda quando o número muda.** Ver seção 7.
 
@@ -359,13 +315,13 @@ Consequência: **a fala não muda quando o número muda.** Ver seção 7.
 
 | ID | Buraco | Slide | Situação |
 | :-- | :-- | :-- | :-- |
-| **G1** | Oportunidade em p.p. e custo de operação | 09 | ✅ **Fechado** — `modelo-economico.md`. Ponto de equilíbrio entre 0,31% e 0,45%, invariante ao recorte |
+| **G1** | Oportunidade em p.p. e investimento operacional | 08 | ✅ **Fechado** — `modelo-economico.md`. Ponto de equilíbrio entre 0,31% e 0,45%, invariante ao recorte |
 | **G2** | Perfil do aluno de sucesso | 07 | ✅ **Fechado** — `perfil-sucesso-e-personas.md`, parte 1. Régua de 6 marcos ancorada no PPTX |
-| **G3** | Piloto e recorte de polos | 11 | ✅ **Fechado** — randomizar por turma, ~22 mil alunos, 3 p.p. detectáveis |
+| **G3** | Piloto e recorte de polos | 10 | ✅ **Fechado** — randomizar por turma, ~22 mil alunos, 3 p.p. detectáveis |
 | **G4** | Personas e storytelling do pré | 06 | ✅ **Fechado** — `perfil-sucesso-e-personas.md`, parte 2. Quatro personas |
 | **G5** | Calouros que cancelam no 1º trimestre | 02 | ⏳ **Só a Vitru tem** — plano B ativo e **melhor que o original**: os 19,1 mil não engajados do release são absolutos e publicados |
-| **G6** | Split captação digital × via polo | 09 | ⏳ **Só a Vitru tem** — dimensiona o prêmio, não a viabilidade |
-| **G7** | Base do retorno estava misturada | 09 | ✅ **Corrigido em 16/08** — ganho vinha de 106,9 mil e custo de 54.829. Retorno cai de 5,7× para **2,9×**. O 0,45% não era afetado |
+| **G6** | Split captação digital × via polo | 08 | ⏳ **Só a Vitru tem** — dimensiona o prêmio, não a viabilidade |
+| **G7** | Base do retorno estava misturada | 08 | ✅ **Corrigido em 16/08** — ganho vinha de 106,9 mil e custo de 54.829. Retorno cai de 5,7× para **2,9×**. O 0,45% não era afetado |
 
 ## 6.1 Restrição de mensageria — incorporada ao desenho
 
@@ -395,9 +351,9 @@ ser usada — sem custo novo de licença.
 O que trava agora e não muda mais:
 
 1. A tese: a evasão começa antes da matrícula.
-2. O arco: número absoluto do problema → os fatores → a pergunta (ementa + troca
-   de curso) → a solução → Agente Pré rodando → Agente Pós rodando → validação →
-   oportunidade → escala → piloto.
+2. O arco: número absoluto do problema → o sintoma no modelo → a hipótese
+   (ementa + troca de curso + associação externa) → a solução → Agente Pré
+   rodando → Agente Pós rodando → oportunidade → escala → piloto.
 3. A frase de transição de cada slide.
 
 O que pode mudar até a véspera sem alterar uma linha da fala: os números dentro

@@ -109,7 +109,12 @@ pública é clara.
 
 ---
 
-## 3. Custo por aluno na jornada de ingresso
+## 3. Investimento operacional por aluno na jornada de ingresso
+
+No slide, usamos **investimento operacional** porque o valor financia a jornada e
+busca gerar ativação e retorno. Na memória de cálculo, cada parcela continua
+sendo tratada como **custo variável marginal**. Os R$ 11 não são o investimento
+total de implantação: não incluem desenvolvimento nem tempo humano das exceções.
 
 ### Agente Pré — antes do RA (pré-venda, no site)
 
@@ -194,7 +199,7 @@ Salesforce que ele já acessa."*
 Essa é a propriedade que fecha a discussão:
 
 ```text
-ponto de equilíbrio (%) = custo por aluno ÷ contribuição por aluno retido
+ponto de equilíbrio (p.p.) = 100 × custo por aluno ÷ contribuição por aluno retido
 ```
 
 Contribuição por aluno retido em 12 meses: R$ 287,4 × 70,3% × 12 = **R$ 2.424**.
@@ -203,6 +208,38 @@ Contribuição por aluno retido em 12 meses: R$ 287,4 × 70,3% × 12 = **R$ 2.42
 | :-- | :-- | --: |
 | 100% digital | R$ 11,00 ÷ R$ 2.424 | **0,45%** |
 | Via polo | R$ 7,44 ÷ R$ 2.424 | **0,31%** |
+
+### A fórmula de Simpson — e como ela se conecta à nossa conta
+
+No cenário de uma instituição financiada por mensalidades, Simpson (2023)
+define:
+
+```text
+superávit = N × [(n/100) × F − P]
+```
+
+onde `N` é a quantidade de alunos alcançados, `n` é a retenção incremental em
+pontos percentuais, `F` é a receita líquida gerada pelo aluno retido e `P` é o
+custo da atividade por aluno. Para que a atividade se pague:
+
+```text
+n ≥ 100 × P ÷ F
+```
+
+A adaptação do Marco Zero mantém exatamente essa estrutura:
+
+```text
+n ≥ 100 × R$ 11 ÷ R$ 2.424 = 0,454% ≈ 0,45 p.p.
+```
+
+Simpson fundamenta a **estrutura econômica**, não as nossas premissas. O paper
+não valida o custo de R$ 11, a contribuição de R$ 2.424 nem prevê o impacto do
+Marco Zero. Esses valores vêm das fontes e hipóteses declaradas neste documento
+e precisam ser confirmados no piloto.
+
+Fonte: Ormond Simpson (2023), *Student Support in Online Learning—We Need to
+Talk About Money*, IRRODL 24(4), DOI `10.19173/irrodl.v24i4.7241`, equações
+16–18.
 
 > **Custo e base escalam juntos.** Se a coorte for menor, o custo cai na mesma
 > proporção. O percentual de equilíbrio é uma propriedade *por aluno*, não da
@@ -215,7 +252,7 @@ O que muda com a coorte é só o **tamanho absoluto do prêmio**, não a viabili
 
 ### Escala absoluta, para dimensionar
 
-| Recorte | Alunos | Custo do programa |
+| Recorte | Alunos | Investimento operacional da jornada |
 | :-- | --: | --: |
 | Safra inteira de calouros UniCesumar | 54.829 | R$ 603 mil |
 | Só o recorte 100% digital *(estimativa — ver seção 7)* | ~23 mil | R$ 253 mil |
@@ -223,10 +260,10 @@ O que muda com a coorte é só o **tamanho absoluto do prêmio**, não a viabili
 
 **Formulação segura para o palco:**
 
-> "Cada aluno custa onze reais para acompanhar do começo ao fim. Um aluno que
-> fica devolve isso em **menos de dois dias** de mensalidade. O programa se paga
-> retendo **meio por cento a mais** da coorte — e isso vale para qualquer recorte,
-> porque custo e base andam juntos."
+> "O investimento operacional é de onze reais por aluno acompanhado do começo ao
+> fim. Um aluno que fica devolve isso em **menos de dois dias** de mensalidade. O
+> programa se paga com **meio ponto percentual de retenção a mais** — e isso vale
+> para qualquer recorte, porque custo e base andam juntos."
 
 ⚠️ **Precisão de fala.** Dizer "se paga retendo 0,45% da coorte" soa como se
 bastasse 0,45% da coorte ficar, o que é absurdamente baixo diante da realidade

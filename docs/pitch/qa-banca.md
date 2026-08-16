@@ -99,8 +99,38 @@ venda sabe por que a pessoa comprou e o pós não sabe. Ninguém liga os dois.
 ### ❓ "Vocês estão substituindo o modelo preditivo?"
 
 > Não, e a distinção importa. O modelo preditivo **fundamentou** o desenho dos
-> marcos — foi ele que nos disse que presença pesa 49,5% no calouro. Mas o agente
-> não consulta score em tempo de execução. Ele dispara por data, evento e status.
+> marcos — foi ele que nos disse que sinais de acesso somam 49,5% no calouro. Mas
+> importância preditiva não é motivo de evasão, e o agente não consulta score em
+> tempo de execução. Ele dispara por data, evento e status.
+
+### ❓ "Então esses sinais do slide 03 não são as causas?"
+
+> Não. São sintomas associados ao risco. O slide 03 localiza a ruptura antes da
+> ativação; o slide 04 apresenta uma hipótese sobre o que pode estar a montante.
+> Ementa, troca de curso e literatura tornam a hipótese testável, não comprovada.
+> O piloto é que mede se agir sobre escolha, expectativa e continuidade melhora a
+> ativação na UniCesumar.
+
+### ❓ "De onde vêm os 9,3 pontos percentuais?" ⚠️
+
+> De Fouarge e Heß, em *Labour Economics* de 2023. Eles acompanharam 2.476 jovens
+> no painel educacional alemão e compararam a preferência ocupacional declarada
+> antes da universidade com as ocupações ligadas ao curso escolhido. O
+> descompasso esteve associado a 9,1–9,3 pontos percentuais a mais de interrupção
+> do curso inicial, sobre uma taxa-base de 29%.
+>
+> Duas ressalvas: interrupção inclui abandonar, trocar de curso ou de instituição;
+> e os próprios autores dizem que o desenho **não identifica causalidade**. É
+> evidência de mecanismo, não previsão de impacto do Marco Zero.
+
+### ❓ "Simpson prova falta de orientação prévia ou impacto de IA?"
+
+> Não. O paper de Simpson de 2023 não fala em *course choice mismatch*,
+> pré-requisito nem desestimular candidato. Ele sustenta contato proativo antes do
+> início e mostra como calcular custo, retenção incremental e retorno. A IA aparece
+> em uma frase como potencial para suporte, sem teste ou tamanho de efeito. No
+> pitch, Simpson fundamenta o suporte e a economia — não a tese de mismatch nem
+> um impacto já comprovado de IA.
 
 ---
 
@@ -115,13 +145,25 @@ nenhum dado que a Vitru precise liberar.
 
 ### ❓ "De onde vem esse 0,45%?" ⚠️
 
-> Custo por aluno dividido por contribuição por aluno retido. Onze reais de custo
-> contra duzentos e dois reais por mês de contribuição bruta — ticket de 287,40
-> vezes a margem bruta de 70,3%, os dois do release de vocês. Em doze meses são
-> 2.424 reais. Onze sobre 2.424 dá 0,45%.
+> No slide, R$ 11 é chamado de **investimento operacional**. Na fórmula, ele é o
+> custo variável por aluno: onze reais divididos pela contribuição de um aluno
+> retido. O ticket de 287,40 vezes a margem bruta de 70,3%, ambos do release, dá
+> 202 reais por mês; em doze meses, 2.424 reais. Onze sobre 2.424 dá 0,45%.
 >
 > E é **retenção incremental**: meio por cento **a mais** do que vocês reteriam
-> sem o programa. Não é meio por cento da coorte ficar.
+> sem o programa. Não é meio por cento da coorte ficar. Também não é orçamento
+> completo de implantação: desenvolvimento e exceções humanas ficam fora.
+
+### ❓ "Essa fórmula veio de onde?"
+
+> A estrutura é a mesma formalizada por Ormond Simpson para instituições
+> financiadas por mensalidade: se `P` é o custo da atividade por aluno, `F` é a
+> receita ou contribuição do retido e `n` é o ganho de retenção em percentual, o
+> equilíbrio exige `n ≥ 100 × P ÷ F`.
+>
+> Adaptando às nossas premissas: 100 × R$ 11 ÷ R$ 2.424 = 0,45%. Simpson sustenta
+> a estrutura; os valores da Vitru e os R$ 11 são premissas deste modelo e precisam
+> ser validados no piloto.
 
 ### ❓ "E essa margem de 70,3%, de onde saiu?" ⚠️ *(a pergunta de quem entende de finanças)*
 
@@ -291,12 +333,17 @@ Honestidade aqui vale ponto. Se vier alguma destas, a resposta é assumir.
 | ❌ Não dizer | ✅ Dizer |
 | :-- | :-- |
 | "Se paga retendo 0,45% da coorte" | "Se paga com 0,45% de retenção **a mais**" |
+| "R$ 11 é o investimento total" | "R$ 11 é o **investimento operacional marginal**; implantação e exceções humanas ficam fora" |
 | "R$ 202 de lucro por aluno" | "R$ 202 de **contribuição bruta** por aluno" |
 | "Agente de Escolha / de Ingresso" | "Agente **Pré**, antes do RA; Agente **Pós**, depois do RA" |
 | "Cada polo vai ter um agente" | "A mensageria é centralizada; o polo recebe tarefa" |
 | "O modelo de vocês não enxerga esses alunos" | "O agente age por evento, então não depende de score" |
+| "Os fatores do modelo são os motivos da evasão" | "São sinais preditivos; localizam o sintoma, não provam a causa" |
+| "Fouarge prova que mismatch causa +9,3 p.p." | "Fouarge encontra associação externa de 9,1–9,3 p.p.; o estudo não identifica causalidade" |
+| "Simpson recomenda desestimular candidatos" | "Simpson sustenta suporte proativo e sua lógica econômica; não faz essa recomendação no paper de 2023" |
+| "Simpson provou o impacto da IA" | "Simpson cita IA como potencial, sem testar efeito" |
 | "Vamos reduzir a evasão em X%" | "Vamos medir ativação; evasão é resultado posterior" |
 | "O CAC de vocês é R$ 783" | "Nosso proxy dá R$ 783; o CAC real é de vocês" |
 | "A base mostra que…" | "O deck do time de dados de vocês mostra que…" |
-| "Não saíram por dinheiro" | "No modelo de vocês, presença pesa 3× mais que dinheiro" |
+| "Não saíram por dinheiro" | "No modelo de vocês, sinais de acesso pesam quase 3× mais que os financeiros" |
 | "É uma IA / um agente" | "É um sistema de ingresso. A IA é a infraestrutura" |

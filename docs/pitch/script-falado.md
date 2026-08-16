@@ -4,7 +4,7 @@ Só as falas. **Um bloco por slide, na ordem exata do `apps/pitch/index.html`.**
 Conferido contra o arquivo em 16/08.
 
 **Tempo alvo: 5 minutos.** O texto sem os cortes dá ~6. Cortes marcados com ✂ —
-tirando os três, fecha em 5 com folga.
+tirando os dois, fecha em 5 com folga.
 
 ---
 
@@ -48,86 +48,85 @@ Se insistirem:
 > não desistiram no meio do curso. Elas não registraram nem uma coisa nem outra.
 > **Elas não começaram.**
 >
+> ✂ *(cortar se estiver longo:)* Pra dimensionar o setor: no EAD privado
+> brasileiro, a evasão medida é de sessenta e quatro por cento.
+>
 > E quando a gente separa calouro de veterano, **o calouro carrega cinco vezes
 > mais risco.** O problema não está espalhado pela jornada. Está na entrada.
 
 **Nota de fala:** não abrir por "segundo o modelo de risco de vocês". O número que
-abre é contagem do release. O modelo entra no slide 03, para explicar *por que*.
+abre é contagem do release. O modelo entra no slide 03 para mostrar **como o
+risco aparece** — não para explicar sua causa.
 
 ---
 
-## 03 · Diagnóstico
+## 03 · O sintoma
 
-> Aí a gente foi ver *por que* o calouro sai. E a resposta surpreende.
+> Antes de procurar a causa, a gente olhou como o problema aparece no dado de
+> vocês.
 >
-> Os cinco fatores que mais pesam no modelo de vocês para o calouro são: dias
-> totais de acesso, acesso na semana de entrega, acesso no período pedagógico,
-> **dias até o primeiro acesso**, e entrega de atividades.
+> E aqui a precisão importa: isto é **importância preditiva**. Não é uma lista de
+> motivos de evasão.
 >
-> Somando os pesos: presença vale quase **cinquenta por cento** do modelo.
-> Dinheiro vale **dezessete**.
+> No calouro, quatro dos cinco sinais mais relevantes são de acesso ao AVA. O
+> quinto é entrega de atividade. Somados, os sinais de acesso representam
+> **quarenta e nove vírgula cinco por cento** do modelo; os financeiros,
+> **dezessete vírgula seis**.
 >
-> Agora compara com o veterano, onde o que pesa é andamento do curso, pagamento e
-> nota.
+> No veterano, o que aparece é andamento, pagamento e desempenho.
 >
-> **O veterano evade porque não avança. O calouro evade porque não começa.**
+> Então o dado não autoriza dizer "o calouro evade porque não começa". Ele
+> localiza a ruptura: no veterano, ela aparece no progresso; no calouro, **antes
+> da ativação**.
 >
-> São dois problemas diferentes. E só um deles tem a ver com a venda.
+> E isso muda a pergunta: **o que pode estar acontecendo antes do primeiro
+> acesso?**
 
 ---
 
-## 04 · A pergunta
+## 04 · A hipótese
 
-> Então a pergunta que a gente se fez foi: por que uma pessoa paga uma matrícula e
-> não aparece?
+> Para responder, a gente fez uma anamnese: voltou do sintoma para o que acontece
+> antes da matrícula.
 >
-> E vocês mesmos nos deram as duas pistas.
+> A **segunda página mais acessada** do site são as ementas. Isso prova que existe
+> demanda por clareza sobre o curso.
 >
-> A **segunda página mais acessada** do site de vocês são as ementas dos cursos.
-> Então a vontade de entender o curso existe, e é gigante.
+> E o **segundo processo mais comum** no CSC é troca de curso, com relatos de até
+> três trocas. Isso sinaliza que parte da decisão está sendo corrigida só depois
+> da compra.
 >
-> E o **segundo processo mais comum** na central de serviços compartilhados é
-> troca de curso. Com gente trocando até três vezes, para áreas que não têm nada a
-> ver uma com a outra.
+> A literatura dá uma terceira pista. Fouarge e Heß acompanharam 2.476 jovens na
+> Alemanha e compararam a preferência ocupacional declarada antes da universidade
+> com as ocupações ligadas ao curso escolhido. O descompasso esteve associado a
+> **nove vírgula três pontos percentuais** a mais de interrupção do curso inicial.
 >
-> Junta as duas: a pessoa quer entender, não consegue entender, compra assim mesmo
-> — e depois tenta consertar por dentro.
+> Associação, não efeito causal — e interrupção inclui troca de curso ou de
+> instituição. A gente não transporta esse percentual para a UniCesumar.
 >
-> Trocar de curso três vezes não é indecisão do aluno. É a venda empurrando a
-> decisão para depois da matrícula.
+> Os três sinais sustentam uma hipótese testável: **parte do não começo nasce de
+> uma escolha pouco esclarecida e de uma expectativa corrigida só depois da
+> matrícula.**
 >
-> E isso tem tamanho medido na literatura: quando o curso não bate com a
-> preferência real da pessoa, a evasão sobe **nove pontos percentuais**.
->
-> **A decisão de evadir já estava tomada. Ela só foi executada depois.**
-
-> 🔴 **NÃO FALAR OS NOVE PONTOS PERCENTUAIS ATÉ VALIDAR.** Ver seção 1.1 do
-> `plano-pitch.md`. O estudo existe e a direção está confirmada, mas a magnitude
-> de 9 p.p. não foi verificada em nenhuma fonte acessível, e o alinhamento mestre
-> — nossa fonte de verdade — diz explicitamente que esse estudo serve como
-> mecanismo e **não** como estimativa. Fala segura enquanto não validar:
->
-> > "E isso está medido na literatura: quando o curso não bate com a preferência
-> > real da pessoa, a evasão é maior. É painel longitudinal alemão, com controles."
+> Se essa ruptura atravessa o RA, a resposta também precisa atravessar.
 
 ---
 
 ## 05 · Solução
 
-> Marco Zero é um sistema de ingresso. Ele leva a pessoa da dúvida sobre qual
-> curso fazer até a primeira atividade entregue.
+> Marco Zero transforma essa hipótese em processo.
 >
-> Tem dois agentes dentro, e eles são nomeados pela etapa, não por metáfora.
+> O **Agente Pré**, antes do RA, faz uma pergunta curta sobre objetivo, explica o
+> curso e a rotina real do EAD, converte — e registra intenção, disponibilidade e
+> dúvida.
 >
-> O **Agente Pré** atua **antes do RA**. É pré-venda: entende a intenção, explica
-> curso e metodologia, converte — e registra **por que** aquela pessoa comprou.
+> A matrícula não apaga essa conversa. O **Contexto de Entrada** atravessa o RA.
 >
-> O **Agente Pós** atua **depois do RA**. Reage a data, evento e status, e conduz
-> a pessoa até os marcos que decidem o trimestre.
+> O **Agente Pós** recebe esse contexto, considera o momento de ingresso e mostra
+> só o próximo passo — **sem perguntar tudo de novo**.
 >
-> No meio dos dois tem a peça que é o nosso diferencial: o **Contexto de Entrada**.
-> O que o candidato disse que queria não morre na matrícula. Vira o roteiro do
-> onboarding dele.
+> É escolha esclarecida, contexto preservado e ativação guiada. A IA faz isso em
+> escala; o produto é o processo.
 
 ---
 
@@ -181,37 +180,17 @@ abre é contagem do release. O modelo entra no slide 03, para explicar *por que*
 
 ---
 
-## 08 · Validação
+## 08 · Oportunidade
 
-> Isso já foi testado fora, com grupo de controle.
->
-> A Georgia State rodou um ensaio randomizado com um assistente conversacional
-> exatamente nessa janela entre a decisão e o primeiro dia de aula. Resultado:
-> **três vírgula três pontos percentuais** a mais de matrícula efetivada.
->
-> ✂ *(cortar se estiver longo:)* Castleman e Page mostraram o mesmo com mensagens
-> personalizadas, a custo de poucos dólares por aluno.
->
-> E o estudo que fecha o raciocínio, publicado em Labour Economics: a evasão **se
-> decide na escolha**, não na dificuldade do curso. O mecanismo que eles mediram é
-> indecisão no momento da matrícula — não obstáculo acadêmico ao longo do caminho.
->
-> E vou ser honesto num ponto: uma replicação posterior mostrou que esse efeito
-> **não é uniforme**. Ele funciona quando é direcionado. É exatamente por isso que
-> a gente escolheu um recorte estreito: calouro, na janela de ingresso.
-
----
-
-## 09 · Oportunidade
-
-> Agora o dinheiro. E eu vou mostrar a conta inteira, porque ela é curta.
+> Agora o investimento operacional. E eu vou mostrar a conta inteira, porque ela
+> é curta.
 >
 > Ação de agente na Salesforce: dez centavos de dólar, preço de tabela. Mensagem
 > de utilidade no WhatsApp no Brasil: seis centavos de real — não oitenta, porque
 > oitenta é preço de mensagem de marketing, e a nossa é serviço.
 >
-> A jornada inteira, do primeiro "oi" até a primeira atividade: **onze reais de
-> investimento por aluno.**
+> A jornada inteira, do primeiro "oi" até a primeira atividade, exige um
+> **investimento operacional de onze reais por aluno.**
 >
 > Do outro lado da conta: mensalidade de duzentos e oitenta e sete e quarenta,
 > vezes a margem bruta ajustada de **setenta vírgula três por cento**. Os dois
@@ -238,7 +217,7 @@ mais**. E nunca chamar os R$ 202 de lucro.
 
 ---
 
-## 10 · Escala
+## 09 · Escala
 
 > Sobre operar isso: a rede tem mais de mil polos, com estruturas muito
 > diferentes. A gente sabe que não dá para padronizar isso.
@@ -257,7 +236,7 @@ mais**. E nunca chamar os R$ 202 de lucro.
 
 ---
 
-## 11 · Implementação
+## 10 · Implementação
 
 > E o piloto já está dimensionado.
 >
@@ -274,7 +253,7 @@ mais**. E nunca chamar os R$ 202 de lucro.
 
 ---
 
-## 12 · Time e fechamento
+## 11 · Time e fechamento
 
 > Somos cinco, e a gente dividiu por frente: dados, produto, front e backend.
 >
@@ -291,12 +270,11 @@ mais**. E nunca chamar os R$ 202 de lucro.
 
 ## Cortes para fechar em 5 minutos
 
-1. Slide 07 — cortar o parágrafo do escalonamento para o polo
-2. Slide 08 — cortar Castleman & Page, ficar com Georgia State e Fouarge & Heß
-3. Slide 09 — cortar a explicação de por que se usa margem bruta e deixar para o Q&A
+1. Slide 02 — cortar a linha do Semesp (os 64,1%)
+2. Slide 07 — cortar o parágrafo do escalonamento para o polo
 
-Se precisar de um quarto corte: no slide 04, ficar só com ementa e troca de curso,
-sem a referência à literatura.
+Se precisar de um terceiro corte: no slide 08, tirar a explicação de por que se usa
+margem bruta e deixar essa resposta para o Q&A.
 
 ---
 
@@ -333,5 +311,5 @@ cem por cento digital?"** ⚠️ *(a pergunta mais afiada que podem fazer)*
 > Usamos para entender o terreno. Mas nenhuma **taxa absoluta** do palco vem dela
 > — ela é um retrato único, sem congelamento temporal, então dá para ordenar e
 > comparar, não para afirmar taxa. O que a gente usou dela é comparação relativa,
-> que sobrevive ao retrato: é de lá que vem o efeito de pares do slide 11. Os
+> que sobrevive ao retrato: é de lá que vem o efeito de pares do slide 10. Os
 > números absolutos vêm do release e do deck do time de Ciência de Dados de vocês.
