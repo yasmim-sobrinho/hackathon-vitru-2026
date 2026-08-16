@@ -204,18 +204,39 @@ h3{margin:0 0 10px;font-size:18px;font-weight:600;letter-spacing:-.01em}
 
 .hyp{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .hy{background:var(--card);border:1px solid var(--line);border-radius:14px;
-  padding:24px 22px;border-top:3px solid var(--bright);position:relative}
+  padding:34px 26px 38px;border-top:3px solid var(--bright);position:relative}
 .hy b{display:block;font-size:12px;font-weight:700;letter-spacing:.18em;
   color:var(--bright);margin-bottom:12px}
-.hy h4{margin:0 0 10px;font-size:19px;font-weight:600;line-height:1.25}
+.hy h4{margin:0;font-size:clamp(22px,2.2vw,30px);font-weight:600;line-height:1.22;letter-spacing:-.02em}
 .hy p{margin:0;font-size:14px;font-weight:300;line-height:1.55;color:#dceaf5}
 @media(max-width:900px){.hyp{grid-template-columns:1fr}}
+
+/* problema: numero + lista */
+.probs{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.prob{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:26px 26px 22px;border-top:3px solid var(--line)}
+.prob.alert{border-top-color:var(--alert);background:rgba(255,138,122,.06)}
+.prob strong{display:block;font-size:clamp(40px,5vw,64px);font-weight:700;
+  letter-spacing:-.045em;line-height:1;margin-bottom:10px}
+.prob.alert strong{color:var(--alert)}
+.prob>span{display:block;color:var(--muted);font-size:15px;font-weight:300;line-height:1.4}
+.prob h5{margin:20px 0 10px;font-size:11px;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--bright);padding-top:16px;
+  border-top:1px solid var(--line)}
+.prob ol{margin:0;padding-left:19px}
+.prob li{font-size:14px;font-weight:300;line-height:1.75;color:#dceaf5}
+.prob li b{font-weight:600;color:#fff}
+
+/* cards com titulo em texto no lugar de numero */
+.tight .metric strong{font-size:clamp(21px,2.3vw,31px);line-height:1.2;
+  letter-spacing:-.02em;margin-bottom:14px}
+.tight .metric span{font-size:15px;line-height:1.5}
 @media(max-width:1040px){
   .sim{grid-template-columns:1fr}
   .panels{grid-template-columns:1fr}
 }
 @media(max-width:900px){
-  .g2,.g3,.arch,.road{grid-template-columns:1fr}
+  .probs,.g2,.g3,.arch,.road{grid-template-columns:1fr}
   .fact{grid-template-columns:1fr}
   .fact .l{border-right:0;border-bottom:1px solid var(--line)}
   .road .ph{border-left:0;border-top:1px solid var(--line);padding-left:0}
@@ -241,7 +262,7 @@ h3{margin:0 0 10px;font-size:18px;font-weight:600;letter-spacing:-.01em}
   <p class="sub"><b style="font-weight:600;color:#fff">Marco Zero</b> — sistema de ingresso do aluno.</p>
   <div class="row">
     <button class="btn" onclick="go(1)">Ver a tese</button>
-    <button class="btn ghost" onclick="go(6)">Ir para a demo</button>
+    <button class="btn ghost" onclick="go(5)">Ir para a demo</button>
   </div>
 </div></section>
 
@@ -249,98 +270,81 @@ h3{margin:0 0 10px;font-size:18px;font-weight:600;letter-spacing:-.01em}
 <section class="slide" data-n="02"><div class="wrap">
   <span class="label">Problema</span>
   <h2>A evasão não está espalhada pelo curso. Ela mora na entrada.</h2>
-  <div class="grid g3">
-    <div class="card metric"><strong style="color:var(--alert)">18%<span style="font-size:.4em;color:var(--muted);font-weight:300"> × 7%</span></strong><span>dos <b>calouros</b> evadem no próprio módulo de ingresso, contra <b>7% dos veteranos</b></span></div>
-    <div class="card metric"><strong>+80 mil</strong><span>alunos perdidos logo no <b>primeiro ano</b></span></div>
-    <div class="card metric"><strong class="ac">R$ 783</strong><span>de aquisição investidos em <b>cada captação</b> — perdidos junto quando o aluno não começa</span></div>
-  </div>
-  <p class="note">O calouro evade <b>duas vezes e meia mais</b> que o veterano. Não é desistência ao longo da graduação —
-  <b>é gente que não chega a começar.</b><br>
-  E quando não começa, perde-se a mensalidade futura <b>e</b> o investimento de aquisição já gasto.</p>
-</div></section>
-
-<!-- 03 O SINTOMA -->
-<section class="slide" data-n="03"><div class="wrap">
-  <span class="label">O sintoma</span>
-  <h2>O dado mostra o sintoma, não a causa.</h2>
-  <div class="fact">
-    <div class="l"><h4>Calouro — sinais mais relevantes</h4>
+  <div class="probs">
+    <div class="prob alert">
+      <strong>18%</strong>
+      <span>dos <b>calouros</b> evadem no próprio módulo de ingresso</span>
+      <h5>O que pesa no calouro</h5>
       <ol>
         <li>Dias totais de acesso ao AVA</li>
         <li>Acesso na semana de entrega</li>
         <li>Acesso no período pedagógico</li>
         <li><b>Dias até o primeiro acesso</b></li>
         <li>Entrega de atividades</li>
-      </ol></div>
-    <div class="r"><h4>Veterano — sinais mais relevantes</h4>
+      </ol>
+    </div>
+    <div class="prob">
+      <strong>7%</strong>
+      <span>dos <b>veteranos</b>, na mesma medida</span>
+      <h5>O que pesa no veterano</h5>
       <ol>
         <li>Andamento do curso</li>
         <li>Pagamentos até o vencimento</li>
         <li>Engajamento financeiro</li>
         <li>Notas do módulo anterior</li>
         <li>Aprovação em disciplinas</li>
-      </ol></div>
+      </ol>
+    </div>
   </div>
-  <p class="note">Quando esses sinais aparecem, <b>o que os produziu já aconteceu semanas antes.</b></p>
+  <p class="note"><b>+80 mil alunos</b> perdidos logo no primeiro ano — e cada captação carrega
+  <b>R$ 783</b> de aquisição, que se perde junto.<br>
+  Mas esses sinais são <b>sintomas</b>: quando eles aparecem, o que os produziu já aconteceu semanas antes.</p>
 </div></section>
 
 <!-- 04 A HIPÓTESE -->
-<section class="slide" data-n="04"><div class="wrap">
+<section class="slide" data-n="03"><div class="wrap">
   <span class="label">A hipótese</span>
   <h2>Três hipóteses. Nenhuma delas é acadêmica.</h2>
   <div class="hyp">
-    <div class="hy"><b>01</b><h4>Desalinhamento de expectativa</h4>
-      <p>Compra o curso e descobre tarde demais a rotina e a autonomia que o EAD exige.</p></div>
-    <div class="hy"><b>02</b><h4>Compra impulsiva no funil mecânico</h4>
-      <p>A decisão acontece em pico de motivação. O funil só coleta contato e encaminha ao pagamento — nada leva a pessoa a examinar a própria escolha.</p></div>
-    <div class="hy"><b>03</b><h4>A síndrome de começar sozinho</h4>
-      <p>Decide sozinho, se matricula sozinho, começa sozinho. Quando trava, silencia — e o silêncio é lido como desistência.</p></div>
+    <div class="hy"><b>01</b><h4>Desalinhamento de expectativa</h4></div>
+    <div class="hy"><b>02</b><h4>Compra impulsiva no funil mecânico</h4></div>
+    <div class="hy"><b>03</b><h4>A síndrome de começar sozinho</h4></div>
   </div>
-  <p class="note">Duas nascem <b>antes</b> da primeira aula, uma logo depois. Todos os sintomas só aparecem com o trimestre em curso.<br>
-  A dor está partida entre <b>Captação e Retenção</b> — e é nessa costura que o aluno fica sem dono.</p>
 </div></section>
 
 <!-- 05 FUNDAMENTAÇÃO -->
-<section class="slide" data-n="05"><div class="wrap">
+<section class="slide" data-n="04"><div class="wrap">
   <span class="label">Fundamentação</span>
   <h2>O que sustenta essas hipóteses.</h2>
-  <div class="grid g3">
-    <div class="card metric"><strong class="ac">2ª</strong><span><b>Busca por clareza:</b> as ementas ocupam o 2º lugar entre as páginas mais acessadas do site</span></div>
-    <div class="card metric"><strong class="ac">2º</strong><span><b>Correção depois da compra:</b> troca de curso no CSC — até 3 por aluno</span></div>
-    <div class="card metric"><strong style="color:var(--alert)">+9,3 p.p.</strong><span><b>associados</b> à interrupção do curso inicial quando escolha e preferência não coincidem</span></div>
+  <div class="grid g3 tight">
+    <div class="card metric"><strong class="ac">Busca por clareza</strong><span>As ementas ocupam o <b>2º lugar</b> entre as páginas mais acessadas do site</span></div>
+    <div class="card metric"><strong class="ac">Correção depois da compra</strong><span>Troca de curso é o <b>2º processo</b> mais comum do CSC — até 3 por aluno</span></div>
+    <div class="card metric"><strong style="color:var(--alert)">40 dias</strong><span>é o <b>ponto de virada</b>: sem acesso ao AVA até aí, a recuperação se torna improvável</span></div>
   </div>
   <p class="note">A vontade de entender existe e é grande — mas não se completa antes da compra,
-  e a correção acaba acontecendo depois dela.<br>
-  Se a ruptura atravessa a matrícula, <b>a resposta também precisa atravessar.</b></p>
+  e a correção acaba acontecendo depois dela.</p>
 </div></section>
 
 <!-- 05 AS TRÊS CAMADAS -->
-<section class="slide" data-n="06"><div class="wrap">
+<section class="slide" data-n="05"><div class="wrap">
   <span class="label">Solução</span>
   <h2>Marco Zero: a rampa de lançamento do aluno.</h2>
-  <p class="sub" style="max-width:74ch;margin-bottom:34px">Quem entra numa faculdade presencial encontra um orientador.
-  Quem entra num EAD encontra um formulário. <b style="color:#fff;font-weight:600">Marco Zero devolve esse orientador</b> —
+  <p class="sub" style="max-width:76ch;margin-bottom:34px">Quem entra numa faculdade presencial encontra um orientador acadêmico.
+  Quem entra num EAD encontra um formulário — e não por descuido: na escala de um milhão de alunos,
+  a conta de orientadores nunca fechou. <b style="color:#fff;font-weight:600">Marco Zero devolve essa função</b>,
   da primeira dúvida sobre qual curso escolher até a primeira entrega feita.</p>
   <div class="layers">
-    <div class="lay whole">
-      <b>Camada 1 · o sistema inteiro</b>
-      <div class="layflow">
-        <span class="node">Dúvida</span><span class="chev">→</span>
-        <span class="node">Escolha</span><span class="chev">→</span>
-        <span class="node key">Matrícula</span><span class="chev">→</span>
-        <span class="node">Ativação</span><span class="chev">→</span>
-        <span class="node">1ª entrega</span>
-      </div>
-    </div>
-    <div class="lay"><span class="tag2 ac">Camada 2 · Agente Pré</span>
-      <h4>Orientadora vocacional</h4>
-      <p>Pergunta o que a captação nunca pergunta: como é seu espaço de estudo, quantas horas livres você tem.
-      Transforma um processo transacional em <b>autodescoberta</b> — e cria o vínculo que sustenta o aluno quando ele travar.</p>
+    <div class="lay"><span class="tag2 ac">Agente Pré · antes da matrícula</span>
+      <h4>Orientação na hora de escolher</h4>
+      <p>Conversa opcional que conecta o <b>objetivo profissional que a pessoa declara</b> aos cursos que realmente
+      levam até lá — e mostra, antes da compra, a rotina que o EAD vai exigir: espaço de estudo, horas livres, autonomia.
+      A matrícula nunca é bloqueada; o que muda é a <b>qualidade da entrada</b>.</p>
       <small>Ataca as hipóteses 01 e 02.</small></div>
-    <div class="lay"><span class="tag2 gr">Camada 3 · Agente Pós</span>
-      <h4>Motor de engajamento</h4>
-      <p>O aluno não começa sozinho. O agente conduz aos comportamentos que a base associa à permanência,
-      chegando <b>antes</b> de o sintoma aparecer.</p>
+    <div class="lay"><span class="tag2 gr">Agente Pós · depois da matrícula</span>
+      <h4>Condução nas primeiras semanas</h4>
+      <p>Recebe esse objetivo e conduz o calouro aos comportamentos que a base associa à permanência:
+      antecipar o primeiro acesso, criar hábito de estudo e chegar preparado às duas entregas
+      que valem <b>7,5 dos 10 pontos</b> do trimestre. Age <b>antes</b> do sintoma, não depois.</p>
       <small>Ataca a hipótese 03.</small></div>
   </div>
   <p class="note">Ligando os dois, a peça que não existe hoje: <b>o objetivo que a própria pessoa declarou atravessa a matrícula.</b>
@@ -348,7 +352,7 @@ h3{margin:0 0 10px;font-size:18px;font-weight:600;letter-spacing:-.01em}
 </div></section>
 
 <!-- 06 PRODUTO — ESCOLHA -->
-<section class="slide" data-n="07"><div class="wrap">
+<section class="slide" data-n="06"><div class="wrap">
   <span class="label">Produto · Agente Pré</span>
   <h2 style="font-size:clamp(28px,3.4vw,46px);margin-bottom:24px">Vender explicando. Não perguntando.</h2>
   <div class="sim">
@@ -369,7 +373,7 @@ h3{margin:0 0 10px;font-size:18px;font-weight:600;letter-spacing:-.01em}
 </div></section>
 
 <!-- 07 PRODUTO — INGRESSO -->
-<section class="slide" data-n="08"><div class="wrap">
+<section class="slide" data-n="07"><div class="wrap">
   <span class="label">Produto · Agente Pós</span>
   <h2 style="font-size:clamp(28px,3.4vw,46px);margin-bottom:20px">Cada marco tem gatilho, canal e registro.</h2>
   <div class="simbar">
@@ -394,7 +398,7 @@ h3{margin:0 0 10px;font-size:18px;font-weight:600;letter-spacing:-.01em}
 </div></section>
 
 <!-- 08 OPORTUNIDADE -->
-<section class="slide" data-n="09"><div class="wrap">
+<section class="slide" data-n="08"><div class="wrap">
   <span class="label">Oportunidade</span>
   <h2>R$ 11 de investimento operacional por aluno.</h2>
   <div class="grid g3">
@@ -402,52 +406,11 @@ h3{margin:0 0 10px;font-size:18px;font-weight:600;letter-spacing:-.01em}
     <div class="card metric"><strong class="gr">0,45%</strong><span>de retenção <b>a mais</b> na coorte já paga o programa inteiro</span></div>
     <div class="card metric"><strong class="ac">2,9×</strong><span>de retorno no cenário mais conservador</span></div>
   </div>
-  <p class="note"><b>A conta, inteira:</b> mensalidade de R$ 287,40 × margem bruta de 70,3% = <b>R$ 202 por mês</b>
-  de contribuição. Em doze meses, R$ 2.424. Custo de R$ 11 ÷ R$ 2.424 = <b>0,45%</b>.<br>
-  Um aluno que fica devolve o custo em <b>menos de dois dias</b>. E o ponto de equilíbrio não muda com o
-  recorte, porque custo e base escalam juntos.</p>
-</div></section>
-
-<!-- 09 ARQUITETURA E ESCALA -->
-<section class="slide" data-n="10"><div class="wrap">
-  <span class="label">Escala</span>
-  <h2>Mensageria centralizada. Polo recebe tarefa, não fila.</h2>
-  <div class="arch">
-    <div class="card mid"><h3>Mensagem ao aluno</h3>
-      <p class="sub" style="font-size:14px">Canal único, operado pela sede. WhatsApp, e-mail, push e in-app.</p>
-      <small>Nenhum polo envia mensagem.</small></div>
-    <div class="card ok"><h3>Tarefa com contexto</h3>
-      <p class="sub" style="font-size:14px">Chega no Salesforce que o polo já acessa hoje, integrado ao Data Lake e ao CRM.</p>
-      <small>Replicável, sem custo novo de licença.</small></div>
-    <div class="card"><h3>Ação local</h3>
-      <p class="sub" style="font-size:14px">O polo resolve o que só ele resolve: documento, presencial, exceção.</p>
-      <small>Diretriz, não obrigação.</small></div>
-  </div>
-  
-  <p class="note">O sistema roda de ponta a ponta sem o polo. Onde o polo adere, o resultado é melhor;
-  onde não adere, continua funcionando. Não dá para padronizar mil polos — e o desenho não pede isso.</p>
-</div></section>
-
-<!-- 10 PILOTO E ROADMAP -->
-<section class="slide" data-n="11"><div class="wrap">
-  <span class="label">Implementação</span>
-  <h2>O piloto já está dimensionado.</h2>
-  <div class="road">
-    <div class="ph"><b>Fase 1 · piloto</b><h4>Uma safra, marcos 1 a 3</h4>
-      <p>~22 mil alunos, randomização <b>por turma</b>. Detecta 3 p.p. com poder de 80%.</p></div>
-    <div class="ph"><b>Fase 2 · ciclo completo</b><h4>Marcos 4 a 6</h4>
-      <p>M.A.P.A. e avaliação presencial, que juntos valem 7,5 dos 10 pontos do trimestre.</p></div>
-    <div class="ph"><b>Fase 3 · escala</b><h4>Rede e polos</h4>
-      <p>Console do polo com carteira de exceções. Aprendizado de próxima melhor ação.</p></div>
-    <div class="ph"><b>Fase 4 · expansão</b><h4>Uniasselvi e veterano</h4>
-      <p>Outra marca exige base própria. O veterano é outro problema: progresso, não presença.</p></div>
-  </div>
-  <p class="note">Randomizar por aluno dentro da mesma turma contamina tratamento e controle — encontramos
-  efeito de pares na base: <b>+29% de chance</b> de intenção a cada 10 p.p. de colegas com intenção.</p>
+  <p class="note"><b>Um aluno que fica devolve o custo em <b>menos de dois dias</b></p>
 </div></section>
 
 <!-- 11 TIME -->
-<section class="slide" data-n="12"><div class="wrap">
+<section class="slide" data-n="09"><div class="wrap">
   <span class="label">Time</span>
   <h2 style="margin-bottom:38px">Do interesse à permanência.</h2>
   <div class="team">
