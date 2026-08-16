@@ -88,6 +88,19 @@ venda sabe por que a pessoa comprou e o pós não sabe. Ninguém liga os dois.
 > um sistema de ingresso — um processo com marcos, gatilhos e registro. A IA é o
 > que faz esse processo rodar em escala e de forma personalizada.
 
+### ❓ "O Agente Pré vai desestimular quem não tem perfil, tipo um teste vocacional?" ⚠️
+
+> Não. Ele não diagnostica vocação nem decide por ninguém — conecta o objetivo
+> declarado a caminhos possíveis e mostra a rotina real do EAD antes da compra, o
+> que chamamos de espelho da realidade. **A compra nunca fica bloqueada nem
+> condicionada** a essa conversa: se a pessoa quiser seguir direto, o agente
+> facilita.
+>
+> Existe, sim, um efeito lateral financeiro: uma escolha mais consciente tende a
+> durar mais, o que preserva tanto a mensalidade futura quanto o investimento de
+> aquisição já feito. Mas isso é consequência do alinhamento, não um filtro ativo
+> de acesso — não temos e não propomos nenhum mecanismo que barre matrícula.
+
 ### ❓ "Qual o diferencial real?"
 
 > Três. Primeiro: o contexto de entrada atravessa o RA — o que a pessoa disse na
@@ -336,6 +349,8 @@ Honestidade aqui vale ponto. Se vier alguma destas, a resposta é assumir.
 | "R$ 11 é o investimento total" | "R$ 11 é o **investimento operacional marginal**; implantação e exceções humanas ficam fora" |
 | "R$ 202 de lucro por aluno" | "R$ 202 de **contribuição bruta** por aluno" |
 | "Agente de Escolha / de Ingresso" | "Agente **Pré**, antes do RA; Agente **Pós**, depois do RA" |
+| "A IA filtra ou desestimula quem não vai dar certo" | "A IA alinha expectativa; a compra nunca fica bloqueada nem condicionada" |
+| "É um teste vocacional" | "É orientação: conecta interesse a curso e carreira, sem diagnosticar nem decidir por ninguém" |
 | "Cada polo vai ter um agente" | "A mensageria é centralizada; o polo recebe tarefa" |
 | "O modelo de vocês não enxerga esses alunos" | "O agente age por evento, então não depende de score" |
 | "Os fatores do modelo são os motivos da evasão" | "São sinais preditivos; localizam o sintoma, não provam a causa" |

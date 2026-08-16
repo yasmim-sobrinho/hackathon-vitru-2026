@@ -17,12 +17,22 @@ funciona em três camadas:
 | | | |
 | :-- | :-- | :-- |
 | **Camada 1** | O sistema inteiro | Dúvida → Escolha → RA → Ativação → 1ª entrega |
-| **Camada 2** | **Agente Pré**, antes do RA | Alinha escolha e expectativa. Faz uma pergunta curta sobre objetivo, explica o curso e a rotina real do EAD, converte — e registra intenção, disponibilidade e dúvida |
+| **Camada 2** | **Agente Pré**, antes do RA | Escuta o objetivo em poucas perguntas, conecta interesse a curso e carreira sem diagnosticar vocação, projeta a rotina real do EAD e converte — registrando intenção, disponibilidade e dúvida |
 | **Camada 3** | **Agente Pós**, depois do RA | Recebe esse contexto e conduz o aluno até os marcos que decidem o trimestre, sem perguntar tudo de novo |
 
+O Agente Pré funciona como um **espelho da realidade**, não como uma venda que
+empurra matrícula: faz as perguntas que a captação tradicional costuma pular —
+como é a rotina de estudo da pessoa, quantas horas livres ela tem na semana — e
+usa isso para mostrar, antes da compra, como a jornada EAD vai ser na prática.
+Isso cria um contrato de transparência sobre a autonomia que a metodologia exige,
+e é exatamente o ponto que a literatura liga à evasão precoce (ver seção 2).
+**A compra nunca fica condicionada a essa conversa:** se a pessoa quiser seguir
+direto, o agente facilita.
+
 Entre as duas camadas está a peça que não existe hoje: o **Contexto de Entrada**,
-que atravessa a matrícula. O que a pessoa disse na venda vira o roteiro do
-onboarding dela.
+que atravessa a matrícula. O que a pessoa disse na venda — inclusive o vínculo
+criado nessa conversa — vira o roteiro do onboarding dela, e é o que o Agente Pós
+usa para reancorar o propósito quando o aluno enfrenta dificuldade.
 
 O Agente Pós não age por score de risco. Age por **data, evento e status** — RA
 gerado sem primeiro acesso, atividade pendente com prazo próximo, M.A.P.A. a 21
@@ -64,6 +74,13 @@ que está a montante:
 
 **A hipótese que o piloto testa:** parte do não começo nasce de uma escolha pouco
 esclarecida e de uma expectativa corrigida tarde demais.
+
+**A dor tem um lado financeiro que se soma ao acadêmico.** Cada captação carrega
+um custo de aquisição já gasto — em um proxy nosso sobre o release, cerca de
+**R$ 783** por captação (despesa comercial ajustada ÷ captação do trimestre; não
+é o CAC oficial da Vitru, e pedimos a confirmação do número real). Quando o aluno
+não engaja, esse investimento se perde junto com a mensalidade futura. Por isso a
+dor não é só receita recorrente que deixa de entrar — é receita **e** aquisição.
 
 ---
 
@@ -126,6 +143,13 @@ públicos da Vitru. E o mesmo autor mediu, na Open University, **+5,1% de reten�
 com uma ligação de £10 feita antes do início do módulo**, com retorno de 640%.
 
 Ele conseguiu 5,1% no telefone. **Precisamos de 0,45%, e fazemos digital.**
+
+**Isso é só o piso — o ganho real é maior.** O cálculo acima usa só a
+contribuição recorrente. Somando a aquisição recuperada (o proxy de R$ 783 por
+captação, seção 2), o valor de um aluno que passa a engajar chega a **R$ 3.207**.
+Num cenário conservador de apenas 1 ponto percentual a mais de engajamento na
+safra, o retorno projetado sobre o investimento operacional é de **2,9×** — o
+detalhamento por cenário está no modelo econômico completo.
 
 **5. Escala sem headcount linear.**
 O digital resolve o comum; polo e especialista recebem apenas exceção já triada.
