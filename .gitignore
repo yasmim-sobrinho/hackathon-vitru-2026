@@ -67,3 +67,4 @@ desktop.ini
 # Word e Office
 ~$*
 api/venv/
+apps/web/.vite/
