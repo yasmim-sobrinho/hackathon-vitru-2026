@@ -32,7 +32,7 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.45;
   color:rgba(255,255,255,.2);font-weight:600;font-size:12px;letter-spacing:.2em}
 .wrap{width:100%;max-width:1300px;margin:0 auto}
 
-.brandmark{position:fixed;left:24px;top:22px;z-index:40;height:26px;opacity:.85}
+.brandmark{position:fixed;left:24px;top:20px;z-index:40;height:44px;opacity:.95}
 .brandmark img{height:100%;display:block}
 
 .label{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.24em;
@@ -53,8 +53,8 @@ h3{margin:0 0 10px;font-size:18px;font-weight:600;letter-spacing:-.01em}
 .note{font-size:clamp(15px,1.4vw,19px);font-weight:300;line-height:1.5;
   color:#d3e4f2;max-width:58ch;margin:28px 0 0;
   border-left:3px solid var(--bright);padding-left:18px}
-.src{position:absolute;left:7vw;right:14vw;bottom:2.4vh;color:var(--dim);
-  font-size:10.5px;font-weight:300;line-height:1.45}
+.src{position:absolute;left:7vw;right:14vw;bottom:2.4vh;color:#9db9d2;
+  font-size:12.5px;font-weight:400;line-height:1.5}
 
 .grid{display:grid;gap:18px}
 .g2{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -134,9 +134,6 @@ h3{margin:0 0 10px;font-size:18px;font-weight:600;letter-spacing:-.01em}
 .panel h5{margin:0 0 12px;font-size:10.5px;font-weight:700;letter-spacing:.18em;
   text-transform:uppercase;color:var(--bright)}
 .panel p{margin:0;font-size:13.5px;font-weight:300;line-height:1.55;color:#dceaf5}
-.panel code{display:block;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11.5px;
-  color:var(--mint);background:rgba(0,0,0,.28);padding:9px 11px;border-radius:6px;
-  margin-top:9px;line-height:1.6;word-break:break-word}
 .chip{display:inline-block;font-size:11px;font-weight:600;padding:4px 10px;border-radius:99px;
   background:rgba(0,160,232,.16);color:var(--bright);margin:0 6px 6px 0}
 .chip.g{background:rgba(31,180,11,.18);color:#5fd94d}
@@ -228,25 +225,28 @@ h3{margin:0 0 10px;font-size:18px;font-weight:600;letter-spacing:-.01em}
   <p class="sub"><b style="font-weight:600;color:#fff">Marco Zero</b> — sistema de ingresso do aluno.</p>
   <div class="row">
     <button class="btn" onclick="go(1)">Ver a tese</button>
-    <button class="btn ghost" onclick="go(6)">Ir para a demo</button>
+    <button class="btn ghost" onclick="go(5)">Ir para a demo</button>
   </div>
 </div></section>
 
 <!-- 02 PROBLEMA -->
 <section class="slide" data-n="02"><div class="wrap">
   <span class="label">Problema</span>
-  <h2>O risco não está espalhado. Está na entrada.</h2>
+  <h2>Num trimestre, <span class="ac">19,1 mil</span> captados não engajaram.</h2>
   <div class="cmp" data-anim>
-    <div class="row2"><b>Calouros em risco ≥ 50%</b>
-      <div class="track"><div class="fill warn" data-w="100"></div></div>
-      <div class="val" style="color:var(--alert)">45,3%</div></div>
-    <div class="row2"><b>Veteranos em risco ≥ 50%</b>
-      <div class="track"><div class="fill" data-w="19.6"></div></div>
-      <div class="val">8,9%</div></div>
+    <div class="row2"><b>Captados que engajaram</b>
+      <div class="track"><div class="fill" data-w="100"></div></div>
+      <div class="val">87,8 mil</div></div>
+    <div class="row2"><b>Captados que não engajaram</b>
+      <div class="track"><div class="fill warn" data-w="21.8"></div></div>
+      <div class="val" style="color:var(--alert)">19,1 mil</div></div>
   </div>
-  <p class="note">Pelo modelo de risco da própria Vitru, o calouro tem <b>5,1× mais risco</b> que o veterano.</p>
+  <p class="note">Engajamento, no próprio release, é contato acadêmico <b>ou</b> financeiro.
+  Então esses 19,1 mil não desistiram no meio do curso — eles <b>não começaram</b>.<br>
+  No EAD privado brasileiro a evasão medida pelo setor é de <b>64,1%</b>. E o calouro carrega
+  <b>cinco vezes mais risco</b> que o veterano: o problema está concentrado na entrada.</p>
 </div>
-<div class="src">Vitru — deck "Motivos de Evasão", time de Ciência de Dados. Volumetrias em risco, corte de 07/08: 24.861 de 54.829 calouros e 35.347 de 397.554 veteranos.</div></section>
+<div class="src">Vitru — release do 2º trimestre de 2026: captação de 106,9 mil, 87,8 mil engajados e 19,1 mil não engajados, taxa de engajamento de 82,1%, definida como engajamento acadêmico e/ou financeiro. Números consolidados da companhia, não segmentados por marca. Evasão no EAD privado: Semesp, 15º Mapa do Ensino Superior Privado (2025). Recorte calouro × veterano: deck "Motivos de Evasão" do time de Ciência de Dados da Vitru.</div></section>
 
 <!-- 03 OS FATORES -->
 <section class="slide" data-n="03"><div class="wrap">
@@ -296,22 +296,22 @@ h3{margin:0 0 10px;font-size:18px;font-weight:600;letter-spacing:-.01em}
   <p class="sub" style="max-width:66ch;margin-bottom:30px">Leva a pessoa da dúvida sobre qual curso fazer até a primeira atividade entregue.
   A IA é a infraestrutura que faz isso em escala — não é o produto. O produto é o processo.</p>
   <div class="grid g2">
-    <div class="card" style="border-top:3px solid var(--bright)"><h3 class="ac">Agente de Escolha</h3>
-      <p class="sub" style="font-size:14.5px">Antes da matrícula. Entende a intenção, explica curso e metodologia, converte — e registra <b>por que</b> a pessoa comprou.</p></div>
-    <div class="card" style="border-top:3px solid var(--mint)"><h3 class="gr">Agente de Ingresso</h3>
-      <p class="sub" style="font-size:14.5px">Depois do RA. Reage a data, evento e status, e conduz aos marcos que decidem o trimestre.</p></div>
+    <div class="card" style="border-top:3px solid var(--bright)"><h3 class="ac">Agente Pré · antes do RA</h3>
+      <p class="sub" style="font-size:14.5px">Pré-venda. Entende a intenção, explica curso e metodologia, converte — e registra <b>por que</b> a pessoa comprou.</p></div>
+    <div class="card" style="border-top:3px solid var(--mint)"><h3 class="gr">Agente Pós · depois do RA</h3>
+      <p class="sub" style="font-size:14.5px">Ingresso. Reage a data, evento e status, e conduz aos marcos que decidem o trimestre.</p></div>
   </div>
   <div class="flow" style="justify-content:center;margin-top:28px">
-    <span class="node">Escolha</span><span class="chev">→</span>
+    <span class="node">Agente Pré</span><span class="chev">→</span>
     <span class="node key">Contexto de Entrada</span><span class="chev">→</span>
-    <span class="node">Ingresso</span>
+    <span class="node">Agente Pós</span>
   </div>
   <p class="note">O que o candidato disse que queria não morre na matrícula. Vira o roteiro do onboarding dele.</p>
 </div></section>
 
 <!-- 06 PRODUTO — ESCOLHA -->
 <section class="slide" data-n="06"><div class="wrap">
-  <span class="label">Produto · Escolha</span>
+  <span class="label">Produto · Agente Pré</span>
   <h2 style="font-size:clamp(28px,3.4vw,46px);margin-bottom:24px">Vender explicando. Não perguntando.</h2>
   <div class="sim">
     <div>
@@ -326,7 +326,7 @@ h3{margin:0 0 10px;font-size:18px;font-weight:600;letter-spacing:-.01em}
     </div>
     <div class="phone">
       <div class="phonehead"><div class="avatar">U</div><div><b style="font-size:13.5px">UniCesumar</b>
-        <div style="font-size:9.5px;opacity:.85;font-weight:300">Agente de Escolha · site</div></div></div>
+        <div style="font-size:9.5px;opacity:.85;font-weight:300">Agente Pré · site · antes do RA</div></div></div>
       <div class="chat" id="preChat"></div>
     </div>
   </div>
@@ -334,7 +334,7 @@ h3{margin:0 0 10px;font-size:18px;font-weight:600;letter-spacing:-.01em}
 
 <!-- 07 PRODUTO — INGRESSO -->
 <section class="slide" data-n="07"><div class="wrap">
-  <span class="label">Produto · Ingresso</span>
+  <span class="label">Produto · Agente Pós</span>
   <h2 style="font-size:clamp(28px,3.4vw,46px);margin-bottom:20px">Cada marco tem gatilho, canal e registro.</h2>
   <div class="simbar">
     <button class="primary" id="autoBtn" onclick="autoPlay()">▶ Rodar o trimestre</button>
@@ -351,7 +351,7 @@ h3{margin:0 0 10px;font-size:18px;font-weight:600;letter-spacing:-.01em}
     </div>
     <div class="phone">
       <div class="phonehead"><div class="avatar">U</div><div><b style="font-size:13.5px">UniCesumar</b>
-        <div style="font-size:9.5px;opacity:.85;font-weight:300">Agente de Ingresso · canal central</div></div></div>
+        <div style="font-size:9.5px;opacity:.85;font-weight:300">Agente Pós · canal central · depois do RA</div></div></div>
       <div class="chat" id="simChat"></div>
     </div>
   </div>
@@ -367,13 +367,13 @@ h3{margin:0 0 10px;font-size:18px;font-weight:600;letter-spacing:-.01em}
       <div class="res"><strong>+3,3 p.p.</strong> de matrícula no prazo e cerca de <strong>21%</strong> menos desistência antes do início.</div></div>
     <div class="ref"><div class="who">Castleman &amp; Page<em>Mensagens personalizadas antes do início das aulas</em></div>
       <div class="res">Aumento de matrícula efetivada a custo de <strong>poucos dólares</strong> por aluno.</div></div>
-    <div class="ref"><div class="who">Open University · Reino Unido<em>Contato proativo — Ormond Simpson</em></div>
-      <div class="res"><strong>Reter custa menos que recrutar.</strong> Base do argumento econômico da retenção.</div></div>
+    <div class="ref"><div class="who">Fouarge &amp; Heß · Labour Economics<em>Painel longitudinal · descompasso entre a preferência da pessoa e o curso escolhido</em></div>
+      <div class="res">A evasão <strong>se decide na escolha</strong>, não na dificuldade do curso. O mecanismo medido é a indecisão no momento da matrícula — não obstáculo acadêmico ao longo do caminho.</div></div>
   </div>
   <p class="note">Uma replicação posterior mostrou que o efeito <b>não é uniforme</b>: depende de para quem e quando.
   Por isso nosso recorte é estreito — calouro, na janela de ingresso.</p>
 </div>
-<div class="src">Page &amp; Gehlbach (2017), AERA Open 3(4) · Bailey et al. (2021), Research in Higher Education · Castleman &amp; Page (2015), J. of Economic Behavior &amp; Organization 115 · Simpson, Student Retention in Online, Open and Distance Learning.</div></section>
+<div class="src">Page &amp; Gehlbach (2017), AERA Open 3(4) · Bailey et al. (2021), Research in Higher Education · Castleman &amp; Page (2015), J. of Economic Behavior &amp; Organization 115 · Fouarge &amp; Heß (2023), Labour Economics 83.</div></section>
 
 <!-- 09 OPORTUNIDADE -->
 <section class="slide" data-n="09"><div class="wrap">
@@ -381,13 +381,15 @@ h3{margin:0 0 10px;font-size:18px;font-weight:600;letter-spacing:-.01em}
   <h2>Custa R$ 11 acompanhar um aluno do começo ao fim.</h2>
   <div class="grid g3">
     <div class="card metric"><strong>R$ 11</strong><span>por aluno na jornada completa — agente e canal</span></div>
-    <div class="card metric"><strong class="gr">0,45%</strong><span>da coorte retida já paga o programa inteiro</span></div>
-    <div class="card metric"><strong class="ac">5,7×</strong><span>de retorno no cenário mais conservador</span></div>
+    <div class="card metric"><strong class="gr">0,45%</strong><span>de retenção <b>a mais</b> na coorte já paga o programa inteiro</span></div>
+    <div class="card metric"><strong class="ac">2,9×</strong><span>de retorno no cenário mais conservador</span></div>
   </div>
-  <p class="note">Um aluno que fica devolve esse custo em <b>menos de dois dias</b> de mensalidade.<br>
-  E o ponto de equilíbrio não muda com o recorte: custo e base escalam juntos.</p>
+  <p class="note"><b>A conta, inteira:</b> mensalidade de R$ 287,40 × margem bruta de 70,3% = <b>R$ 202 por mês</b>
+  de contribuição. Em doze meses, R$ 2.424. Custo de R$ 11 ÷ R$ 2.424 = <b>0,45%</b>.<br>
+  Um aluno que fica devolve o custo em <b>menos de dois dias</b>. E o ponto de equilíbrio não muda com o
+  recorte, porque custo e base escalam juntos.</p>
 </div>
-<div class="src">Cálculo próprio sobre o release do 2º trimestre de 2026 e preço de tabela Salesforce/Meta. Ação de agente US$ 0,10; mensagem utility no Brasil R$ 0,04–0,08. Contribuição de R$ 202/mês por aluno (ticket R$ 287,4 × margem bruta 70,3%). Proxy de aquisição R$ 783 — não é o CAC oficial da companhia.</div></section>
+<div class="src">Cálculo próprio sobre o release do 2º trimestre de 2026 e preço de tabela Salesforce/Meta. A margem bruta ajustada de 70,3% é a margem reportada pela Vitru no release — é margem no nível <b>bruto</b>, não desconta despesa comercial nem administrativa, então os R$ 202/mês são contribuição bruta e não lucro. Ação de agente US$ 0,10; mensagem utility no Brasil R$ 0,04–0,08; câmbio a R$ 5,50, premissa nossa. Retorno de 2,9× no cenário de +1 ponto percentual de engajamento, calculado sobre a mesma base de alunos do custo. Proxy de aquisição R$ 783 — não é o CAC oficial da companhia.</div></section>
 
 <!-- 10 ARQUITETURA E ESCALA -->
 <section class="slide" data-n="10"><div class="wrap">
@@ -482,7 +484,7 @@ function panels(id,arr){
   arr.forEach(x=>{const d=document.createElement('div');d.className='panel';
     d.innerHTML='<h5>'+x.t+'</h5>'+x.b;p.appendChild(d)})}
 
-/* DEMO 1 · Agente de Escolha */
+/* DEMO 1 · Agente Pré */
 const preSteps=[
  {d:200,side:'me',t:'Minha filha gosta muito de animais, mas não sabe qual faculdade fazer.'},
  {d:1200,side:'them',t:'Que bom que veio perguntar. Antes de te jogar uma lista: ela se imagina mais <b>cuidando da saúde do animal</b>, trabalhando com <b>produção e natureza</b>, ou ainda está explorando?'},
@@ -496,7 +498,7 @@ const preSteps=[
 const prePanelsData=[
  {t:'O que muda',b:'<p>Começa pela <b>intenção</b>, não pelo cadastro. Pergunta só o que altera a recomendação.</p>'},
  {t:'Guardrail',b:'<p>Nunca promete emprego, salário ou aprovação. Diz o que o diploma <b>não</b> entrega sozinho.</p>'},
- {t:'O que fica',b:'<p>Não é um lead. É o contexto que atravessa a matrícula.</p><code>main_goal · career_interest<br>course_confidence · concerns</code>'}
+ {t:'O que fica',b:'<p>Não é um lead. É o contexto que atravessa a matrícula: o objetivo declarado, o interesse de carreira, a confiança na escolha e a dúvida que sobrou.</p>'}
 ];
 function preRun(){preReset();preSteps.forEach(s=>bubble('preChat',s.t,s.side,s.d));
   setTimeout(()=>panels('prePanels',prePanelsData),1300)}
@@ -505,34 +507,34 @@ function preReset(){clearEl('preChat');clearEl('prePanels')}
 /* DEMO 2 · Simulador de jornada */
 const MARCOS=[
 {n:'1',lab:'Primeiro<br>acesso',
- gat:'<p>RA gerado há 2 dias e <b>nenhum acesso</b> ao Studeo.</p><code>evento: ra_gerado<br>D+2 AND first_access = null</code>',
+ gat:'<p>RA gerado há <b>dois dias</b> e nenhum acesso ao Studeo.</p>',
  acao:'<p><span class="chip">WhatsApp utility</span><span class="chip">R$ 0,06</span>Manda <b>um</b> passo só, com link que já abre autenticado. Sem catálogo, sem boas-vindas genérica.</p>',
- reg:'<p>Sem resposta em 48h, repete por e-mail. Em D+5 sem acesso, abre tarefa no polo.</p><code>first_access_status · channel<br>outcome · next_check</code>',
+ reg:'<p>Sem resposta em 48 horas, repete por e-mail. Em cinco dias sem acesso, abre tarefa no polo.</p>',
  msg:['Oi, Lucas! Seu RA saiu. Seu próximo passo é um só: <b>abrir o Studeo pela primeira vez</b>.','Deixei o link pronto — abre direto na sua tela inicial, sem senha. Leva 1 minuto. Quer que eu te acompanhe?']},
 {n:'2',lab:'Ritmo de<br>acesso',
- gat:'<p>Acesso acumulado <b>abaixo da trajetória</b> que leva aos 40 dias.</p><code>ponto de virada Vitru: 40 dias<br>acesso_semana_N &lt; esperado</code>',
- acao:'<p><span class="chip">Push in-app</span><span class="chip">WhatsApp após 7d</span>Retoma <b>de onde parou</b> — reabre o último recurso e sugere uma microtarefa de 10 minutos.</p>',
- reg:'<p>Usa o canal mais barato que ainda funciona. Só sobe para WhatsApp se o push falhar.</p><code>access_days_cum · channel_ladder</code>',
+ gat:'<p>Acesso acumulado <b>abaixo da trajetória</b> que leva aos 40 dias — o ponto de virada que a própria Vitru mediu.</p>',
+ acao:'<p><span class="chip">Push in-app</span><span class="chip">WhatsApp após 7 dias</span>Retoma <b>de onde parou</b> — reabre o último recurso e sugere uma microtarefa de 10 minutos.</p>',
+ reg:'<p>Usa o canal mais barato que ainda funciona. Só sobe para o WhatsApp se o push falhar.</p>',
  msg:['Você parou no meio da <b>Aula 2 de Fundamentos</b>. Faltam 12 minutos pra fechar.','Se preferir, te lembro amanhã no mesmo horário. Como fica melhor?']},
 {n:'3',lab:'Primeira<br>atividade',
- gat:'<p>A.E. 01 pendente e prazo a <b>5 dias</b>.</p><code>atividade_01 = pendente<br>prazo - hoje &lt;= 5</code>',
+ gat:'<p>Primeira atividade pendente e prazo a <b>cinco dias</b>.</p>',
  acao:'<p><span class="chip">WhatsApp utility</span>Mostra <b>só a atividade da vez</b>, o peso e o prazo. Oferece lembrete agendado.</p>',
- reg:'<p>Entrega de atividades é o único detrator que junta volume alto e risco alto.</p><code>activity_status · reminder_set</code>',
+ reg:'<p>Entrega de atividades é o único detrator que junta volume alto e risco alto.</p>',
  msg:['Sua primeira atividade fecha sexta. É a A.E. 01, vale 0,5 ponto.','Não vou te mandar o pacote todo — só essa. Quer o lembrete na quinta de manhã?']},
 {n:'4',lab:'M.A.P.A.<br>3,5 pontos',
- gat:'<p><b>21 dias</b> antes do prazo do M.A.P.A.</p><code>T-21 do prazo_mapa</code>',
- acao:'<p><span class="chip">WhatsApp</span><span class="chip">in-app</span>Explica que vale <b>3,5 dos 10 pontos</b> e quebra em 3 etapas, com checkpoints em T-14 e T-7.</p>',
- reg:'<p>Se não iniciou em T-7, escala para o polo com o contexto pronto.</p><code>mapa_stage · checkpoints[]<br>escalation_at</code>',
+ gat:'<p><b>Vinte e um dias</b> antes do prazo do M.A.P.A.</p>',
+ acao:'<p><span class="chip">WhatsApp</span><span class="chip">in-app</span>Explica que vale <b>3,5 dos 10 pontos</b> e quebra em três etapas, com checagens a duas semanas e a uma semana do prazo.</p>',
+ reg:'<p>Se não começou a uma semana do prazo, escala para o polo com o contexto pronto.</p>',
  msg:['Chegou a parte que mais pesa no seu trimestre: o <b>M.A.P.A.</b>, 3,5 dos 10 pontos.','Dá pra fazer em três etapas, sem sufoco. Começamos hoje pela primeira? Leva 20 minutos.']},
 {n:'5',lab:'Avaliação<br>presencial',
- gat:'<p><b>10 dias</b> antes da avaliação presencial.</p><code>T-10 do prova_presencial</code>',
+ gat:'<p><b>Dez dias</b> antes da avaliação presencial.</p>',
  acao:'<p><span class="chip">WhatsApp</span><span class="chip w">maior item: 4,0 pontos</span>Confirma <b>data, local e documento</b>. Se o aluno não puder, abre 2ª chamada no polo.</p>',
- reg:'<p>O agente não decide exceção acadêmica — abre a solicitação com contexto e acompanha o retorno.</p><code>exam_confirmed · pole_task_id</code>',
+ reg:'<p>O agente não decide exceção acadêmica — abre a solicitação com contexto e acompanha o retorno.</p>',
  msg:['Sua avaliação presencial é dia 14, no polo Centro. Ela vale <b>4,0 pontos</b> — o maior item do trimestre.','Leva documento com foto. Consegue nesse dia? Se não, eu já abro a segunda chamada pra você.']},
 {n:'6',lab:'Aprovar<br>e renovar',
- gat:'<p>Notas lançadas no fim do trimestre.</p><code>notas_lancadas = true</code>',
+ gat:'<p>Notas lançadas no fim do trimestre.</p>',
  acao:'<p><span class="chip g">saída da jornada intensiva</span>Aprovado, fecha o ciclo e devolve para a régua normal. Reprovado em uma, orienta a recuperação.</p>',
- reg:'<p>Média mínima 6,0. "Andamento do curso" é o fator nº 1 do veterano — daqui pra frente o problema é outro.</p><code>cycle_closed · handoff_to = regua_normal</code>',
+ reg:'<p>Média mínima 6,0. Andamento do curso é o fator nº 1 do veterano — daqui pra frente o problema é outro.</p>',
  msg:['Fechou seu primeiro trimestre com média 7,2. Você entregou tudo que a gente combinou.','A partir daqui você já sabe se virar. Vou sair do seu pé — só volto se algo travar.']}
 ];
 let autoT=[];

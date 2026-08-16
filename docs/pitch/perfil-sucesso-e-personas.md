@@ -52,7 +52,7 @@ Aqui é onde o perfil de sucesso vira **régua de agente**. Tudo abaixo tem ânc
 > **7,5 dos 10 pontos**. O trimestre inteiro se decide em dois eventos.
 >
 > Um aluno pode parecer engajado nas dez semanas e reprovar por perder um deles.
-> Por isso os marcos 4 e 5 são os de maior valor do agente de ingresso.
+> Por isso os marcos 4 e 5 são os de maior valor do Agente Pós.
 
 ## Estrutura do trimestre — a régua temporal
 
@@ -185,4 +185,4 @@ As personas 2 e 4 ficam no material de apoio, para pergunta da banca.
 | :-- | :-- | :-- |
 | Split entre captação 100% digital e via polo | Dimensiona o prêmio absoluto, **não** o ponto de equilíbrio | Apresentar por aluno, que é invariante |
 | Volume real de trocas de curso | Fortaleceria o slide 04 | Qualitativo "2º processo do CSC" + os 9 p.p. externos |
-| Definição operacional de "migração" | Fluxo B4 do agente de ingresso | Manter como cenário declarado, sem regra |
+| Definição operacional de "migração" | Fluxo B4 do Agente Pós | Manter como cenário declarado, sem regra |

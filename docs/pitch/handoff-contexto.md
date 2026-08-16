@@ -18,11 +18,12 @@ Frase de definição (decorada, é a resposta para "não entendi a solução"):
 fazer até a primeira atividade entregue."
 
 Regra inegociável: IA é INFRAESTRUTURA, como energia elétrica. Nunca apresentar
-como "uma IA" ou "um agente". O produto é o PROCESSO. Dois agentes dentro:
-Escolha (antes da matrícula) e Ingresso (depois do RA), ligados por um Contexto
-de Entrada que atravessa a matrícula.
+como "uma IA" ou "um agente". O produto é o PROCESSO. Dois agentes dentro,
+nomeados pela ETAPA e não por metáfora: AGENTE PRÉ (pré-venda, antes do RA) e
+AGENTE PÓS (ingresso, depois do RA), ligados por um Contexto de Entrada que
+atravessa a matrícula. Os nomes antigos "Escolha" e "Ingresso" estão fora de uso.
 
-Tese: A EVASÃO COMEÇA ANTES MESMO DA MATRÍCULA.
+Tese: A EVASÃO COMEÇA ANTES DA MATRÍCULA.
 
 ## Leia primeiro, nesta ordem
 
@@ -44,6 +45,18 @@ Deck: apps/pitch/index.html (12 slides, autocontido, deploy na Vercel).
 4. A planilha anonimizada do hackathon — USO RESTRITO, ver abaixo
 
 ## Números que sustentam o pitch (todos verificados)
+
+O NÚMERO QUE ABRE A PROBLEMÁTICA (mudado em 16/08):
+- 19,1 mil pessoas captadas no trimestre NÃO ENGAJARAM, de 106,9 mil. É absoluto,
+  publicado e não depende de modelo. Antes o slide 02 abria pelas faixas de risco
+  do modelo preditivo deles — isso saiu, porque entregava a definição do problema
+  para o modelo e não respondia "quantos saem?".
+- Ressalva que a gente declara antes de perguntarem: engajamento no release é
+  contato acadêmico E/OU financeiro, então esses 19,1 mil não evadiram no meio do
+  curso, eles NÃO COMEÇARAM. E o release não segmenta por marca — é consolidado.
+- As faixas de risco (45,3% × 8,9%) viraram a frase mastigada de fechamento do
+  slide 02: "o calouro carrega cinco vezes mais risco". Nunca a construção
+  aninhada "X% numa faixa de Y% que dá Z% de chance".
 
 Do PPTX da Vitru:
 - Calouros em risco >=50%: 45,3% (24.861 de 54.829)
@@ -73,6 +86,23 @@ Nossas contas (sempre rotular como proxy):
 - Custo da jornada: R$ 11,00 (digital, dois agentes) ou R$ 7,44 (via polo)
 - PONTO DE EQUILÍBRIO: 0,45% (digital) e 0,31% (polo). É invariante ao recorte,
   porque custo e base escalam juntos. Este é o número mais forte do pitch.
+- RETORNO: 2,9x no cenário conservador (+1 p.p.), 5,8x (+2 p.p.), 9,6x (+3,3 p.p.).
+  Corrigido em 16/08: a versão anterior dizia 5,7x / 18,8x porque calculava o ganho
+  sobre a captação consolidada (106,9 mil) e o custo sobre a safra UniCesumar
+  (54.829). Bases diferentes, fator 1,95 de inflação. O 0,45% nunca foi afetado.
+  Versão só com contribuição, sem aquisição recuperada: 2,2x.
+
+De onde vem o 70,3% (pergunta esperada no Q&A):
+- É a MARGEM BRUTA AJUSTADA reportada pela Vitru no release. Indicador deles, não
+  conta nossa. Receita líquida menos custo de entregar o serviço.
+- NÃO É LUCRO. Margem bruta fica acima de despesa comercial e administrativa. Os
+  R$ 202/mês são CONTRIBUIÇÃO BRUTA.
+- Por que usar bruta: a pergunta é marginal. A captação daquele aluno já foi paga
+  e a estrutura já existe; o que muda com ele ficando é receita menos custo de
+  entregar a aula.
+- Onde somos generosos: os R$ 11 são custo variável, sem desenvolvimento nem tempo
+  humano de L3/L4. Onde somos conservadores: assumimos só 12 meses de permanência,
+  quando a graduação tem 4 anos.
 
 Preços de tabela verificados:
 - Agentforce: US$ 0,10 por ação (20 Flex Credits, pacote US$ 500 / 100 mil)
@@ -113,6 +143,10 @@ Literatura:
 6. Nunca prometer redução de evasão em %. Prometemos ativação medida.
 7. Rotular todo proxy como proxy antes que perguntem.
 8. Nunca dizer que o polo vai mandar mensagem ou ter agente próprio.
+9. O ponto de equilíbrio é RETENÇÃO INCREMENTAL. Dizer "0,45% A MAIS", nunca
+   "0,45% da coorte", que soa absurdamente baixo diante da realidade deles.
+10. Nunca chamar os R$ 202/mês de lucro. É contribuição bruta.
+11. Não abrir a problemática pelo modelo preditivo deles. Abrir pelos 19,1 mil.
 
 ## O que ainda não temos (com plano B ativo — nada é bloqueante)
 

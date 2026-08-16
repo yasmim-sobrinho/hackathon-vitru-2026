@@ -49,7 +49,7 @@ alguém que troca para uma área não correlata está provando que a venda origi
 estava desalinhada. É a coisa mais próxima de uma medição direta de "venda mal
 feita" que existe na operação deles — e ainda gera custo de CSC.
 
-### Engenharia reversa — o que a Solução 1 ataca
+### Engenharia reversa — o que o Agente Pré ataca
 
 Você pediu para eu construir isso de trás para frente. Cada linha: uma lacuna na
 venda → o que a pessoa sente → como isso aparece no modelo de risco **deles**.
@@ -98,7 +98,13 @@ Conheça EAD, Sala Virtual.
 | **Ponte** | Conceitualmente exato: liga venda e vida acadêmica | Genérico como marca |
 
 **Recomendo Marco Zero.** Fica: *Marco Zero — a jornada de ingresso da
-UniCesumar*, com dois agentes dentro (Escolha e Ingresso).
+UniCesumar*, com dois agentes dentro: **Agente Pré**, antes do RA, e **Agente
+Pós**, depois do RA.
+
+> **Nomenclatura fechada em 16/08.** Os agentes são nomeados pela **etapa**, não
+> por metáfora: Pré é pré-venda e atua antes do RA; Pós atua depois. Os nomes
+> "Escolha" e "Ingresso" saíram de circulação — obrigavam a explicar a metáfora
+> antes de explicar o produto.
 
 ---
 
@@ -138,7 +144,9 @@ Calouro evade por **não começar**. Só um dos dois tem a ver com a venda.
 - **"Ponto de virada: 40 dias"** — corte deles entre evadiu e não evadiu, em dias
   de acesso ao AVA de calouros.
 - **Risco ≥ 50%: 45,3% dos calouros (24.861) vs 8,9% dos veteranos (35.347).**
-  → **5,1× mais risco no calouro.** É o slide 02.
+  → **5,1× mais risco no calouro.** Entra no slide 02 como **frase mastigada de
+  fechamento** ("o calouro carrega cinco vezes mais risco"), não como abertura —
+  ver seção 4.1.
 - **Faixas de sucesso deles:** Detrator < 25% de conclusão · Neutro 25-50% ·
   **Promotor > 50%**.
 - **Estrutura do trimestre:** 10 semanas, 2 disciplinas, 4 aulas ao vivo cada,
@@ -210,28 +218,72 @@ curso + os 9 p.p. de Fouarge & Heß), que não depende da planilha.
 
 ## 4. Estrutura do deck — 12 slides
 
+Esta tabela é o **espelho do `apps/pitch/index.html`**. Se divergir do arquivo, o
+arquivo manda. Conferida em 16/08.
+
 | # | Slide | Ideia única | Status |
 | --: | :-- | :-- | :-- |
-| 01 | **Capa** | "A evasão começa antes mesmo da matrícula" | 🟢 |
-| 02 | **Problema** | Risco concentrado no calouro: 5,1× o veterano | 🟢 |
-| 03 | **Os fatores** | Calouro × veterano: presença vs. progresso | 🟢 |
-| 04 | **A virada** | Ementa é a 2ª página mais vista; troca de curso é o 2º processo do CSC | 🟢🔵 |
-| 05 | **Solução 1 — Escolha** | Vender explicando. O que existe hoje é um pop-up | 🔵 |
-| 06 | **Solução 2 — Ingresso** | Os fatores restantes são de ativação | 🟢 |
-| 07 | **Validação** | Georgia State, Castleman & Page, Simpson, Fouarge & Heß | 🟢 |
-| 08 | **Oportunidade** | Custo, receita, pontos percentuais | 🔴 G1 |
-| 09 | **Produto — pré** | Personas e storytelling | 🔴 G4 |
-| 10 | **Produto — pós** | Cases ancorados no perfil de sucesso | 🔴 G2 |
-| 11 | **Adoção / piloto** | Recorte por polo | 🔴 G3 |
+| 01 | **Capa** | "A evasão começa antes da matrícula" | 🟢 |
+| 02 | **Problema** | 19,1 mil captados não engajaram num trimestre | 🟢 |
+| 03 | **Diagnóstico** | Calouro × veterano: presença vs. progresso | 🟢 |
+| 04 | **A pergunta** | Ementa é a 2ª página mais vista; troca de curso é o 2º processo do CSC | 🟢🔵 |
+| 05 | **Solução** | Marco Zero, um sistema de ingresso com Agente Pré e Agente Pós | 🔵 |
+| 06 | **Produto · Agente Pré** | Conversa rodando: vender explicando, não perguntando | 🟢 |
+| 07 | **Produto · Agente Pós** | Simulador dos 6 marcos: gatilho, ação, registro | 🟢 |
+| 08 | **Validação** | Georgia State, Castleman & Page, Fouarge & Heß, ressalva do Bailey | 🟢 |
+| 09 | **Oportunidade** | R$ 11, ponto de equilíbrio de 0,45%, retorno de 2,9× | 🟢 |
+| 10 | **Escala** | Mensageria centralizada; polo recebe tarefa, não fila | 🟢 |
+| 11 | **Implementação** | Piloto dimensionado, randomização por turma, roadmap em 4 fases | 🟢 |
 | 12 | **Time e fechamento** | — | 🟢 |
 
-**Cortados por repetição:** Diferenciais (já está em 05/06), Evidências separado
-(é o 07), Piloto duplicado (é o 11), Modelo de Valor separado (funde com o 08),
-"O que existe hoje" separado (vira contraste dentro do 05).
+**Cortados por repetição:** Diferenciais (está em 05), Evidências separado (é o
+08), Piloto duplicado (é o 11), Modelo de Valor separado (funde com o 09), "O que
+existe hoje" separado (vira contraste dentro do 06).
 
-**Nota importante para o slide 06:** o agente **não consulta** o modelo preditivo
+**Nota importante para o slide 07:** o agente **não consulta** o modelo preditivo
 em runtime. O modelo **fundamentou** o desenho dos marcos e da régua. A distinção
 precisa aparecer na fala.
+
+---
+
+## 4.1 Realinhamento do slide 02 — decidido em 16/08
+
+**O problema com a versão anterior.** O slide abria com "45,3% dos calouros em
+faixa de risco ≥ 50% contra 8,9% dos veteranos". Três defeitos:
+
+1. A fonte da problemática passava a ser **o modelo preditivo deles**. Abrir o
+   pitch dizendo "segundo o modelo de vocês" entrega a definição do problema para
+   a ferramenta que a gente diz que não é o ponto.
+2. Não é número absoluto. É **probabilidade de**, não **quantidade que**. A banca
+   pergunta "e quantos saem?" e a resposta era outra pergunta.
+3. Exigia uma construção aninhada — "X% está numa faixa de Y% que corresponde a
+   Z% de chance" — que ninguém acompanha em cinco minutos.
+
+**O que entrou no lugar.** Número absoluto, publicado, sem modelo nenhum:
+
+| Métrica | Valor | Fonte |
+| :-- | :-- | :-- |
+| Captação do trimestre | 106,9 mil | 🟢 release 2T26 |
+| Engajados | 87,8 mil | 🟢 release |
+| **Não engajados** | **19,1 mil** | 🟢 release |
+| Taxa de engajamento | 82,1% | 🟢 release |
+| Evasão no EAD privado brasileiro | 64,1% | 🟢 Semesp, 15º Mapa (2025) |
+
+**A ressalva que a gente declara antes de perguntarem.** Engajamento, na definição
+do release, é contato acadêmico **ou** financeiro. Então 19,1 mil não é gente que
+evadiu no meio do curso — é gente que não registrou nem uma coisa nem outra.
+Operacionalmente: **não começou**. Isso não enfraquece a tese, fortalece: é
+exatamente a população do Marco Zero.
+
+Segunda ressalva: o release **não segmenta por marca**. O 19,1 mil é consolidado
+Vitru. O recorte UniCesumar entra no slide 03, com o dado do time de Ciência de
+Dados.
+
+**Onde foi parar o 45,3%.** Virou a **frase mastigada de fechamento** do slide 02:
+*"e o calouro carrega cinco vezes mais risco que o veterano — o problema está
+concentrado na entrada."* Uma frase, sem percentual aninhado, depois do número
+absoluto. O detalhamento fica no slide 03, onde o modelo é usado para explicar
+**mecanismo**, que é o uso legítimo dele.
 
 ---
 
@@ -242,10 +294,10 @@ crítico, existe um substituto já definido:
 
 | Slide | Número ideal | Plano B se não vier |
 | :-- | :-- | :-- |
-| 02 | % de calouros que cancelam no 1º trimestre | 45,3% em risco ≥50% vs 8,9% *(já temos)* |
+| 02 | % de calouros que cancelam no 1º trimestre | 19,1 mil não engajados do release *(já temos, e é absoluto)* |
 | 04 | Volume real de trocas de curso no CSC | "2º processo mais comum" qualitativo + os 9 p.p. de Fouarge & Heß |
-| 08 | CAC oficial | Proxy R$ 783, rotulado como proxy *(já temos)* |
-| 08 | Impacto em p.p. de receita | Cenário modelado sobre o release, rotulado como cenário |
+| 09 | CAC oficial | Proxy R$ 783, rotulado como proxy *(já temos)* |
+| 09 | Impacto em p.p. de receita | Cenário modelado sobre o release, rotulado como cenário |
 | 11 | Critério de polo da Vitru | Critério nosso, justificado por volume + capacidade |
 
 Consequência: **a fala não muda quando o número muda.** Ver seção 7.
@@ -256,12 +308,13 @@ Consequência: **a fala não muda quando o número muda.** Ver seção 7.
 
 | ID | Buraco | Slide | Situação |
 | :-- | :-- | :-- | :-- |
-| **G1** | Oportunidade em p.p. e custo de operação | 08 | ✅ **Fechado** — `modelo-economico.md`. Ponto de equilíbrio entre 0,31% e 0,45%, invariante ao recorte |
-| **G2** | Perfil do aluno de sucesso | 06, 10 | ✅ **Fechado** — `perfil-sucesso-e-personas.md`, parte 1. Régua de 6 marcos ancorada no PPTX |
+| **G1** | Oportunidade em p.p. e custo de operação | 09 | ✅ **Fechado** — `modelo-economico.md`. Ponto de equilíbrio entre 0,31% e 0,45%, invariante ao recorte |
+| **G2** | Perfil do aluno de sucesso | 07 | ✅ **Fechado** — `perfil-sucesso-e-personas.md`, parte 1. Régua de 6 marcos ancorada no PPTX |
 | **G3** | Piloto e recorte de polos | 11 | ✅ **Fechado** — randomizar por turma, ~22 mil alunos, 3 p.p. detectáveis |
-| **G4** | Personas e storytelling do pré | 09 | ✅ **Fechado** — `perfil-sucesso-e-personas.md`, parte 2. Quatro personas |
-| **G5** | Calouros que cancelam no 1º trimestre | 02 | ⏳ **Só a Vitru tem** — plano B ativo (45,3% × 8,9%) |
-| **G6** | Split captação digital × via polo | 08 | ⏳ **Só a Vitru tem** — dimensiona o prêmio, não a viabilidade |
+| **G4** | Personas e storytelling do pré | 06 | ✅ **Fechado** — `perfil-sucesso-e-personas.md`, parte 2. Quatro personas |
+| **G5** | Calouros que cancelam no 1º trimestre | 02 | ⏳ **Só a Vitru tem** — plano B ativo e **melhor que o original**: os 19,1 mil não engajados do release são absolutos e publicados |
+| **G6** | Split captação digital × via polo | 09 | ⏳ **Só a Vitru tem** — dimensiona o prêmio, não a viabilidade |
+| **G7** | Base do retorno estava misturada | 09 | ✅ **Corrigido em 16/08** — ganho vinha de 106,9 mil e custo de 54.829. Retorno cai de 5,7× para **2,9×**. O 0,45% não era afetado |
 
 ## 6.1 Restrição de mensageria — incorporada ao desenho
 
@@ -291,8 +344,9 @@ ser usada — sem custo novo de licença.
 O que trava agora e não muda mais:
 
 1. A tese: a evasão começa antes da matrícula.
-2. O arco: sintoma medido → os fatores → a virada (ementa + troca de curso) →
-   Solução 1 → Solução 2 → validação → oportunidade → produto → piloto.
+2. O arco: número absoluto do problema → os fatores → a pergunta (ementa + troca
+   de curso) → a solução → Agente Pré rodando → Agente Pós rodando → validação →
+   oportunidade → escala → piloto.
 3. A frase de transição de cada slide.
 
 O que pode mudar até a véspera sem alterar uma linha da fala: os números dentro

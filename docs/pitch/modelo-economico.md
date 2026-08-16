@@ -26,7 +26,58 @@ número oficial ou preço de tabela público. Cada premissa está rotulada.
 
 ---
 
-## 1.1 Guardrail: não multiplicamos score por dinheiro
+## 1.1 De onde vem a margem de 70,3% — e o que ela não é
+
+Pergunta que vai vir no Q&A. A resposta precisa estar decorada.
+
+**O que é.** 70,3% é a **margem bruta ajustada** que a Vitru reporta no release do
+2º trimestre de 2026. É um indicador divulgado por ela, não uma conta nossa.
+Margem bruta é receita líquida menos o custo do serviço prestado — professor,
+tutoria, conteúdo, plataforma, tudo que é preciso para entregar a aula. O
+"ajustada" é o padrão dos releases da companhia: expurga itens não recorrentes e
+não caixa para mostrar a margem operacional recorrente.
+
+**O que ela não é.** Não é lucro. Margem **bruta** fica acima da despesa
+comercial, da administrativa, dos juros e dos impostos. Então quando dizemos que
+um aluno retido vale R$ 202 por mês, estamos falando de **contribuição bruta** —
+o dinheiro que sobra depois de entregar a aula e antes de pagar o resto da
+empresa.
+
+**Por que usamos ela e não o lucro líquido.** Porque a pergunta é marginal: *um
+aluno adicional que fica, quanto traz?* O custo de captar esse aluno **já foi
+gasto** — ele já está na base. A estrutura administrativa também já existe. O que
+muda com ele ficando é receita menos custo de entregar a aula. Isso é exatamente
+a margem bruta.
+
+**Onde isso é generoso e onde é conservador.**
+
+| | |
+| :-- | :-- |
+| Generoso | Margem bruta não desconta o custo humano de L3/L4 nem o desenvolvimento do programa. Os R$ 11 são custo **variável marginal** de operação, não custo cheio. |
+| Conservador | Assume que o aluno retido rende **só 12 meses**. Uma graduação EAD tem 4 anos. Se ele fica 24 meses, a contribuição dobra e o ponto de equilíbrio cai pela metade. |
+
+### A cadeia completa, número por número
+
+```text
+R$ 287,40   ticket médio híbrido/EAD por mês          🟢 release
+  × 70,3%   margem bruta ajustada                     🟢 release
+= R$ 202,04 contribuição bruta por aluno por mês      🟡 nossa multiplicação
+  × 12      meses de permanência assumidos            🟡 premissa nossa
+= R$ 2.424  contribuição por aluno retido em 12 meses
+```
+
+```text
+R$ 11,00    custo de rodar a jornada por aluno        🟡 nossa conta, seção 3
+÷ R$ 2.424  contribuição por aluno retido
+= 0,45%     ponto de equilíbrio
+```
+
+Nenhum passo usa score de risco, projeção de evasão ou dado que a Vitru não
+tenha publicado. É ticket × margem × tempo, dividido por custo de tabela.
+
+---
+
+## 1.2 Guardrail: não multiplicamos score por dinheiro
 
 O `ACHADOS.md` mostrou, via calibração de Platt, que `Y_PROBA_EVADIU` é
 **ordenação, não probabilidade** (inclinação 0,438; erro de calibração cai de
@@ -45,7 +96,7 @@ O especialista da Salesforce falou em **R$ 0,80 por disparo**. Isso não bate co
 a tabela pública da Meta.
 
 Desde 2026 a cobrança é **por mensagem**, não por janela de 24h. E as mensagens
-do agente de ingresso são quase todas da categoria **utility** (transacional:
+do Agente Pós são quase todas da categoria **utility** (transacional:
 confirmação de matrícula, próximo passo, prazo), que custa **R$ 0,04 a 0,08**.
 
 **Marketing** é que custa R$ 0,31–0,39. Nosso agente não faz marketing — faz
@@ -60,7 +111,7 @@ pública é clara.
 
 ## 3. Custo por aluno na jornada de ingresso
 
-### Agente 1 — Escolha (pré-venda, no site)
+### Agente Pré — antes do RA (pré-venda, no site)
 
 | Item | Qtd | Custo |
 | :-- | --: | --: |
@@ -68,7 +119,7 @@ pública é clara.
 | Canal (widget no site) | — | R$ 0 |
 | **Subtotal** | | **≈ R$ 3,30** |
 
-### Agente 2 — Ingresso (pós-matrícula, janela de ~90 dias)
+### Agente Pós — depois do RA (ingresso, janela de ~90 dias)
 
 | Item | Qtd | Custo |
 | :-- | --: | --: |
@@ -133,7 +184,7 @@ Salesforce que ele já acessa."*
 
 ### Custo por jornada
 
-| Jornada | Agente 1 (Escolha) | Agente 2 (Ingresso) | Custo/aluno |
+| Jornada | Agente Pré | Agente Pós | Custo/aluno |
 | :-- | :-- | :-- | --: |
 | **100% digital** | sim, widget no site | sim, WhatsApp central | **R$ 11,00** |
 | **Via polo** | não — quem vende é o humano do polo | sim, WhatsApp central | **R$ 7,44** |
@@ -174,8 +225,13 @@ O que muda com a coorte é só o **tamanho absoluto do prêmio**, não a viabili
 
 > "Cada aluno custa onze reais para acompanhar do começo ao fim. Um aluno que
 > fica devolve isso em **menos de dois dias** de mensalidade. O programa se paga
-> retendo menos de meio por cento da coorte — e isso vale para qualquer recorte,
+> retendo **meio por cento a mais** da coorte — e isso vale para qualquer recorte,
 > porque custo e base andam juntos."
+
+⚠️ **Precisão de fala.** Dizer "se paga retendo 0,45% da coorte" soa como se
+bastasse 0,45% da coorte ficar, o que é absurdamente baixo diante da realidade
+deles. É **retenção incremental**: 0,45 ponto percentual **a mais** do que se
+reteria sem o programa. Sempre dizer "a mais".
 
 *(R$ 202 de contribuição por mês = R$ 6,73 por dia. R$ 11 ÷ R$ 6,73 = 1,6 dias.)*
 
@@ -187,26 +243,54 @@ Falamos na métrica que **eles próprios elegeram** no release: a taxa de
 engajamento da captação. Saiu de 72,5% para 82,1% em um ano e virou manchete —
 então ponto percentual nessa métrica é a linguagem da casa.
 
-Base: 106,9 mil captações/trimestre. Cada **+1 p.p.** = **+1.069 alunos engajados**.
+> ⚠️ **Correção aplicada em 16/08.** A versão anterior desta seção calculava o
+> ganho sobre a captação consolidada da Vitru (106,9 mil por trimestre) e o custo
+> sobre a safra de calouros UniCesumar (54.829). São bases diferentes, e a razão
+> entre elas — 1,95 — inflava o retorno em quase o dobro. Os números abaixo estão
+> na **mesma base**. O ponto de equilíbrio de 0,45% nunca dependeu disso, porque
+> é uma razão por aluno.
 
-| Cenário | Ganho na taxa de engajamento | Alunos/trimestre | Contribuição bruta em 12 meses | Aquisição recuperada |
-| :-- | --: | --: | --: | --: |
-| **Conservador** | +1,0 p.p. | 1.069 | R$ 2,59 mi | R$ 837 mil |
-| **Base** | +2,0 p.p. | 2.138 | R$ 5,18 mi | R$ 1,67 mi |
-| **Georgia State** | +3,3 p.p. | 3.528 | R$ 8,55 mi | R$ 2,76 mi |
+### A forma robusta: retorno por aluno da coorte
+
+Esta é a conta que sobrevive a qualquer recorte, porque numerador e denominador
+falam do mesmo aluno.
+
+```text
+ganho por aluno da coorte = efeito (p.p.) × (contribuição + aquisição recuperada)
+                          = efeito × (R$ 2.424 + R$ 783)
+                          = efeito × R$ 3.207
+
+retorno = ganho por aluno ÷ R$ 11 de custo por aluno
+```
+
+| Cenário | Efeito | Ganho por aluno da coorte | Retorno |
+| :-- | --: | --: | --: |
+| **Conservador** | +1,0 p.p. | R$ 32,07 | **2,9×** |
+| **Base** | +2,0 p.p. | R$ 64,14 | **5,8×** |
+| **Georgia State** | +3,3 p.p. | R$ 105,83 | **9,6×** |
 
 *"Aquisição recuperada" = despesa comercial que já foi gasta e que hoje se perde
-com quem não consolida (R$ 783 × alunos).*
+com quem não consolida (R$ 783 × alunos). Não é caixa novo entrando — é caixa que
+para de ser desperdiçado.*
 
-**Retorno no cenário conservador:**
+**Versão ainda mais apertada, se a banca questionar a aquisição recuperada:** tire
+os R$ 783 do numerador e fique só na contribuição. A +1 p.p. o retorno cai para
+**2,2×**, e a +3,3 p.p. para **7,3×**. Continua confortável. Vale ter esse número
+no bolso.
 
-```
-Ganho:  R$ 2,59 mi (contribuição) + R$ 837 mil (aquisição) = R$ 3,43 mi
-Custo:  R$ 603 mil
-Retorno: 5,7× — no cenário mais pessimista
-```
+### Os mesmos cenários em valor absoluto
 
-No cenário Georgia State, o retorno é **18,8×**.
+Base única: safra de calouros UniCesumar, 54.829 alunos, custo de R$ 603 mil.
+
+| Cenário | Alunos a mais retidos | Contribuição em 12 meses | Aquisição recuperada | Ganho total | Retorno |
+| :-- | --: | --: | --: | --: | --: |
+| **Conservador** | 548 | R$ 1,33 mi | R$ 429 mil | R$ 1,76 mi | 2,9× |
+| **Base** | 1.097 | R$ 2,66 mi | R$ 859 mil | R$ 3,52 mi | 5,8× |
+| **Georgia State** | 1.809 | R$ 4,39 mi | R$ 1,42 mi | R$ 5,80 mi | 9,6× |
+
+Se a banca preferir dimensionar sobre a captação consolidada (106,9 mil), o
+retorno é **o mesmo** — o custo sobe para R$ 1,18 mi na mesma proporção do ganho.
+É a propriedade de invariância outra vez.
 
 ### Contexto do que está em jogo hoje
 
@@ -214,6 +298,9 @@ No cenário Georgia State, o retorno é **18,8×**.
 19,1 mil não engajados × R$ 783 = R$ 15,0 milhões por trimestre
                                   de despesa comercial que não vira aluno
 ```
+
+Este número é sobre a **captação consolidada** da Vitru, não só UniCesumar. Serve
+para dimensionar o problema, não para compor o retorno acima.
 
 ---
 

@@ -28,8 +28,27 @@ resposta pronta.
 ### Onde estamos fortes
 
 O desafio diz que o diagnóstico já existe e pede **ação preventiva, concreta,
-escalável e segura**. Nosso recorte responde item a item, e o problema está
-definido com dado deles: 45,3% dos calouros em risco contra 8,9% dos veteranos.
+escalável e segura**. Nosso recorte responde item a item, e o problema abre com
+número **absoluto e publicado** por eles: 19,1 mil pessoas captadas no trimestre
+que não engajaram, de 106,9 mil. Não é projeção de modelo, é contagem do release.
+
+### ❓ "De onde vem esse 19,1 mil?" ⚠️
+
+> Do release do segundo trimestre de vocês. Captação de 106,9 mil, 87,8 mil
+> engajados, taxa de engajamento de 82,1%. A diferença é 19,1 mil.
+>
+> E aqui um cuidado que a gente faz questão de declarar: engajamento, na
+> definição do release, é contato acadêmico **ou** financeiro. Então esses 19,1
+> mil não são pessoas que evadiram no meio do curso — são pessoas que não
+> registraram nem uma coisa nem outra. Operacionalmente, não começaram. É
+> exatamente a população que a gente quer atacar.
+
+### ❓ "Esse número é UniCesumar ou consolidado?"
+
+> Consolidado. O release não segmenta por marca, e a gente não vai fingir que
+> segmenta. O recorte UniCesumar aparece no dado do time de Ciência de Dados de
+> vocês, onde a safra de calouros é de 54.829 e onde dá para separar calouro de
+> veterano.
 
 ### ❓ "Vocês não estão resolvendo a evasão, só o começo dela."
 
@@ -100,6 +119,53 @@ nenhum dado que a Vitru precise liberar.
 > contra duzentos e dois reais por mês de contribuição bruta — ticket de 287,40
 > vezes a margem bruta de 70,3%, os dois do release de vocês. Em doze meses são
 > 2.424 reais. Onze sobre 2.424 dá 0,45%.
+>
+> E é **retenção incremental**: meio por cento **a mais** do que vocês reteriam
+> sem o programa. Não é meio por cento da coorte ficar.
+
+### ❓ "E essa margem de 70,3%, de onde saiu?" ⚠️ *(a pergunta de quem entende de finanças)*
+
+> É a margem bruta ajustada que vocês reportam no release do trimestre. Não é
+> conta nossa — é indicador de vocês. Receita líquida menos o custo de entregar o
+> serviço: professor, tutoria, conteúdo, plataforma. O "ajustada" é o padrão do
+> release, que expurga item não recorrente.
+>
+> E eu quero ser explícito no que ela **não** é: não é lucro. Margem bruta fica
+> acima de despesa comercial e administrativa. Então quando eu digo que um aluno
+> retido vale 202 reais por mês, é **contribuição bruta**, não resultado final.
+>
+> Usei margem bruta de propósito, porque a pergunta é marginal: um aluno que já
+> está na base e decide ficar, o que ele traz? A captação dele já foi paga, a
+> estrutura administrativa já existe. O que muda é receita menos custo de entregar
+> a aula. Isso é a margem bruta.
+
+### ❓ "Vocês estão sendo generosos com vocês mesmos nessa conta?"
+
+> Em um ponto sim e em outro não, e vale dizer os dois.
+>
+> Generoso: os onze reais são custo variável de operação. Não incluem o
+> desenvolvimento do programa nem o tempo humano do polo e do especialista nas
+> exceções.
+>
+> Conservador: eu assumi que o aluno retido rende **só doze meses**. Uma graduação
+> EAD tem quatro anos. Se ele fica vinte e quatro meses, a contribuição dobra e o
+> ponto de equilíbrio cai para 0,22%. Os dois erros andam em direções opostas, e a
+> conclusão sobrevive aos dois.
+
+### ❓ "E esse retorno de 2,9×, como se calcula?"
+
+> Ganho por aluno da coorte dividido por custo por aluno. No cenário mais
+> conservador, um ponto percentual de engajamento a mais: um por cento de 3.207
+> reais — que é a contribuição de 2.424 mais os 783 de aquisição que hoje se
+> perde — dá 32 reais por aluno. Sobre onze reais de custo, 2,9 vezes.
+>
+> Se vocês tirarem a aquisição recuperada e ficarem só na contribuição, cai para
+> 2,2 vezes. No cenário da Georgia State, sobe para 9,6.
+>
+> A conta está toda na mesma base de alunos — numerador e denominador falam do
+> mesmo aluno. Isso importa: uma versão anterior do nosso material misturava a
+> captação consolidada com a safra UniCesumar e inflava o retorno em quase o
+> dobro. A gente achou e corrigiu.
 
 ### ❓ "Essa conta é da jornada do polo ou da 100% digital?" ⚠️ *(a mais afiada)*
 
@@ -224,6 +290,9 @@ Honestidade aqui vale ponto. Se vier alguma destas, a resposta é assumir.
 
 | ❌ Não dizer | ✅ Dizer |
 | :-- | :-- |
+| "Se paga retendo 0,45% da coorte" | "Se paga com 0,45% de retenção **a mais**" |
+| "R$ 202 de lucro por aluno" | "R$ 202 de **contribuição bruta** por aluno" |
+| "Agente de Escolha / de Ingresso" | "Agente **Pré**, antes do RA; Agente **Pós**, depois do RA" |
 | "Cada polo vai ter um agente" | "A mensageria é centralizada; o polo recebe tarefa" |
 | "O modelo de vocês não enxerga esses alunos" | "O agente age por evento, então não depende de score" |
 | "Vamos reduzir a evasão em X%" | "Vamos medir ativação; evasão é resultado posterior" |
