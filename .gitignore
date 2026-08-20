@@ -21,6 +21,8 @@ view-source_*.html
 
 # Historico de sessao de ferramentas
 .codex-history/
+.claude-code-history/
+
 
 *.db
 *.sqlite3
